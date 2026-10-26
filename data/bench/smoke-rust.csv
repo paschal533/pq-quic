@@ -1,0 +1,11 @@
+pair,variant,elapsed_ms
+0,classical,160.67
+0,hybrid,112.043
+1,classical,124.241
+1,hybrid,109.371
+2,hybrid,122.889
+2,classical,118.06
+3,classical,115.847
+3,hybrid,135.974
+4,hybrid,113.945
+4,classical,110.892

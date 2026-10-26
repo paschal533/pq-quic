@@ -1,0 +1,8 @@
+# build outputs and fetched dependencies
+harness/rust-pair/target/
+harness/js-pair/node_modules/
+harness/nim-pair/nimbledeps/
+harness/nim-pair/nim_pair
+*.exe
+__pycache__/
+*.pyc

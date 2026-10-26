@@ -1,0 +1,13 @@
+[package]
+name = "rust-pair"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libp2p = { version = "=0.57.1", features = ["tokio", "quic", "macros"] }
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+
+[patch.crates-io]
+# Measurement patch: PQQUIC_CLASSICAL=1 restricts key exchange to X25519.
+libp2p-tls = { path = "vendor/libp2p-tls" }
