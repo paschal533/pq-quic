@@ -17,6 +17,7 @@ import re
 import statistics
 import subprocess
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -38,13 +39,23 @@ STACKS = {
 }
 
 
-def start_listener(cmd: list[str]) -> tuple[subprocess.Popen, str]:
+def drain(stream, sink: list[str]) -> None:
+    """Keep reading the listener's output. If nobody reads it, the pipe fills
+    (4 KiB on Windows, about 66 'accepted' lines) and the listener blocks on its
+    next print and stops accepting connections."""
+    for line in stream:
+        sink.append(line)
+
+
+def start_listener(cmd: list[str]) -> tuple[subprocess.Popen, str, list[str]]:
     proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     deadline = time.monotonic() + 15
     while time.monotonic() < deadline:
         line = proc.stdout.readline()
         if line.startswith("peer "):
-            return proc, line.split()[1].strip()
+            log: list[str] = []
+            threading.Thread(target=drain, args=(proc.stdout, log), daemon=True).start()
+            return proc, line.split()[1].strip(), log
     proc.kill()
     raise RuntimeError("listener did not print its peer id")
 
@@ -123,7 +134,7 @@ def main() -> int:
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     trace = str(Path(a.out).with_suffix(".jsonl"))
 
-    listener, peer = start_listener(stack["listen"](lp))
+    listener, peer, listener_log = start_listener(stack["listen"](lp))
     tap = subprocess.Popen(
         [sys.executable, str(HERE / "tap" / "quic_tap.py"), "--listen", str(tp), "--upstream", str(lp),
          "--out", trace, "--seconds", "100000", "--delay-ms", str(a.delay_ms),
@@ -161,6 +172,8 @@ def main() -> int:
                       f"{k}=({v[0]:.3f},{v[1]:.3f})" if isinstance(v, tuple) else f"{k}={v}"
                       for k, v in s.items()))
     print(f"  drop_c2s=[{a.drop_c2s}] " + trace_medians(rows))
+    accepted = sum(1 for line in listener_log if line.startswith("accepted"))
+    print(f"  listener accepted={accepted} (expected {1 + 2 * a.pairs} incl. warm-up)")
     return 0
 
 

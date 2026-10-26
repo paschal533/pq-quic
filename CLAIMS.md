@@ -42,6 +42,7 @@ Every number that reaches prose comes from this file, and every row points at it
 
 - The decoder's key derivation is checked against RFC 9001 Appendix A.1 (`--self-test`).
 - Datagram counts include ACK-only Initials (padded), so `initial_datagrams` is not "datagrams carrying the ClientHello". Do not quote it as such.
+- Listener stdout must be drained. Before commit after 15ae4ec, `bench_handshake.py` stopped reading the listener after its `peer` line. On Windows the pipe holds 4 KiB (~66 `accepted` lines), after which the listener blocks and every later dial times out. Runs with ≤ 61 dials (pilot, targeted: C-17–C-19) were under the limit and report zero failures. The first random-loss run (randomloss-20261026T193754Z, 167/200 pairs failed from pair 33) is discarded. The bench now prints `listener accepted=N` to check.
 
 ## Retracted
 
