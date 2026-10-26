@@ -39,6 +39,8 @@ Every number that reaches prose comes from this file, and every row points at it
 
 | C-24 | nim-libp2p master 881082e (libp2p 2.4.0, lsquic 0.11.2, nim-boringssl 0.0.14, built with `-d:BORINGSSL_USE_ASM=false`, Nim 2.2.10, Windows): offers `X25519MLKEM768, X25519, secp256r1, secp384r1` with two shares (1,216 + 32 B), ClientHello 1,446 B, signature_algorithms only `ed25519, ecdsa_secp256r1_sha256`. nim with nim, go, rust, js (both directions) and py-libp2p with aioquic #634 (both directions): X25519MLKEM768, HRR absent, listener accepts. Classical-only go (`tlsmlkem=0`) and rust (`PQQUIC_CLASSICAL=1`) dialers to nim: X25519, HRR absent. Stock py-libp2p 0.8.1 (aioquic 1.7.0) with nim: X25519 both directions (nim picks X25519 from four classical shares). One py-to-nim attempt produced empty output (py launcher; rerun passed, as in C-11) | `data/nim-*.jsonl`, `data/*-to-nim.jsonl`, 2026-10-26; `harness/nim-pair/` |
 
+| C-25 | (strong pilot) Pooled over seeds, 50 ms RTT, random loss both directions, paired Connect difference hybrid − classical: rust −36 (−59, −15) / −59 (−98, −23) / −61 (−122, −1) ms at 2/5/10% (n=400 each); go +9.5 (+0.8, +18) / +7 (−6, +21) / +37 (+20, +54) ms (n=400/400/660). With no loss, hybrid carries about one extra datagram each way (go 8.7 vs 7.6 c2s, 7.5 vs 6.6 s2c). go qlog: RTT estimates equal for both variants | `data/bench/randomloss-*`, `data/bench/qlog-go10-*`, `notes/phase2-random-loss.md` |
+
 ## Not yet measured
 
 - nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).

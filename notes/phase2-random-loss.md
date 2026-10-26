@@ -69,3 +69,30 @@ confirmation / HANDSHAKE_DONE? 1-RTT recovery state seeded by the hybrid handsha
   "hybrid handshake inflates the RTT estimate and so the 1-RTT PTO" hypothesis is **rejected**. Handshake-space PTO
   expiries: 10/60 hybrid vs 5/60 classical, and handshake confirmation came later (mean 255 vs 224 ms), but this cell's
   Connect difference is not significant (+4.7 ms, CI −49, +62). Needs a larger qlog run.
+
+## Pooled result and a working explanation (2026-10-27, early)
+
+Pooled paired Connect difference, hybrid − classical (seeds 23 + 41; go 10% also seeds 77 and 91; bootstrap 95% CI):
+
+| loss | rust | go |
+|---|---|---|
+| 2% | −36 (−59, −15), n=400 | +9.5 (+0.8, +18), n=400 |
+| 5% | −59 (−98, −23), n=400 | +7 (−6, +21), n=400 |
+| 10% | −61 (−122, −1), n=400 | +37 (+20, +54), n=660 |
+
+200-pair qlog run (go 10%, seed 91, `qlog-go10-n200-*`): RTT estimates match on both sides (client srtt 65.7 vs 65.7,
+server 66.4 vs 64.8), so the hybrid handshake does not distort the RTT estimate. Hybrid connections show slightly more loss
+activity: client lost packets per connection 0.5 vs 0.3, and connections with a server 1-RTT PTO expiry 103 vs 86 (of ~185).
+
+Exposure: with no loss, a hybrid connection carries about one extra datagram each way (go 8.7 vs 7.6 c2s, 7.5 vs 6.6 s2c;
+rust 13.5 vs 12.0, 12.0 vs 10.8), from the 1,216 B client share and 1,120 B server share.
+
+**Working explanation (hypothesis; arithmetic, not a fit):**
+- Penalty ≈ Δpackets × p × cost per recovered loss. With Δ ≈ 2 and ≈ 200 ms per recovery on quic-go: ≈ 8 ms at 2%,
+  ≈ 40 ms at 10%. Measured on go: +9.5 and +37.
+- Benefit: a lost first ClientHello packet is recovered by the 9/8·RTT time threshold instead of the pre-sample PTO (C-18, C-21).
+  It is worth p × (PTO₀ − ~1.5 RTT): small on quic-go (PTO₀ = 200 ms), large on quinn (PTO₀ ≈ 1 s).
+- Net: quinn stacks (rust, js) gain from hybrid under loss; quic-go loses a little at high loss. Both stacks follow the same
+  RFC 9002 rules; only the initial-RTT default differs (C-20).
+- To test properly: (1) quic-go with initial RTT forced to 333 ms should behave like quinn; (2) quinn with 100 ms
+  should behave like quic-go. Both are one-line harness changes, and the run would turn the explanation into a measurement.

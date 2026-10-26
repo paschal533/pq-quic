@@ -39,13 +39,16 @@ def recovery_summary(path: Path) -> dict:
         line = line.lstrip("\x1e").strip()
         if not line.startswith('{"time"'):
             continue
-        e = json.loads(line)
+        try:
+            e = json.loads(line)
+        except json.JSONDecodeError:
+            continue  # the listener is killed at the end of a run, so its last lines can be cut off
         name, d, t = e["name"], e.get("data", {}), e["time"]
         if name == "recovery:metrics_updated" and "smoothed_rtt" in d:
             srtt, rttvar = d["smoothed_rtt"], d.get("rtt_variance", rttvar)
             if s["first_rtt"] is None:
                 s["first_rtt"] = d.get("latest_rtt")
-        elif name == "security:key_discarded" and d.get("key_type") == "client_handshake_secret" and s["t_confirm"] is None:
+        elif name == "security:key_discarded" and d.get("key_type") in ("client_handshake_secret", "server_handshake_secret") and s["t_confirm"] is None:
             s.update(t_confirm=t, srtt_at_confirm=srtt, rttvar_at_confirm=rttvar)
         elif name == "recovery:loss_timer_updated" and d.get("timer_type") == "pto":
             space = d.get("packet_number_space")
@@ -63,9 +66,16 @@ def recovery_summary(path: Path) -> dict:
 def main(csv_path: str, trace: str, qdir: str) -> int:
     odcid = odcid_by_client(trace)
     rows = list(csv.DictReader(open(csv_path, encoding="utf-8")))
+    for side in ("client", "server"):
+        print(f"--- {side} qlogs")
+        report(rows, odcid, qdir, side)
+    return 0
+
+
+def report(rows: list[dict], odcid: dict[int, str], qdir: str, side: str) -> None:
     by_variant: dict[str, list[dict]] = {"hybrid": [], "classical": []}
     for i, r in enumerate(rows):
-        q = Path(qdir) / f"{odcid.get(i + 1, '')}_client.sqlog"
+        q = Path(qdir) / f"{odcid.get(i + 1, '')}_{side}.sqlog"
         if not q.exists():
             continue
         s = recovery_summary(q)
@@ -84,7 +94,6 @@ def main(csv_path: str, trace: str, qdir: str) -> int:
               f"srtt@confirm={m([s['srtt_at_confirm'] for s in ss])} rttvar@confirm={m([s['rttvar_at_confirm'] for s in ss])} "
               f"t_confirm={m([s['t_confirm'] for s in ss])} max_app_pto={m([s['max_app_pto'] for s in ss])} "
               f"lost/conn={m([s['lost'] for s in ss])} conns with PTO expiry: initial={init_pto} handshake={hs_pto} app={app_pto}")
-    return 0
 
 
 if __name__ == "__main__":
