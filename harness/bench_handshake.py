@@ -76,10 +76,17 @@ def add_trace_times(rows: list[dict], trace: str) -> None:
     out = subprocess.run([sys.executable, str(HERE / "tap" / "handshake_time.py"), trace],
                          capture_output=True, text=True).stdout
     by_client = {d["client"]: d for d in map(json.loads, out.splitlines())}
+    keys = Path(trace).with_suffix(".keys")
+    if keys.exists():  # Handshake-space decryption: the client's Finished time
+        hs = subprocess.run([sys.executable, str(HERE / "tap" / "handshake_space.py"), trace, str(keys)],
+                            capture_output=True, text=True).stdout
+        for d in map(json.loads, hs.splitlines()):
+            by_client.setdefault(d["client"], {})["finished_ms"] = d.get("finished_ms")
     for i, r in enumerate(rows):
         d = by_client.get(i + 1, {})
         r["trace_hs_ms"] = d.get("handshake_ms")
         r["trace_complete_ms"] = d.get("complete_ms")
+        r["trace_finished_ms"] = d.get("finished_ms")
         r["c2s_dropped"] = d.get("c2s_dropped")
 
 
@@ -126,6 +133,8 @@ def main() -> int:
     p.add_argument("--loss", type=float, default=0.0)
     p.add_argument("--seed", type=int, default=1)
     p.add_argument("--drop-c2s", default="", help="passed to the tap: 1-based c2s datagrams to drop per connection")
+    p.add_argument("--keylog", action="store_true",
+                   help="peers write TLS secrets to <trace>.keys (SSLKEYLOGFILE) so Handshake packets can be decrypted")
     p.add_argument("--out", required=True)
     a = p.parse_args()
 
@@ -135,6 +144,10 @@ def main() -> int:
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     trace = str(Path(a.out).with_suffix(".jsonl"))
 
+    if a.keylog:  # inherited by the listener and every dialer
+        keys = Path(trace).with_suffix(".keys")
+        keys.unlink(missing_ok=True)
+        os.environ["SSLKEYLOGFILE"] = str(keys)
     listener, peer, listener_log = start_listener(stack["listen"](lp))
     tap = subprocess.Popen(
         [sys.executable, str(HERE / "tap" / "quic_tap.py"), "--listen", str(tp), "--upstream", str(lp),
@@ -163,7 +176,7 @@ def main() -> int:
     time.sleep(0.5)
     add_trace_times(rows, trace)
     with open(a.out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "c2s_dropped"])
+        w = csv.DictWriter(f, fieldnames=["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "trace_finished_ms", "c2s_dropped"])
         w.writeheader()
         w.writerows(rows)
 

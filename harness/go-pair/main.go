@@ -6,6 +6,8 @@
 //	-mode dial   dial -peer at 127.0.0.1:-dial-port and report the handshake
 //
 // GODEBUG=tlsmlkem=0 turns off Go's default X25519MLKEM768 for classical baselines.
+// SSLKEYLOGFILE=<path> appends TLS secrets (NSS key log format) so the tap decoder
+// can decrypt Handshake packets. Test harness only: it breaks the security of the logged connections.
 package main
 
 import (
@@ -13,12 +15,14 @@ import (
 	"flag"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/libp2p/go-libp2p"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/network"
 	"github.com/libp2p/go-libp2p/core/peer"
+	p2ptls "github.com/libp2p/go-libp2p/p2p/security/tls"
 	quic "github.com/libp2p/go-libp2p/p2p/transport/quic"
 	webtransport "github.com/libp2p/go-libp2p/p2p/transport/webtransport"
 	ma "github.com/multiformats/go-multiaddr"
@@ -41,9 +45,23 @@ func listenWebTransport(port, seconds int) {
 	time.Sleep(time.Duration(seconds) * time.Second)
 }
 
+// quicTransport is the QUIC transport, with a TLS key log when SSLKEYLOGFILE is set
+// (the same variable rustls reads, so both harnesses are switched the same way).
+func quicTransport() libp2p.Option {
+	path := os.Getenv("SSLKEYLOGFILE")
+	if path == "" {
+		return libp2p.Transport(quic.NewTransport)
+	}
+	f, err := os.OpenFile(path, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0o600)
+	if err != nil {
+		log.Fatalf("SSLKEYLOGFILE: %v", err)
+	}
+	return libp2p.Transport(quic.NewTransport, quic.WithTLSIdentityOption(p2ptls.WithKeyLogWriter(f)))
+}
+
 func newListener(port int) host.Host {
 	h, err := libp2p.New(
-		libp2p.Transport(quic.NewTransport),
+		quicTransport(),
 		libp2p.ListenAddrStrings(fmt.Sprintf("/ip4/127.0.0.1/udp/%d/quic-v1", port)),
 	)
 	if err != nil {
@@ -53,7 +71,7 @@ func newListener(port int) host.Host {
 }
 
 func dial(id peer.ID, port int) {
-	dialer, err := libp2p.New(libp2p.Transport(quic.NewTransport), libp2p.NoListenAddrs)
+	dialer, err := libp2p.New(quicTransport(), libp2p.NoListenAddrs)
 	if err != nil {
 		log.Fatalf("dialer: %v", err)
 	}

@@ -10,7 +10,7 @@ from pathlib import Path
 
 from bench_handshake import add_trace_times
 
-FIELDS = ["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "c2s_dropped"]
+FIELDS = ["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "trace_finished_ms", "c2s_dropped"]
 
 
 def main(paths: list[str]) -> int:

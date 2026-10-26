@@ -7,7 +7,7 @@ outdir=../data/bench/randomloss-$stamp
 mkdir -p "$outdir"
 for stack in rust go; do
   for loss in 0.02 0.05 0.10; do
-    python bench_handshake.py --stack $stack --pairs 200 --delay-ms 25 --loss $loss --seed 23 \
+    python bench_handshake.py --stack $stack --pairs 200 --delay-ms 25 --loss $loss --seed ${SEED:-23} ${EXTRA:-} \
       --out "$outdir/$stack-loss$loss.csv" | tee -a "$outdir/summary.txt"
   done
 done
