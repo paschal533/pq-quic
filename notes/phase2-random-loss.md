@@ -59,3 +59,13 @@ the client's Finished**: elapsed − Finished-delivered, mean hybrid 77/106/124 
 p90 tail. Loss of the client Finished is equal across variants (2.1 vs 1.6%, 4.6 vs 4.6%, 11.0 vs 11.1%), so that isn't the cause.
 Open question for next session: what in go-libp2p's Connect after the handshake (Identify? handshake
 confirmation / HANDSHAKE_DONE? 1-RTT recovery state seeded by the hybrid handshake's RTT samples) is slower after a hybrid handshake.
+
+### Go post-handshake gap: first diagnostics (2026-10-26 night)
+
+- go-libp2p `BasicHost.Connect` waits for Identify after the handshake (`p2p/host/basic/basic_host.go:576`,
+  `<-h.ids.IdentifyWait(c)`). That settles the pilot hypothesis: Go's Connect = handshake + one Identify round trip.
+- qlog (QLOGDIR, `harness/tap/qlog_recovery.py`), 60 pairs at 10% loss (`data/bench/qlog-go10-20261026T223039Z/`):
+  RTT estimates at handshake confirmation are identical (srtt 69.6 vs 70.8 ms, rttvar 29.4 vs 29.6), so the
+  "hybrid handshake inflates the RTT estimate and so the 1-RTT PTO" hypothesis is **rejected**. Handshake-space PTO
+  expiries: 10/60 hybrid vs 5/60 classical, and handshake confirmation came later (mean 255 vs 224 ms), but this cell's
+  Connect difference is not significant (+4.7 ms, CI −49, +62). Needs a larger qlog run.
