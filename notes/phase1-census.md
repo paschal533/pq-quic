@@ -13,7 +13,7 @@ Rows are dialers, columns are listeners. "PQ" = X25519MLKEM768 selected, no Hell
 | py-libp2p + aioquic#634 | PQ (C-11) | PQ (C-11) | not run | — | not run |
 | Chrome 155 (WebTransport) | PQ (C-15) | not run | — | — | — |
 
-nim-libp2p: not measured yet (see CLAIMS "Not yet measured").
+nim-libp2p (master 881082e, lsquic + BoringSSL): PQ by default (X25519MLKEM768 + X25519 shares); interoperates PQ with go, rust, js and py+#634 in both directions; classical fallback to X25519, HRR absent (C-24).
 
 ## What the census says so far
 
@@ -34,7 +34,6 @@ nim-libp2p: not measured yet (see CLAIMS "Not yet measured").
 
 ## Still to do in Phase 1
 
-- nim-libp2p (blocked on tooling approval).
 - js ↔ py and Chrome ↔ rust cells, for completeness. No surprise expected: js and Chrome behave like rust.
 - A classical-only dialer against each PQ listener (Go GODEBUG / Rust patch), to confirm "no HRR"
   from the other direction too.

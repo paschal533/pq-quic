@@ -37,9 +37,11 @@ Every number that reaches prose comes from this file, and every row points at it
 | C-22 | (strong pilot) Random loss 2% / 5% each direction, 50 ms RTT, 200 pairs, rust-libp2p: hybrid Connect is faster on average than classical, paired mean −40 ms (95% CI −73, −12) and −65 ms (−115, −19). Dials over 500 ms: 0% vs 5.0% and 1.0% vs 10.0%. At 10%: +4 ms (−91, +104), no difference | `data/bench/randomloss-20261026T210107Z/rust-*.csv`, `notes/phase2-random-loss.md` |
 | C-23 | (strong pilot) Same setup, go-libp2p: no difference at 2% (+5, CI −8, +18) or 5% (−6, CI −26, +12). At 10%, hybrid is slower: +50 ms (+21, +78); medians 256 vs 139 ms. Cause unexplained, and not visible in the client's first Handshake packet | `data/bench/randomloss-20261026T210107Z/go-*.csv` |
 
+| C-24 | nim-libp2p master 881082e (libp2p 2.4.0, lsquic 0.11.2, nim-boringssl 0.0.14, built with `-d:BORINGSSL_USE_ASM=false`, Nim 2.2.10, Windows): offers `X25519MLKEM768, X25519, secp256r1, secp384r1` with two shares (1,216 + 32 B), ClientHello 1,446 B, signature_algorithms only `ed25519, ecdsa_secp256r1_sha256`. nim with nim, go, rust, js (both directions) and py-libp2p with aioquic #634 (both directions): X25519MLKEM768, HRR absent, listener accepts. Classical-only go (`tlsmlkem=0`) and rust (`PQQUIC_CLASSICAL=1`) dialers to nim: X25519, HRR absent. Stock py-libp2p 0.8.1 (aioquic 1.7.0) with nim: X25519 both directions (nim picks X25519 from four classical shares). One py-to-nim attempt produced empty output (py launcher; rerun passed, as in C-11) | `data/nim-*.jsonl`, `data/*-to-nim.jsonl`, 2026-10-26; `harness/nim-pair/` |
+
 ## Not yet measured
 
-- nim-libp2p (lsquic + BoringSSL). Blocked 2026-10-26: building nim-libp2p master's dependencies needs a newer nimble (CI pins 0.24.1; local is 0.22.2), and fetching/building them was held for the author's approval.
+- nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).
 
 ## Method notes
 
