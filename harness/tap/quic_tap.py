@@ -97,6 +97,7 @@ class Tap:
                         "hex": data.hex(),
                     }) + "\n")
                     count += 1
+                out.flush()  # the bench terminates the tap; unflushed lines would be lost
                 self.flush_due()
             out.flush()
         print(f"tap done, {count} datagrams -> {out_path}", flush=True)

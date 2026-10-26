@@ -3,7 +3,9 @@
 Under small random loss most handshakes lose nothing, so medians hide the effect.
 What matters is the mean penalty and the tail (how often a handshake stalls).
 
-  python analyse_loss.py ../data/bench/randomloss-<stamp>/*.csv
+  python analyse_loss.py [--metric trace_complete_ms|trace_hs_ms|elapsed_ms] ../data/bench/randomloss-<stamp>/*.csv
+
+Default metric: trace_complete_ms (first delivered client 1-RTT packet).
 """
 
 import csv
@@ -16,11 +18,11 @@ STALL_MS = 500.0      # a handshake slower than this has waited for a pre-sample
 BOOTSTRAP_ROUNDS = 2000
 
 
-def load(path: str) -> dict[int, dict[str, float | None]]:
+def load(path: str, metric: str) -> dict[int, dict[str, float | None]]:
     pairs: dict[int, dict[str, float | None]] = {}
     with open(path, encoding="utf-8") as f:
         for r in csv.DictReader(f):
-            v = r["trace_hs_ms"]
+            v = r[metric]
             pairs.setdefault(int(r["pair"]), {})[r["variant"]] = float(v) if v not in ("", "None", "nan") else None
     return pairs
 
@@ -42,10 +44,13 @@ def paired_mean_diff_ci(diffs: list[float], seed: int = 1) -> tuple[float, float
     return statistics.fmean(diffs), pct(means, 0.025), pct(means, 0.975)
 
 
-def main(paths: list[str]) -> int:
-    for path in paths:
-        pairs = load(path)
-        print(Path(path).stem)
+def main(args: list[str]) -> int:
+    metric = "trace_complete_ms"
+    if args[:1] == ["--metric"]:
+        metric, args = args[1], args[2:]
+    for path in args:
+        pairs = load(path, metric)
+        print(f"{Path(path).stem} [{metric}]")
         for v in ("hybrid", "classical"):
             xs = [p[v] for p in pairs.values() if p.get(v) is not None]
             missing = sum(1 for p in pairs.values() if p.get(v) is None)

@@ -79,6 +79,7 @@ def add_trace_times(rows: list[dict], trace: str) -> None:
     for i, r in enumerate(rows):
         d = by_client.get(i + 1, {})
         r["trace_hs_ms"] = d.get("handshake_ms")
+        r["trace_complete_ms"] = d.get("complete_ms")
         r["c2s_dropped"] = d.get("c2s_dropped")
 
 
@@ -162,7 +163,7 @@ def main() -> int:
     time.sleep(0.5)
     add_trace_times(rows, trace)
     with open(a.out, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["pair", "variant", "elapsed_ms", "trace_hs_ms", "c2s_dropped"])
+        w = csv.DictWriter(f, fieldnames=["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "c2s_dropped"])
         w.writeheader()
         w.writerows(rows)
 
