@@ -46,3 +46,16 @@ Medians are equal in every cell except go 10% (256 vs 139) and rust 10% (129 vs 
 1. Key log + Handshake decryption → true handshake-complete time, and an explanation for go 10%.
 2. Repeat with a different seed (and more pairs for the 10% cells, where the CIs are wide).
 3. Linux netem cross-check of one cell.
+
+## Replication, seed 41, with Handshake decryption (randomloss-20261026T215115Z)
+
+Connect time, paired mean hybrid − classical (95% CI):
+- rust: 2% −33 (−66, −4) · 5% −54 (−107, −2) · 10% **−126 (−204, −53)**. Replicates seed 23, and 10% is now significant too.
+- go: 2% +14 (+2, +25) · 5% +21 (+2, +40) · 10% +49 (+18, +80). Hybrid is slower at every level on this seed. Seed 23 showed it only at 10%.
+
+Client Finished time (decrypted, `trace_finished_ms`): rust −38 / −84 / −55, go +4 / −5 / **+35 (+13, +58)**.
+So on Go, the handshake itself is only slower at 10%. The rest of Go's penalty comes **after the server has received
+the client's Finished**: elapsed − Finished-delivered, mean hybrid 77/106/124 vs classical 70/79/106 ms, with a longer
+p90 tail. Loss of the client Finished is equal across variants (2.1 vs 1.6%, 4.6 vs 4.6%, 11.0 vs 11.1%), so that isn't the cause.
+Open question for next session: what in go-libp2p's Connect after the handshake (Identify? handshake
+confirmation / HANDSHAKE_DONE? 1-RTT recovery state seeded by the hybrid handshake's RTT samples) is slower after a hybrid handshake.

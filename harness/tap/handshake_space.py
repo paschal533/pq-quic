@@ -11,6 +11,7 @@ Output, one JSON line per client:
                 carries the last byte of the client's Finished: the client's TLS
                 handshake is complete when it sends this.
   server_flight_ms  first server datagram carrying the last byte of the server's Finished.
+  *_delivered_ms    the same, counting only datagrams the tap delivered (not dropped).
 
   python handshake_space.py trace.jsonl trace.keys
 """
@@ -134,7 +135,7 @@ def client_timing(recs: list[dict], keylog: dict[str, dict[str, bytes]]) -> dict
         return {"error": "no client Initial"}
     ikeys = {"c2s": initial_keys(odcid, "client"), "s2c": initial_keys(odcid, "server")}
     init_frames = {"c2s": [], "s2c": []}
-    hs_packets = {"c2s": [], "s2c": []}  # (t, raw, pn_offset)
+    hs_packets = {"c2s": [], "s2c": []}  # (t, raw, pn_offset, dropped)
     for r in recs:
         for p in split_datagram(bytes.fromhex(r["hex"])):
             if p.ptype == INITIAL:
@@ -143,7 +144,7 @@ def client_timing(recs: list[dict], keylog: dict[str, dict[str, bytes]]) -> dict
                 except Exception:
                     pass  # e.g. a later Initial under different keys; not needed
             elif p.ptype == HANDSHAKE:
-                hs_packets[r["dir"]].append((r["t"], p.raw, p.pn_offset))
+                hs_packets[r["dir"]].append((r["t"], p.raw, p.pn_offset, bool(r.get("dropped"))))
     ch = dict(handshake_messages(assemble(init_frames["c2s"]))).get(1)
     sh = dict(handshake_messages(assemble(init_frames["s2c"]))).get(2)
     if ch is None or sh is None:
@@ -157,15 +158,19 @@ def client_timing(recs: list[dict], keylog: dict[str, dict[str, bytes]]) -> dict
     for d, label, field in (("c2s", "CLIENT_HANDSHAKE_TRAFFIC_SECRET", "finished_ms"),
                             ("s2c", "SERVER_HANDSHAKE_TRAFFIC_SECRET", "server_flight_ms")):
         k = hs_keys(entry[label], suite)
-        frames = []
-        for t, raw, pn_off in hs_packets[d]:
+        frames, delivered = [], []
+        for t, raw, pn_off, dropped in hs_packets[d]:
             try:
-                frames.extend((t, off, data) for off, data in crypto_frames(decrypt_long(raw, pn_off, k))[0])
+                got = [(t, off, data) for off, data in crypto_frames(decrypt_long(raw, pn_off, k))[0]]
             except Exception:
                 continue
+            frames.extend(got)
+            if not dropped:
+                delivered.extend(got)
         end = stream_end_of(assemble([(o, b) for _, o, b in frames]), HS_FINISHED)
-        t = first_covering(frames, end - 1) if end else None
-        out[field] = round((t - t0) * 1000, 2) if t is not None else None
+        for name, fs in ((field, frames), (field.replace("_ms", "_delivered_ms"), delivered)):
+            t = first_covering(fs, end - 1) if end else None
+            out[name] = round((t - t0) * 1000, 2) if t is not None else None
     return out
 
 
