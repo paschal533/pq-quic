@@ -41,6 +41,8 @@ Every number that reaches prose comes from this file, and every row points at it
 
 | C-25 | (strong pilot) Pooled over seeds, 50 ms RTT, random loss both directions, paired Connect difference hybrid − classical: rust −36 (−59, −15) / −59 (−98, −23) / −61 (−122, −1) ms at 2/5/10% (n=400 each); go +9.5 (+0.8, +18) / +7 (−6, +21) / +37 (+20, +54) ms (n=400/400/660). With no loss, hybrid carries about one extra datagram each way (go 8.7 vs 7.6 c2s, 7.5 vs 6.6 s2c). go qlog: RTT estimates equal for both variants | `data/bench/randomloss-*`, `data/bench/qlog-go10-*`, `notes/phase2-random-loss.md` |
 
+| C-26 | (strong pilot, causal) rust-libp2p with quinn initial RTT forced to 67 ms (first PTO ≈ 200 ms, like quic-go; harness patch `PQQUIC_INITIAL_RTT_MS`), seed 23, 200 pairs: hybrid − classical Connect +9.9 (−0.4, +19.8) / +16.4 (−0.7, +35.2) / +49.6 (+20.7, +80.3) ms at 2/5/10%, versus −40 / −65 / +4 with the 333 ms default on the same seed. Prediction recorded before the run (`notes/prediction-rtt67.md`, commit 85b716f) | `data/bench/randomloss-rust-rtt67-20261026T230550Z/` |
+
 ## Not yet measured
 
 - nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).
