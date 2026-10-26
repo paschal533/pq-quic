@@ -3,9 +3,9 @@
 set -u
 cd "$(dirname "$0")"
 stamp=$(date -u +%Y%m%dT%H%M%SZ)
-outdir=../data/bench/randomloss-$stamp
+outdir=../data/bench/randomloss${TAG:+-$TAG}-$stamp
 mkdir -p "$outdir"
-for stack in rust go; do
+for stack in ${STACKS:-rust go}; do
   for loss in 0.02 0.05 0.10; do
     python bench_handshake.py --stack $stack --pairs 200 --delay-ms 25 --loss $loss --seed ${SEED:-23} ${EXTRA:-} \
       --out "$outdir/$stack-loss$loss.csv" | tee -a "$outdir/summary.txt"
