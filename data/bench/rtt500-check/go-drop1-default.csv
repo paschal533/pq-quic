@@ -1,0 +1,11 @@
+pair,variant,elapsed_ms,trace_hs_ms,trace_complete_ms,trace_finished_ms,c2s_dropped
+0,classical,326.609,258.29,258.29,,1
+0,hybrid,222.521,152.32,152.32,,1
+1,classical,343.313,275.18,275.18,,1
+1,hybrid,212.683,145.35,145.35,,1
+2,hybrid,220.092,154.33,154.33,,1
+2,classical,343.162,273.18,273.18,,1
+3,classical,327.972,260.46,260.46,,1
+3,hybrid,204.664,138.43,138.43,,1
+4,hybrid,218.168,153.83,153.83,,1
+4,classical,343.456,266.79,266.79,,1

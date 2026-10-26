@@ -93,3 +93,6 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 	lukechampine.com/blake3 v1.4.1 // indirect
 )
+
+// Measurement patch: PQQUIC_INITIAL_RTT_MS sets quic-go's initial RTT (see vendor-quic-go/internal/utils/rtt_stats.go).
+replace github.com/quic-go/quic-go => ./vendor-quic-go
