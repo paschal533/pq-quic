@@ -43,6 +43,8 @@ Every number that reaches prose comes from this file, and every row points at it
 
 | C-26 | (strong pilot, causal) rust-libp2p with quinn initial RTT forced to 67 ms (first PTO ≈ 200 ms, like quic-go; harness patch `PQQUIC_INITIAL_RTT_MS`), seed 23, 200 pairs: hybrid − classical Connect +9.9 (−0.4, +19.8) / +16.4 (−0.7, +35.2) / +49.6 (+20.7, +80.3) ms at 2/5/10%, versus −40 / −65 / +4 with the 333 ms default on the same seed. Prediction recorded before the run (`notes/prediction-rtt67.md`, commit 85b716f) | `data/bench/randomloss-rust-rtt67-20261026T230550Z/` |
 
+| C-27 | (strong pilot) Inverse of C-26: go-libp2p with quic-go initial RTT forced to 500 ms (first PTO 1,000 ms; harness patch), seed 23, 200 pairs: hybrid − classical Connect −1.8 (−35, +29) / +6.1 (−52, +62) / −21.7 (−101, +60) ms at 2/5/10%. Moves the predicted way at 10% but does not reproduce rust's clear hybrid gain at 2–5%. Stall rate > 500 ms at 2%: 2.5% hybrid vs 3.0% classical. So the timer explanation is one-directional (`notes/prediction-go-rtt500.md`, prediction commit d1dab95) | `data/bench/randomloss-go-rtt500-20261026T232413Z/` |
+
 ## Not yet measured
 
 - nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).
