@@ -1,6 +1,8 @@
 package quic
 
 import (
+	"os"
+	"strconv"
 	"fmt"
 	"time"
 
@@ -24,6 +26,10 @@ func (c *Config) maxRetryTokenAge() time.Duration {
 
 func (c *Config) initialPacketSize() protocol.ByteCount {
 	if c.InitialPacketSize == 0 {
+		// Measurement patch (PQ-QUIC harness): PQQUIC_INITIAL_PACKET_SIZE overrides the 1,280-B default.
+		if v, err := strconv.Atoi(os.Getenv("PQQUIC_INITIAL_PACKET_SIZE")); err == nil && v >= int(protocol.MinInitialPacketSize) {
+			return protocol.ByteCount(v)
+		}
 		return protocol.InitialPacketSize
 	}
 	return protocol.ByteCount(c.InitialPacketSize)
