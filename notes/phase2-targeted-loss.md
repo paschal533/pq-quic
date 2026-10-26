@@ -39,10 +39,19 @@ client within the run.)
   acknowledged one isn't detected by the ACK. The client waits for a probe timeout, now computed
   from a real RTT sample, so it is shorter: about +200 ms on both stacks.
 
-To check before stating: the initial-RTT defaults behind these timers (quinn ≈ 333 ms giving
-≈ 1 s; quic-go ≈ 100 ms) and the exact loss-detection rule from RFC 9002, quoted from the
-source. The numbers above are consistent with those defaults, but I have not read the code or RFC
-text in this session.
+**Verified 2026-10-26 (C-20, C-21):**
+- quinn (rust-libp2p, js-libp2p-quic): initial RTT 333 ms, so the first PTO is 999 ms, as RFC 9002 §6.2.2 recommends.
+- quic-go (go-libp2p): `DefaultInitialRTT = 100 ms` and `PTO = 2 × 100 ms = 200 ms` before a sample. That is shorter than the
+  RFC's 333 ms SHOULD, which is why Go's classical penalty is so much smaller.
+- Hybrid part-1 loss is caught by the time threshold (9/8 × RTT after the lost packet was sent), not by a PTO.
+  That is why it costs about 1.1–1.8 RTT, whatever the stack's initial-RTT default.
+- Part-2 loss (the last packet in flight) can only be caught by a PTO, which now uses the measured RTT
+  (≈ srtt + 4·rttvar): about 200 ms on both stacks at 50 ms RTT.
+
+So the asymmetry is a property of RFC 9002, not of one library: a one-packet first flight has nothing
+behind it to trigger time-threshold detection. Its loss always costs the pre-sample PTO, 1 s by the RFC's
+recommendation. Any stack that follows the RFC default (quinn, and so rust and js libp2p) should show the
+large classical penalty. quic-go's shorter default hides most of it.
 
 ## What this suggests (hypothesis for the real runs)
 
