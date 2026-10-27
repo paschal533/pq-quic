@@ -8,6 +8,8 @@ only its own Connect/dial call.
   python bench_handshake.py --stack go --pairs 30 --delay-ms 25 --loss 0 --out ../data/bench/x.csv
 """
 
+from __future__ import annotations
+
 import argparse
 import csv
 import json

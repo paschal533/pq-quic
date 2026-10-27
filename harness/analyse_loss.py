@@ -8,6 +8,8 @@ What matters is the mean penalty and the tail (how often a handshake stalls).
 Default metric: trace_complete_ms (first delivered client 1-RTT packet).
 """
 
+from __future__ import annotations
+
 import csv
 import random
 import statistics
