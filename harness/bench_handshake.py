@@ -22,8 +22,9 @@ import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-GO = str(HERE / "go-pair" / "gopair.exe")
-RS = str(HERE / "rust-pair" / "target" / "release" / "rust-pair.exe")
+# PQQUIC_GO_BIN / PQQUIC_RS_BIN point at other builds (the Linux netem container uses them).
+GO = os.environ.get("PQQUIC_GO_BIN", str(HERE / "go-pair" / "gopair.exe"))
+RS = os.environ.get("PQQUIC_RS_BIN", str(HERE / "rust-pair" / "target" / "release" / "rust-pair.exe"))
 
 STACKS = {
     "go": {
@@ -135,6 +136,9 @@ def main() -> int:
     p.add_argument("--drop-c2s", default="", help="passed to the tap: 1-based c2s datagrams to drop per connection")
     p.add_argument("--keylog", action="store_true",
                    help="peers write TLS secrets to <trace>.keys (SSLKEYLOGFILE) so Handshake packets can be decrypted")
+    p.add_argument("--direct", action="store_true",
+                   help="no tap: dial the listener directly and leave impairment to the OS (e.g. netem on lo); "
+                        "--delay-ms/--loss/--drop-c2s are then only recorded, not applied")
     p.add_argument("--out", required=True)
     a = p.parse_args()
 
@@ -149,11 +153,13 @@ def main() -> int:
         keys.unlink(missing_ok=True)
         os.environ["SSLKEYLOGFILE"] = str(keys)
     listener, peer, listener_log = start_listener(stack["listen"](lp))
-    tap = subprocess.Popen(
+    tap = None if a.direct else subprocess.Popen(
         [sys.executable, str(HERE / "tap" / "quic_tap.py"), "--listen", str(tp), "--upstream", str(lp),
          "--out", trace, "--seconds", "100000", "--delay-ms", str(a.delay_ms),
          "--loss", str(a.loss), "--seed", str(a.seed), "--drop-c2s", a.drop_c2s],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    if a.direct:
+        tp = lp
     time.sleep(1.0)
 
     # Warm-up: the listener's first connection is slower (pilot finding), so discard one dial.
@@ -170,18 +176,20 @@ def main() -> int:
                 ms = dial_once(stack["dial"](tp, peer), env)
                 rows.append({"pair": i, "variant": variant, "elapsed_ms": ms})
     finally:
-        tap.terminate()
+        if tap:
+            tap.terminate()
         listener.kill()
 
     time.sleep(0.5)
-    add_trace_times(rows, trace)
+    if not a.direct:
+        add_trace_times(rows, trace)
     with open(a.out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["pair", "variant", "elapsed_ms", "trace_hs_ms", "trace_complete_ms", "trace_finished_ms", "c2s_dropped"])
         w.writeheader()
         w.writerows(rows)
 
     s = summarise(rows)
-    print(f"{a.stack} delay={a.delay_ms}ms one-way loss={a.loss} pairs={a.pairs}: "
+    print(f"{a.stack}{' direct' if a.direct else ''} delay={a.delay_ms}ms one-way loss={a.loss} pairs={a.pairs}: "
           + ", ".join(f"{k}={v:.3f}" if isinstance(v, float) else
                       f"{k}=({v[0]:.3f},{v[1]:.3f})" if isinstance(v, tuple) else f"{k}={v}"
                       for k, v in s.items()))

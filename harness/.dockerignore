@@ -1,0 +1,6 @@
+rust-pair/target/
+js-pair/
+nim-pair/
+**/*.exe
+**/__pycache__/
+go-pair/gopair-linux
