@@ -1,0 +1,4 @@
+qdisc netem 8001: root refcnt 2 limit 1000 delay 25ms loss 10%
+go direct delay=25.0ms one-way loss=0.1 pairs=200: pairs_complete=200, failed_hybrid=0, failed_classical=0, median_hybrid_ms=171.136, median_classical_ms=116.745, median_diff_ms=0.145, diff_iqr_ms=(-96.756,106.625), median_ratio=1.001, ratio_iqr=(0.645,1.863)
+  drop_c2s=[] trace_hybrid=none, trace_classical=none
+  listener accepted=401 (expected 401 incl. warm-up)

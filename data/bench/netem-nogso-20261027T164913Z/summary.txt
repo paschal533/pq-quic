@@ -1,0 +1,12 @@
+qdisc netem 8005: root refcnt 2 limit 1000 delay 25ms loss 2%
+rust direct delay=25.0ms one-way loss=0.02 pairs=200: pairs_complete=200, failed_hybrid=0, failed_classical=0, median_hybrid_ms=111.936, median_classical_ms=111.493, median_diff_ms=1.505, diff_iqr_ms=(-13.894,17.694), median_ratio=1.011, ratio_iqr=(0.902,1.139)
+  drop_c2s=[] trace_hybrid=none, trace_classical=none
+  listener accepted=401 (expected 401 incl. warm-up)
+qdisc netem 8006: root refcnt 2 limit 1000 delay 25ms loss 5%
+rust direct delay=25.0ms one-way loss=0.05 pairs=200: pairs_complete=200, failed_hybrid=0, failed_classical=0, median_hybrid_ms=97.931, median_classical_ms=95.677, median_diff_ms=2.931, diff_iqr_ms=(-4.039,17.227), median_ratio=1.031, ratio_iqr=(0.959,1.195)
+  drop_c2s=[] trace_hybrid=none, trace_classical=none
+  listener accepted=400 (expected 401 incl. warm-up)
+qdisc netem 8007: root refcnt 2 limit 1000 delay 25ms loss 10%
+rust direct delay=25.0ms one-way loss=0.1 pairs=200: pairs_complete=199, failed_hybrid=0, failed_classical=1, median_hybrid_ms=106.324, median_classical_ms=100.117, median_diff_ms=1.099, diff_iqr_ms=(-14.413,52.180), median_ratio=1.012, ratio_iqr=(0.882,1.441)
+  drop_c2s=[] trace_hybrid=none, trace_classical=none
+  listener accepted=394 (expected 401 incl. warm-up)

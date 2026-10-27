@@ -1,0 +1,4 @@
+go-loss0.10 [elapsed_ms]
+  hybrid    n=200 mean=223.9 median=171.1 p90=369.1 p99=1110.6 stall>500ms=3.5% missing=0
+  classical n=200 mean=203.2 median=116.7 p90=365.0 p99=547.8 stall>500ms=3.5% missing=0
+  paired mean(hybrid - classical) = +20.7 ms, 95% bootstrap CI [-7.6, +53.2] over 200 pairs

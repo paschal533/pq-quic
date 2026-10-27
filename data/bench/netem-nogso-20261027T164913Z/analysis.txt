@@ -1,0 +1,12 @@
+rust-loss0.02 [elapsed_ms]
+  hybrid    n=200 mean=146.3 median=111.9 p90=271.0 p99=450.7 stall>500ms=0.0% missing=0
+  classical n=200 mean=174.0 median=111.5 p90=291.0 p99=1171.9 stall>500ms=3.5% missing=0
+  paired mean(hybrid - classical) = -27.7 ms, 95% bootstrap CI [-55.0, -2.0] over 200 pairs
+rust-loss0.05 [elapsed_ms]
+  hybrid    n=200 mean=169.8 median=97.9 p90=264.8 p99=3419.0 stall>500ms=2.0% missing=0
+  classical n=200 mean=164.6 median=95.7 p90=116.3 p99=1162.3 stall>500ms=6.0% missing=0
+  paired mean(hybrid - classical) = +5.2 ms, 95% bootstrap CI [-52.4, +75.1] over 200 pairs
+rust-loss0.10 [elapsed_ms]
+  hybrid    n=200 mean=271.1 median=106.9 p90=393.8 p99=3432.1 stall>500ms=9.0% missing=0
+  classical n=199 mean=356.5 median=100.1 p90=1146.2 p99=3093.3 stall>500ms=19.6% missing=1
+  paired mean(hybrid - classical) = -84.8 ms, 95% bootstrap CI [-192.0, +21.4] over 199 pairs
