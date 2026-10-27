@@ -146,6 +146,12 @@ impl From<Config> for QuinnConfig {
         if let Some(ms) = std::env::var("PQQUIC_INITIAL_RTT_MS").ok().and_then(|v| v.parse::<u64>().ok()) {
             transport.initial_rtt(std::time::Duration::from_millis(ms));
         }
+        // Measurement patch (PQ-QUIC harness): PQQUIC_DISABLE_GSO=1 turns off UDP GSO, so each
+        // datagram reaches the qdisc on its own (netem on lo drops a GSO batch as one unit).
+        // Mirrors quic-go's QUIC_GO_DISABLE_GSO.
+        if matches!(std::env::var("PQQUIC_DISABLE_GSO").as_deref(), Ok("1") | Ok("true")) {
+            transport.enable_segmentation_offload(false);
+        }
         // Disable uni-directional streams.
         transport.max_concurrent_uni_streams(0u32.into());
         transport.max_concurrent_bidi_streams(max_concurrent_stream_limit.into());
