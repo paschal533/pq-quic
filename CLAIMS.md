@@ -47,6 +47,8 @@ Every number that reaches prose comes from this file, and every row points at it
 
 | C-28 | (strong pilot) Server-side probe effect. The hybrid ServerHello (1,178 B) spills into a second server Initial packet in quinn's 1,200-B datagrams (CRYPTO[0+1147] + [1147+31]) but fits in one quic-go 1,280-B datagram. When the server's first datagram is the first loss: rust default hybrid median Finished 243 ms vs classical 1,132 ms (n=26/26, seed 41); go with 500 ms initial RTT hybrid Connect 1,125 vs 1,197 ms (n=31/27), so hybrid stalls too. This explains why C-27 falls short of rust | `data/bench/targeted-*/{go,rust}-dropnone.jsonl` (frames), `randomloss-20261026T215115Z/rust-*`, `randomloss-go-rtt500-*`; `notes/prediction-go-rtt500.md` |
 
+| C-29 | (strong pilot, causal, both directions with C-26) go-libp2p with quic-go initial RTT 500 ms AND initial packet size 1,200 B (harness patches), seed 23, 200 pairs: hybrid − classical Connect −17.4 (−47, +12) / −54.0 (−101, −11) / −146.8 (−232, −63) ms at 2/5/10%. Stalls > 500 ms hybrid vs classical 0.5/4.0%, 2.5/7.5%, 9.0/20.5%. Server-first-datagram loss: hybrid 211 ms (2/22 stalls) vs classical 340 ms (13/29). Prediction recorded first (`notes/prediction-go-rtt500-1200.md`, commit 0f645c8) | `data/bench/randomloss-go-rtt500-1200-20261026T234643Z/` |
+
 ## Not yet measured
 
 - nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).
