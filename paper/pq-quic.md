@@ -1,6 +1,6 @@
 # Post-Quantum Key Exchange Is Already On in libp2p QUIC: What the Two-Datagram ClientHello Changes
 
-**Paschal Okwuosah** · Independent · DRAFT 2026-10-28 (Claude-drafted from `CLAIMS.md`; author to revise)
+**Paschal Okwuosa** · Independent · DRAFT 2026-10-28 (Claude-drafted from `CLAIMS.md`; author to revise)
 
 > Drafting rule: every number in this paper is a row of `CLAIMS.md` and is cited as (C-nn).
 > Anything else is labelled as a projection, a hypothesis or planned work. Bracketed `[TODO …]`
