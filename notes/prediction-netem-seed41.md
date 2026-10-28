@@ -32,3 +32,28 @@ to rescue a failure.
 - Next: rerun seed 41, both stacks, with nothing else running on the host and sleep disabled. That
   rerun is the replication. This is a rerun of the same pre-registered seed because of a documented
   confound, not an added seed.
+
+## Outcome of the clean rerun (2026-10-28, run `data/bench/netem-nogso-seed41-clean`, 09:35–10:08)
+
+Nothing else running on the host; sleep blocked for the run (`SetThreadExecutionState`, no settings
+change). Medians 108–115 ms, in line with seed 23. Pooled seeds 23 + 41 (the pre-registered test):
+
+| stack | loss | n | paired mean hybrid − classical | 95% CI | stall>500 hyb / cls |
+|---|---|---|---|---|---|
+| rust | 2%  | 400 | −32.6 | [−55.8, −12.4]  | 0.0% / 4.2% |
+| rust | 5%  | 400 | −39.9 | [−81.5, +1.6]   | 2.2% / 8.8% |
+| rust | 10% | 399 | −78.4 | [−142.8, −12.3] | 7.0% / 17.8% |
+| go   | 2%  | 400 | +1.3  | [−7.2, +9.2]    | 0.0% / 0.0% |
+| go   | 5%  | 400 | −2.3  | [−13.9, +9.3]   | 0.5% / 0.8% |
+| go   | 10% | 400 | +22.3 | [+3.1, +42.2]   | 3.5% / 4.8% |
+
+Against the criteria:
+- rust negative at every loss rate: **holds**. CI excludes 0 in ≥ 2 of 3: **holds** (2%, 10%).
+- go positive at 2% and 10%: **holds**. 10% CI excludes 0: **holds**. 5% either sign: −2.3, allowed.
+- rust stalls classical > hybrid: **holds** in all three.
+- go stalls "similar or higher for hybrid": similar (0/0, 0.5/0.8, 3.5/4.8); hybrid is slightly
+  *lower*, not higher. Reported as similar, with the direction noted.
+
+**The pooled test passes.** The sign of the hybrid-vs-classical difference under random loss reproduces
+on Linux with kernel netem, so C-25 is not an artefact of Windows loopback, timer resolution or the
+Python tap. Seed 41 alone (clean): rust −37.4 / −85.1 / −72.1, go −1.5 / −1.3 / +23.8.
