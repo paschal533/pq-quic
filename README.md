@@ -1,29 +1,82 @@
-# PQ-QUIC: hybrid post-quantum key exchange in libp2p QUIC, measured
+<h1 align="center">PQ-QUIC</h1>
+
+<p align="center"><b>Hybrid post-quantum key exchange in libp2p QUIC, measured.</b><br>
+Census, loss behaviour, NAT traversal and an on-path downgrade test, with every number traced to its evidence.</p>
+
+<p align="center">
+  <a href="CLAIMS.md"><img alt="claims" src="https://img.shields.io/badge/every_number-in_CLAIMS.md-0f766e"></a>
+  <img alt="group" src="https://img.shields.io/badge/TLS_1.3_group-X25519MLKEM768-7c3aed">
+  <img alt="stacks" src="https://img.shields.io/badge/stacks-go%20%C2%B7%20rust%20%C2%B7%20js%20%C2%B7%20nim%20%C2%B7%20browser-2f6f9f">
+  <a href="#license"><img alt="license" src="https://img.shields.io/badge/license-MIT%20OR%20Apache--2.0-6b7280"></a>
+</p>
 
 Every libp2p QUIC stack we tested already negotiates the hybrid TLS 1.3 group **X25519MLKEM768** by
 default. This repository asks what that changes on the wire and in connection behaviour, and
 answers with traces, paired benchmarks, an on-path downgrade test and pre-registered replications.
 
-**Every number we state lives in [`CLAIMS.md`](CLAIMS.md), and each row there points at its
-evidence.** Rows are graded (verified, strong pilot, pilot), and the retracted ones are kept. Where
-this README and CLAIMS.md disagree, CLAIMS.md is right.
+> [!IMPORTANT]
+> **Every number we state lives in [`CLAIMS.md`](CLAIMS.md), and each row there points at its
+> evidence.** Rows are graded (verified, strong pilot, pilot), and the retracted ones are kept. Where
+> this README and CLAIMS.md disagree, CLAIMS.md is right.
 
-## Findings at a glance (details and confidence intervals in CLAIMS.md)
+<p align="center">
+  <img src="docs/loss-recovery.svg" width="900"
+       alt="Animated timeline. Classical: the one ClientHello datagram is lost and the client waits for its 999 ms probe timeout, finishing at 1,077 ms. Hybrid: the ClientHello spans two datagrams, part 1 is lost, part 2 is acknowledged, the client resends part 1 at 85 ms and finishes at 147 ms.">
+</p>
+<p align="center"><sub>The core mechanism, on rust-libp2p with the first datagram dropped (C-18 to C-21, pilot grade).
+Figure source: <a href="docs/make_diagrams.py"><code>docs/make_diagrams.py</code></a>, numbers taken from CLAIMS.md.</sub></p>
 
-- **Census.** The defaults of go-libp2p v0.51.0, rust-libp2p 0.57.1, js-libp2p + @chainsafe/libp2p-quic,
-  nim-libp2p and Chrome WebTransport all select X25519MLKEM768 (C-01, C-02, C-12, C-14, C-15, C-24).
-  py-libp2p on aioquic 1.7.0 is classical-only, and becomes hybrid with aioquic PR #634 alone (C-10, C-11).
-  The hybrid ClientHello (≈1.5 KB) always spans two Initial datagrams (C-04).
-- **No cost without loss.** Hybrid and classical handshakes take the same time at RTTs of 50, 150 and
-  300 ms and on a LAN (C-17, C-34).
-- **Loss changes the picture, and the transport's timers decide which way.** With random loss,
-  rust-libp2p (quinn) connects *faster* with the hybrid hello. The second datagram gives the client an
-  early ACK, so it recovers by time-threshold loss detection instead of quinn's 999 ms first probe
-  timeout (C-18, C-21, C-22). go-libp2p (quic-go, 200 ms first PTO) sees no gain, and is slower at 10%
-  loss (C-23, C-25). Swapping the timers swaps the outcome (C-26, C-29). A Linux kernel-netem
-  replication registered before the run passed (C-31).
-- **Downgrade.** An on-path proxy that strips or forces away the hybrid group never yields a
-  classical session (C-33).
+## Contents
+
+- [How it works](#how-it-works)
+- [Findings at a glance](#findings-at-a-glance)
+- [Layout](#layout)
+- [Reproducing](#reproducing)
+- [Method rules](#method-rules)
+- [A note on `*.keys`](#a-note-on-keys)
+- [License](#license)
+
+## How it works
+
+The protocol is not modified. Each stack's TLS library chooses the group; the harness only watches
+and perturbs the connection, and always compares against a classical baseline built from the same binary.
+
+```mermaid
+flowchart LR
+    subgraph peers["libp2p QUIC peers (harness/*-pair)"]
+        D["dialer<br/>hybrid or classical"]
+        L["listener"]
+    end
+    D -- UDP --> T["tap / netem<br/>seeded delay + loss"]
+    T -- UDP --> L
+    T --> J["traces (*.jsonl)<br/>decoded Initials"]
+    D --> C["paired timings (*.csv)"]
+    J --> A["analysis<br/>bootstrap 95% CIs"]
+    C --> A
+    P["prediction-*.md<br/>committed first"] -.-> A
+    A --> R["CLAIMS.md"]
+```
+
+1. **Census.** A UDP tap captures the client's Initial packets and decrypts them with the RFC 9001
+   Initial keys (`harness/tap/decode_initial.py`), so the offered and selected groups are read off the wire.
+2. **Paired benchmark.** Hybrid and classical dials alternate in a seeded order, one fresh process per
+   dial, through the same delay and loss (userspace tap on Windows, kernel netem on Linux).
+3. **Adversary.** `harness/tap/downgrade_proxy.py` rewrites the ClientHello in flight (strip the hybrid
+   group, or force a HelloRetryRequest) to see whether a classical session can be forced.
+4. **NAT traversal.** A five-namespace Linux topology runs DCUtR hole punching through a relay (in progress).
+
+The classical baseline is `GODEBUG=tlsmlkem=0` (Go) or `PQQUIC_CLASSICAL=1` (Rust, vendored patch).
+
+## Findings at a glance
+
+Details and confidence intervals are in CLAIMS.md.
+
+| | result | rows |
+|---|---|---|
+| **Census** | go-libp2p v0.51.0, rust-libp2p 0.57.1, js-libp2p + @chainsafe/libp2p-quic, nim-libp2p and Chrome WebTransport all select X25519MLKEM768 by default. py-libp2p on aioquic 1.7.0 is classical-only, and becomes hybrid with aioquic PR #634 alone. The hybrid ClientHello (≈1.5 KB) always spans two Initial datagrams | C-01, C-02, C-04, C-10..C-12, C-14, C-15, C-24 |
+| **No loss, no cost** | Hybrid and classical handshakes take the same time at RTTs of 50, 150 and 300 ms and on a LAN | C-17, C-34 |
+| **Loss: the timers decide** | rust-libp2p (quinn) connects *faster* with the hybrid hello: the second datagram earns an early ACK, so it recovers by time-threshold loss detection instead of quinn's 999 ms first probe timeout. go-libp2p (quic-go, 200 ms first PTO) sees no gain, and is slower at 10% loss. Swapping the timers swaps the outcome. A Linux kernel-netem replication registered before the run passed | C-18, C-21..C-23, C-25, C-26, C-29, C-31 |
+| **Downgrade** | An on-path proxy that strips or forces away the hybrid group never yields a classical session | C-33 |
 
 ## Layout
 
