@@ -53,6 +53,8 @@ Every number that reaches prose comes from this file, and every row points at it
 
 | C-31 | (strong pilot, pre-registered replication) Linux netem, seeds 23 + 41 pooled (400 pairs per cell), same setup as C-30: rust hybrid − classical Connect −32.6 (−56, −12) / −39.9 (−82, +2) / −78.4 (−143, −12) ms at 2/5/10%, stalls > 500 ms hybrid vs classical 0/4.2%, 2.2/8.8%, 7.0/17.8%; go +1.3 (−7, +9) / −2.3 (−14, +9) / +22.3 (+3, +42) ms, stalls 0/0, 0.5/0.8, 3.5/4.8%. All pre-registered criteria hold (go stalls similar, hybrid slightly lower). So C-25 holds on Linux with kernel loss, not only with the Windows userspace tap. One machine, WSL2 kernel 6.6.87.2. Prediction `notes/prediction-netem-seed41.md` (commit 31eae4b); an earlier seed-41 run confounded by host load and sleep is excluded (c8afcb6) | `data/bench/netem-nogso-seed41-clean/` + C-30 runs |
 
+| C-32 | (verified, one capture per pair) go-pair rebuilt with Go 1.27.3 (current stable on 2026-10-28; same go.mod, go-libp2p v0.51.0). go1.27↔go1.27, go1.27→rust, rust→go1.27, go1.26→go1.27, go1.27→go1.26 all select X25519MLKEM768 with no HRR; offered groups are unchanged from Go 1.26. Change: a Go 1.27 dialer lists mldsa44, mldsa65, mldsa87 first in signature_algorithms (ClientHello 1,525 B vs 1,509 B for Go 1.26 to the same go1.27 listener). go-libp2p still signs with its P-256 cert key, so no ML-DSA signature is sent. The timing claims (C-17..C-31) use Go 1.26.10 | `data/census127-*.jsonl` |
+
 ## Not yet measured
 
 - nim with BoringSSL assembly enabled (affects speed only). All five libp2p QUIC stacks are in the census (C-24 for nim).
