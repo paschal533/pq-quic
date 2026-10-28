@@ -10,3 +10,23 @@ for i in range($PAIRS): print(i, *r.sample(['hybrid','classical'], 2))"
      49446 Hangup                  | while read -r pair v1 v2; do
     trial "$pair" "$v1" "$cell.log"; trial "$pair" "$v2" "$cell.log";
 done
+model=unified D=100 pairs=100 seed=23 skews=0 50 90 110 150 300 1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/
+skip unified skew 0 (done)
+skip unified skew 50 (done)
+skip unified skew 90 (done)
+skip unified skew 110 (done)
+skip unified skew 150 (done)
+unified skew 300: 0 direct of 200
+unified skew 1000: 0 direct of 200
+holepunch done: /mnt/c/Users/user/Documents/PQ-QUIC/data/bench/holepunch-unified
+model=testplans D=100 pairs=100 seed=23 skews=0 50 90 110 150 300 1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWK6uma6MSM8NFxQHgDk3maK3aq6ZqQdabVxmXSj1gDXzm
+testplans skew 0: 200 direct of 200
+testplans skew 50: 200 direct of 200
+testplans skew 90: 200 direct of 200
+run_holepunch.sh: line 37: 37984 Done                    python3 -c "import random; r=random.Random($SEED*1000+$s)
+for i in range($PAIRS): print(i, *r.sample(['hybrid','classical'], 2))"
+     37985 Hangup                  | while read -r pair v1 v2; do
+    trial "$pair" "$v1" "$cell.log"; trial "$pair" "$v2" "$cell.log";
+done

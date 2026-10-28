@@ -122,8 +122,11 @@ start_relay() {
   x hpW env QUIC_GO_DISABLE_GSO=true "$HP_BIN" -role relay -listen /ip4/$RELAY_IP/udp/4001/quic-v1 \
     -timeout 24h > "$out/relay.log" 2>&1 &
   relay_pid=$!
-  for _ in $(seq 100); do grep -q '^relay ' "$out/relay.log" && break; sleep 0.1; done
-  RELAY="/ip4/$RELAY_IP/udp/4001/quic-v1/p2p/$(awk '/^relay /{print $2; exit}' "$out/relay.log")"
+  # a cold start (e.g. right after WSL was idle) can take well over 10 s
+  for _ in $(seq 600); do grep -q '^relay ' "$out/relay.log" && break; sleep 0.1; done
+  local rid; rid=$(awk '/^relay /{print $2; exit}' "$out/relay.log")
+  [ -n "$rid" ] || { echo "relay did not print its peer ID within 60 s"; exit 3; }
+  RELAY="/ip4/$RELAY_IP/udp/4001/quic-v1/p2p/$rid"
   echo "relay $RELAY" | tee -a "$out/summary.txt"
 }
 
@@ -160,6 +163,10 @@ for i in range($PAIRS): print(i, *r.sample(['hybrid','classical'], 2))" |
   while read -r pair v1 v2; do
     trial "$pair" "$v1" "$cell.log"; trial "$pair" "$v2" "$cell.log"
   done
+  # a cell where no listener ever came up is a harness failure, not data: leave it unmarked
+  if [ "$(grep -c ' A listener not ready' "$cell.log")" -ge "$((2*PAIRS))" ]; then
+    echo "$MODEL skew $s: no listener came up in any trial; cell not marked done"; exit 3
+  fi
   touch "$cell.done"
   echo "$MODEL skew $s: $(grep -c '"direct":true' "$cell.log") direct of $((2*PAIRS))" | tee -a "$out/summary.txt"
 done

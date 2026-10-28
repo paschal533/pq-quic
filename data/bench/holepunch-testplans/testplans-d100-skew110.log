@@ -1,0 +1,860 @@
+T 0 hybrid B ready 12D3KooWNj3ExbJmwmK87vLehvtADbWX1uz4fovHMQMJAdW53DoW
+T 0 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44739/quic-v1"],"RTT":425177191},"role":"listen","ts":1793202174513237353,"type":"StartHolePunch"}
+T 0 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202174513859036,"type":"HolePunchAttempt"}
+T 0 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003839880,"Error":"failed to dial: failed to dial 12D3KooWFUykJSeyYpQ5kGYhGT5BvzLi8DeEB5GF2ZRX4rgJ2ZNt: all dials failed\n  * [/ip4/11.0.0.1/udp/44739/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202179515930070,"type":"EndHolePunch"}
+T 0 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44739/quic-v1"],"RTT":425630207},"role":"listen","ts":1793202180155465527,"type":"StartHolePunch"}
+T 0 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202180155518877,"type":"HolePunchAttempt"}
+T 0 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001073472,"Error":"failed to dial: failed to dial 12D3KooWFUykJSeyYpQ5kGYhGT5BvzLi8DeEB5GF2ZRX4rgJ2ZNt: all dials failed\n  * [/ip4/11.0.0.1/udp/44739/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202185156063020,"type":"EndHolePunch"}
+T 0 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44739/quic-v1"],"RTT":424002116},"role":"listen","ts":1793202185793634794,"type":"StartHolePunch"}
+T 0 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202185793878444,"type":"HolePunchAttempt"}
+T 0 hybrid B event {"evt":{"Success":false,"EllapsedTime":5005589292,"Error":"failed to dial: failed to dial 12D3KooWFUykJSeyYpQ5kGYhGT5BvzLi8DeEB5GF2ZRX4rgJ2ZNt: all dials failed\n  * [/ip4/11.0.0.1/udp/44739/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202190797978795,"type":"EndHolePunch"}
+T 0 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42683/quic-v1"],"RTT":422280891},"role":"dial","ts":1793202174400264978,"type":"StartHolePunch"}
+T 0 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202174400377453,"type":"HolePunchAttempt"}
+T 0 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001702534,"Error":"failed to dial: failed to dial 12D3KooWNj3ExbJmwmK87vLehvtADbWX1uz4fovHMQMJAdW53DoW: all dials failed\n  * [/ip4/11.0.0.2/udp/42683/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202179402080629,"type":"EndHolePunch"}
+T 0 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42683/quic-v1"],"RTT":424516550},"role":"dial","ts":1793202180044838994,"type":"StartHolePunch"}
+T 0 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202180044992628,"type":"HolePunchAttempt"}
+T 0 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002525701,"Error":"failed to dial: failed to dial 12D3KooWNj3ExbJmwmK87vLehvtADbWX1uz4fovHMQMJAdW53DoW: all dials failed\n  * [/ip4/11.0.0.2/udp/42683/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202185047518879,"type":"EndHolePunch"}
+T 0 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42683/quic-v1"],"RTT":424879458},"role":"dial","ts":1793202185682916136,"type":"StartHolePunch"}
+T 0 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202185683058861,"type":"HolePunchAttempt"}
+T 0 hybrid A event {"evt":{"Success":false,"EllapsedTime":5004747793,"Error":"failed to dial: failed to dial 12D3KooWNj3ExbJmwmK87vLehvtADbWX1uz4fovHMQMJAdW53DoW: all dials failed\n  * [/ip4/11.0.0.2/udp/42683/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202190687806837,"type":"EndHolePunch"}
+T 0 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1710.781,"total_ms":59236.919}
+T 0 classical B ready 12D3KooWMedgXhyGQVWoxTrQTWsS2WuqQm9WLJrZ45ysHzuTQTha
+T 0 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54271/quic-v1"],"RTT":426000266},"role":"listen","ts":1793202238403718074,"type":"StartHolePunch"}
+T 0 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202238404373949,"type":"HolePunchAttempt"}
+T 0 classical B event {"evt":{"Success":false,"EllapsedTime":5004191743,"Error":"failed to dial: failed to dial 12D3KooWAefHtJLBpmkvSVBfAhzFaPBb5KQAM7mJ1x2mF3e9zmAg: all dials failed\n  * [/ip4/11.0.0.1/udp/54271/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202246322828854,"type":"EndHolePunch"}
+T 0 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54271/quic-v1"],"RTT":424043366},"role":"listen","ts":1793202246960081811,"type":"StartHolePunch"}
+T 0 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202246960194745,"type":"HolePunchAttempt"}
+T 0 classical B event {"evt":{"Success":false,"EllapsedTime":5002863492,"Error":"failed to dial: failed to dial 12D3KooWAefHtJLBpmkvSVBfAhzFaPBb5KQAM7mJ1x2mF3e9zmAg: all dials failed\n  * [/ip4/11.0.0.1/udp/54271/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202251962382470,"type":"EndHolePunch"}
+T 0 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54271/quic-v1"],"RTT":424830691},"role":"listen","ts":1793202252601797203,"type":"StartHolePunch"}
+T 0 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202252601903444,"type":"HolePunchAttempt"}
+T 0 classical B event {"evt":{"Success":false,"EllapsedTime":5003231396,"Error":"failed to dial: failed to dial 12D3KooWAefHtJLBpmkvSVBfAhzFaPBb5KQAM7mJ1x2mF3e9zmAg: all dials failed\n  * [/ip4/11.0.0.1/udp/54271/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202257603673903,"type":"EndHolePunch"}
+T 0 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35027/quic-v1"],"RTT":423987083},"role":"dial","ts":1793202238291662275,"type":"StartHolePunch"}
+T 0 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202238292080733,"type":"HolePunchAttempt"}
+T 0 classical A event {"evt":{"Success":false,"EllapsedTime":5003388467,"Error":"failed to dial: failed to dial 12D3KooWMedgXhyGQVWoxTrQTWsS2WuqQm9WLJrZ45ysHzuTQTha: all dials failed\n  * [/ip4/11.0.0.2/udp/35027/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202246211595671,"type":"EndHolePunch"}
+T 0 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35027/quic-v1"],"RTT":423106807},"role":"dial","ts":1793202246848561437,"type":"StartHolePunch"}
+T 0 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202246848616895,"type":"HolePunchAttempt"}
+T 0 classical A event {"evt":{"Success":false,"EllapsedTime":5002034460,"Error":"failed to dial: failed to dial 12D3KooWMedgXhyGQVWoxTrQTWsS2WuqQm9WLJrZ45ysHzuTQTha: all dials failed\n  * [/ip4/11.0.0.2/udp/35027/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202251850652638,"type":"EndHolePunch"}
+T 0 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35027/quic-v1"],"RTT":421983983},"role":"dial","ts":1793202252489194153,"type":"StartHolePunch"}
+T 0 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202252489269870,"type":"HolePunchAttempt"}
+T 0 classical A event {"evt":{"Success":false,"EllapsedTime":5001957275,"Error":"failed to dial: failed to dial 12D3KooWMedgXhyGQVWoxTrQTWsS2WuqQm9WLJrZ45ysHzuTQTha: all dials failed\n  * [/ip4/11.0.0.2/udp/35027/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202257491227879,"type":"EndHolePunch"}
+T 0 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.612,"total_ms":59230.696}
+T 1 hybrid B ready 12D3KooWBLwqRoASvvUzLshdCh55Y4n2pJkVKCqeVWupLAY1HGac
+T 1 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39100/quic-v1"],"RTT":423650483},"role":"listen","ts":1793202305169569115,"type":"StartHolePunch"}
+T 1 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202305169940732,"type":"HolePunchAttempt"}
+T 1 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002661643,"Error":"failed to dial: failed to dial 12D3KooWA97U3m6kJCBwCZqtdbfgojYJoxVgqPZLFJK3YCtEJj1f: all dials failed\n  * [/ip4/11.0.0.1/udp/39100/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202313108683246,"type":"EndHolePunch"}
+T 1 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39100/quic-v1"],"RTT":425371250},"role":"listen","ts":1793202313748692162,"type":"StartHolePunch"}
+T 1 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202313749036003,"type":"HolePunchAttempt"}
+T 1 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003677585,"Error":"failed to dial: failed to dial 12D3KooWA97U3m6kJCBwCZqtdbfgojYJoxVgqPZLFJK3YCtEJj1f: all dials failed\n  * [/ip4/11.0.0.1/udp/39100/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202318750829746,"type":"EndHolePunch"}
+T 1 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39100/quic-v1"],"RTT":425375283},"role":"listen","ts":1793202319389773312,"type":"StartHolePunch"}
+T 1 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202319389857462,"type":"HolePunchAttempt"}
+T 1 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003485085,"Error":"failed to dial: failed to dial 12D3KooWA97U3m6kJCBwCZqtdbfgojYJoxVgqPZLFJK3YCtEJj1f: all dials failed\n  * [/ip4/11.0.0.1/udp/39100/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202324392908046,"type":"EndHolePunch"}
+T 1 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40344/quic-v1"],"RTT":424111475},"role":"dial","ts":1793202305058158924,"type":"StartHolePunch"}
+T 1 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202305058562074,"type":"HolePunchAttempt"}
+T 1 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002586476,"Error":"failed to dial: failed to dial 12D3KooWBLwqRoASvvUzLshdCh55Y4n2pJkVKCqeVWupLAY1HGac: all dials failed\n  * [/ip4/11.0.0.2/udp/40344/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202312998854488,"type":"EndHolePunch"}
+T 1 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40344/quic-v1"],"RTT":424501332},"role":"dial","ts":1793202313636820062,"type":"StartHolePunch"}
+T 1 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202313636990654,"type":"HolePunchAttempt"}
+T 1 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003717093,"Error":"failed to dial: failed to dial 12D3KooWBLwqRoASvvUzLshdCh55Y4n2pJkVKCqeVWupLAY1HGac: all dials failed\n  * [/ip4/11.0.0.2/udp/40344/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202318640707746,"type":"EndHolePunch"}
+T 1 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40344/quic-v1"],"RTT":423467332},"role":"dial","ts":1793202319277768662,"type":"StartHolePunch"}
+T 1 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202319277817887,"type":"HolePunchAttempt"}
+T 1 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001075168,"Error":"failed to dial: failed to dial 12D3KooWBLwqRoASvvUzLshdCh55Y4n2pJkVKCqeVWupLAY1HGac: all dials failed\n  * [/ip4/11.0.0.2/udp/40344/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202324278893880,"type":"EndHolePunch"}
+T 1 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1712.805,"total_ms":59228.283}
+T 1 classical B ready 12D3KooWGEUcKECYht1pKdPpegoDax2Q38skGSHBrQNVQXxTK6oW
+T 1 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/49847/quic-v1"],"RTT":424606200},"role":"listen","ts":1793202371899180950,"type":"StartHolePunch"}
+T 1 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202371899422125,"type":"HolePunchAttempt"}
+T 1 classical B event {"evt":{"Success":false,"EllapsedTime":5002235484,"Error":"failed to dial: failed to dial 12D3KooWH6s9vYZ5p5rd5Gp1sHPQdwxuKhL7v4HkGH1w27b4YBz3: all dials failed\n  * [/ip4/11.0.0.1/udp/49847/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202376900467226,"type":"EndHolePunch"}
+T 1 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/49847/quic-v1"],"RTT":424077742},"role":"listen","ts":1793202377538121775,"type":"StartHolePunch"}
+T 1 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202377538184200,"type":"HolePunchAttempt"}
+T 1 classical B event {"evt":{"Success":false,"EllapsedTime":5002198220,"Error":"failed to dial: failed to dial 12D3KooWH6s9vYZ5p5rd5Gp1sHPQdwxuKhL7v4HkGH1w27b4YBz3: all dials failed\n  * [/ip4/11.0.0.1/udp/49847/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202385529291865,"type":"EndHolePunch"}
+T 1 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/49847/quic-v1"],"RTT":423109008},"role":"listen","ts":1793202386165181098,"type":"StartHolePunch"}
+T 1 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202386165413564,"type":"HolePunchAttempt"}
+T 1 classical B event {"evt":{"Success":false,"EllapsedTime":5004922738,"Error":"failed to dial: failed to dial 12D3KooWH6s9vYZ5p5rd5Gp1sHPQdwxuKhL7v4HkGH1w27b4YBz3: all dials failed\n  * [/ip4/11.0.0.1/udp/49847/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202391169332873,"type":"EndHolePunch"}
+T 1 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40653/quic-v1"],"RTT":422900833},"role":"dial","ts":1793202371787317559,"type":"StartHolePunch"}
+T 1 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202371787488334,"type":"HolePunchAttempt"}
+T 1 classical A event {"evt":{"Success":false,"EllapsedTime":5001445867,"Error":"failed to dial: failed to dial 12D3KooWGEUcKECYht1pKdPpegoDax2Q38skGSHBrQNVQXxTK6oW: all dials failed\n  * [/ip4/11.0.0.2/udp/40653/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202376788935302,"type":"EndHolePunch"}
+T 1 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40653/quic-v1"],"RTT":423551483},"role":"dial","ts":1793202377427721567,"type":"StartHolePunch"}
+T 1 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202377427918467,"type":"HolePunchAttempt"}
+T 1 classical A event {"evt":{"Success":false,"EllapsedTime":5002113293,"Error":"failed to dial: failed to dial 12D3KooWGEUcKECYht1pKdPpegoDax2Q38skGSHBrQNVQXxTK6oW: all dials failed\n  * [/ip4/11.0.0.2/udp/40653/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202385419780457,"type":"EndHolePunch"}
+T 1 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40653/quic-v1"],"RTT":424229266},"role":"dial","ts":1793202386055085131,"type":"StartHolePunch"}
+T 1 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202386055249765,"type":"HolePunchAttempt"}
+T 1 classical A event {"evt":{"Success":false,"EllapsedTime":5003399009,"Error":"failed to dial: failed to dial 12D3KooWGEUcKECYht1pKdPpegoDax2Q38skGSHBrQNVQXxTK6oW: all dials failed\n  * [/ip4/11.0.0.2/udp/40653/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202391058648957,"type":"EndHolePunch"}
+T 1 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.356,"total_ms":59233.297}
+T 2 hybrid B ready 12D3KooWR49jWUZm5WHwV51JwA4cGVSbgYoNmQJMnp9ACzLro6Sp
+T 2 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47357/quic-v1"],"RTT":426994207},"role":"listen","ts":1793202438755463385,"type":"StartHolePunch"}
+T 2 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202438755652860,"type":"HolePunchAttempt"}
+T 2 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002233789,"Error":"failed to dial: failed to dial 12D3KooWEGB6PHMvzdTe7XyiPYLrrDDufdrDEboCSbn3r74UfRoa: all dials failed\n  * [/ip4/11.0.0.1/udp/47357/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202443757255111,"type":"EndHolePunch"}
+T 2 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47357/quic-v1"],"RTT":424310116},"role":"listen","ts":1793202444395561410,"type":"StartHolePunch"}
+T 2 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202444395644001,"type":"HolePunchAttempt"}
+T 2 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002804185,"Error":"failed to dial: failed to dial 12D3KooWEGB6PHMvzdTe7XyiPYLrrDDufdrDEboCSbn3r74UfRoa: all dials failed\n  * [/ip4/11.0.0.1/udp/47357/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202449397169344,"type":"EndHolePunch"}
+T 2 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47357/quic-v1"],"RTT":423865808},"role":"listen","ts":1793202452965222583,"type":"StartHolePunch"}
+T 2 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202452965292616,"type":"HolePunchAttempt"}
+T 2 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002305196,"Error":"failed to dial: failed to dial 12D3KooWEGB6PHMvzdTe7XyiPYLrrDDufdrDEboCSbn3r74UfRoa: all dials failed\n  * [/ip4/11.0.0.1/udp/47357/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202457967267767,"type":"EndHolePunch"}
+T 2 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53140/quic-v1"],"RTT":424305074},"role":"dial","ts":1793202438642493119,"type":"StartHolePunch"}
+T 2 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202438642627594,"type":"HolePunchAttempt"}
+T 2 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002797126,"Error":"failed to dial: failed to dial 12D3KooWR49jWUZm5WHwV51JwA4cGVSbgYoNmQJMnp9ACzLro6Sp: all dials failed\n  * [/ip4/11.0.0.2/udp/53140/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202443645425453,"type":"EndHolePunch"}
+T 2 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53140/quic-v1"],"RTT":421560391},"role":"dial","ts":1793202444282899602,"type":"StartHolePunch"}
+T 2 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202444282950569,"type":"HolePunchAttempt"}
+T 2 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001216426,"Error":"failed to dial: failed to dial 12D3KooWR49jWUZm5WHwV51JwA4cGVSbgYoNmQJMnp9ACzLro6Sp: all dials failed\n  * [/ip4/11.0.0.2/udp/53140/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202449284167545,"type":"EndHolePunch"}
+T 2 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53140/quic-v1"],"RTT":422287858},"role":"dial","ts":1793202449923281794,"type":"StartHolePunch"}
+T 2 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202449923353660,"type":"HolePunchAttempt"}
+T 2 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001916942,"Error":"failed to dial: failed to dial 12D3KooWR49jWUZm5WHwV51JwA4cGVSbgYoNmQJMnp9ACzLro6Sp: all dials failed\n  * [/ip4/11.0.0.2/udp/53140/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202457856354776,"type":"EndHolePunch"}
+T 2 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.903,"total_ms":59231.62}
+T 2 classical B ready 12D3KooWFDLSHPXYKTeP2JUZDMMLniNiPbt8KA3XYo1aaN6Zp48S
+T 2 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50981/quic-v1"],"RTT":423438916},"role":"listen","ts":1793202505586878539,"type":"StartHolePunch"}
+T 2 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202505587190664,"type":"HolePunchAttempt"}
+T 2 classical B event {"evt":{"Success":false,"EllapsedTime":5003490126,"Error":"failed to dial: failed to dial 12D3KooWFZ2zYx25w6YxPQWR5mRpHfzAGFPqcChrMw2D3Wa2WUDK: all dials failed\n  * [/ip4/11.0.0.1/udp/50981/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202510589059665,"type":"EndHolePunch"}
+T 2 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50981/quic-v1"],"RTT":423393816},"role":"listen","ts":1793202511226147714,"type":"StartHolePunch"}
+T 2 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202511226276139,"type":"HolePunchAttempt"}
+T 2 classical B event {"evt":{"Success":false,"EllapsedTime":5002210826,"Error":"failed to dial: failed to dial 12D3KooWFZ2zYx25w6YxPQWR5mRpHfzAGFPqcChrMw2D3Wa2WUDK: all dials failed\n  * [/ip4/11.0.0.1/udp/50981/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202516227447740,"type":"EndHolePunch"}
+T 2 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50981/quic-v1"],"RTT":424236782},"role":"listen","ts":1793202516865196981,"type":"StartHolePunch"}
+T 2 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202516865232731,"type":"HolePunchAttempt"}
+T 2 classical B event {"evt":{"Success":false,"EllapsedTime":5002065717,"Error":"failed to dial: failed to dial 12D3KooWFZ2zYx25w6YxPQWR5mRpHfzAGFPqcChrMw2D3Wa2WUDK: all dials failed\n  * [/ip4/11.0.0.1/udp/50981/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202524777975348,"type":"EndHolePunch"}
+T 2 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40055/quic-v1"],"RTT":424685216},"role":"dial","ts":1793202505476331940,"type":"StartHolePunch"}
+T 2 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202505476708782,"type":"HolePunchAttempt"}
+T 2 classical A event {"evt":{"Success":false,"EllapsedTime":5002605818,"Error":"failed to dial: failed to dial 12D3KooWFDLSHPXYKTeP2JUZDMMLniNiPbt8KA3XYo1aaN6Zp48S: all dials failed\n  * [/ip4/11.0.0.2/udp/40055/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202510479314416,"type":"EndHolePunch"}
+T 2 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40055/quic-v1"],"RTT":422716583},"role":"dial","ts":1793202511115346832,"type":"StartHolePunch"}
+T 2 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202511115488457,"type":"HolePunchAttempt"}
+T 2 classical A event {"evt":{"Success":false,"EllapsedTime":5002468868,"Error":"failed to dial: failed to dial 12D3KooWFDLSHPXYKTeP2JUZDMMLniNiPbt8KA3XYo1aaN6Zp48S: all dials failed\n  * [/ip4/11.0.0.2/udp/40055/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202516117957416,"type":"EndHolePunch"}
+T 2 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40055/quic-v1"],"RTT":423325891},"role":"dial","ts":1793202516754188015,"type":"StartHolePunch"}
+T 2 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202516754335873,"type":"HolePunchAttempt"}
+T 2 classical A event {"evt":{"Success":false,"EllapsedTime":5005203925,"Error":"failed to dial: failed to dial 12D3KooWFDLSHPXYKTeP2JUZDMMLniNiPbt8KA3XYo1aaN6Zp48S: all dials failed\n  * [/ip4/11.0.0.2/udp/40055/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202524670982115,"type":"EndHolePunch"}
+T 2 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1702.594,"total_ms":59234.573}
+T 3 hybrid B ready 12D3KooWBNRGdG8GLKKJu7DKJHf3Jn5h92H23PQap4KHsG24YaP5
+T 3 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/33002/quic-v1"],"RTT":425384724},"role":"listen","ts":1793202572383791566,"type":"StartHolePunch"}
+T 3 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202572384314891,"type":"HolePunchAttempt"}
+T 3 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002383481,"Error":"failed to dial: failed to dial 12D3KooWAGxNdCN7qdeNC1PDkMVZJuS5e12DCWXtnSDsAg1F9rmD: all dials failed\n  * [/ip4/11.0.0.1/udp/33002/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202577386003034,"type":"EndHolePunch"}
+T 3 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/33002/quic-v1"],"RTT":425553574},"role":"listen","ts":1793202578026683041,"type":"StartHolePunch"}
+T 3 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202578026832641,"type":"HolePunchAttempt"}
+T 3 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002686622,"Error":"failed to dial: failed to dial 12D3KooWAGxNdCN7qdeNC1PDkMVZJuS5e12DCWXtnSDsAg1F9rmD: all dials failed\n  * [/ip4/11.0.0.1/udp/33002/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202583027998925,"type":"EndHolePunch"}
+T 3 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/33002/quic-v1"],"RTT":422826308},"role":"listen","ts":1793202583663705100,"type":"StartHolePunch"}
+T 3 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202583664113474,"type":"HolePunchAttempt"}
+T 3 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004153380,"Error":"failed to dial: failed to dial 12D3KooWAGxNdCN7qdeNC1PDkMVZJuS5e12DCWXtnSDsAg1F9rmD: all dials failed\n  * [/ip4/11.0.0.1/udp/33002/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202588666687759,"type":"EndHolePunch"}
+T 3 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43576/quic-v1"],"RTT":424275283},"role":"dial","ts":1793202572272168250,"type":"StartHolePunch"}
+T 3 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202572272259000,"type":"HolePunchAttempt"}
+T 3 hybrid A event {"evt":{"Success":false,"EllapsedTime":5000942617,"Error":"failed to dial: failed to dial 12D3KooWBNRGdG8GLKKJu7DKJHf3Jn5h92H23PQap4KHsG24YaP5: all dials failed\n  * [/ip4/11.0.0.2/udp/43576/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202577273202626,"type":"EndHolePunch"}
+T 3 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43576/quic-v1"],"RTT":422777541},"role":"dial","ts":1793202577913406058,"type":"StartHolePunch"}
+T 3 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202577913467933,"type":"HolePunchAttempt"}
+T 3 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001209826,"Error":"failed to dial: failed to dial 12D3KooWBNRGdG8GLKKJu7DKJHf3Jn5h92H23PQap4KHsG24YaP5: all dials failed\n  * [/ip4/11.0.0.2/udp/43576/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202582914678493,"type":"EndHolePunch"}
+T 3 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43576/quic-v1"],"RTT":424703457},"role":"dial","ts":1793202583554168850,"type":"StartHolePunch"}
+T 3 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202583554305158,"type":"HolePunchAttempt"}
+T 3 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002608751,"Error":"failed to dial: failed to dial 12D3KooWBNRGdG8GLKKJu7DKJHf3Jn5h92H23PQap4KHsG24YaP5: all dials failed\n  * [/ip4/11.0.0.2/udp/43576/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202588556914642,"type":"EndHolePunch"}
+T 3 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1703.863,"total_ms":59234.067}
+T 3 classical B ready 12D3KooWCjVexc7Dkk6f9QmQGYqeMD6GGiL87u5kQU2AtjyNMwA7
+T 3 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54931/quic-v1"],"RTT":423840141},"role":"listen","ts":1793202639136949704,"type":"StartHolePunch"}
+T 3 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202639137302071,"type":"HolePunchAttempt"}
+T 3 classical B event {"evt":{"Success":false,"EllapsedTime":5003286856,"Error":"failed to dial: failed to dial 12D3KooWNmHd7m5USzNZqQnBNQdfdddVLDYNPHzKPMYDnXomvLQk: all dials failed\n  * [/ip4/11.0.0.1/udp/54931/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202644139428563,"type":"EndHolePunch"}
+T 3 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54931/quic-v1"],"RTT":424522782},"role":"listen","ts":1793202644777004004,"type":"StartHolePunch"}
+T 3 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202644777119046,"type":"HolePunchAttempt"}
+T 3 classical B event {"evt":{"Success":false,"EllapsedTime":5001295260,"Error":"failed to dial: failed to dial 12D3KooWNmHd7m5USzNZqQnBNQdfdddVLDYNPHzKPMYDnXomvLQk: all dials failed\n  * [/ip4/11.0.0.1/udp/54931/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202649778173038,"type":"EndHolePunch"}
+T 3 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54931/quic-v1"],"RTT":425188100},"role":"listen","ts":1793202650416828496,"type":"StartHolePunch"}
+T 3 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202650416958479,"type":"HolePunchAttempt"}
+T 3 classical B event {"evt":{"Success":false,"EllapsedTime":5003471243,"Error":"failed to dial: failed to dial 12D3KooWNmHd7m5USzNZqQnBNQdfdddVLDYNPHzKPMYDnXomvLQk: all dials failed\n  * [/ip4/11.0.0.1/udp/54931/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202655420022813,"type":"EndHolePunch"}
+T 3 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42410/quic-v1"],"RTT":425035932},"role":"dial","ts":1793202639026497338,"type":"StartHolePunch"}
+T 3 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202639027340396,"type":"HolePunchAttempt"}
+T 3 classical A event {"evt":{"Success":false,"EllapsedTime":5002761101,"Error":"failed to dial: failed to dial 12D3KooWCjVexc7Dkk6f9QmQGYqeMD6GGiL87u5kQU2AtjyNMwA7: all dials failed\n  * [/ip4/11.0.0.2/udp/42410/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202644030101680,"type":"EndHolePunch"}
+T 3 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42410/quic-v1"],"RTT":424518658},"role":"dial","ts":1793202644666545955,"type":"StartHolePunch"}
+T 3 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202644666686205,"type":"HolePunchAttempt"}
+T 3 classical A event {"evt":{"Success":false,"EllapsedTime":5001838293,"Error":"failed to dial: failed to dial 12D3KooWCjVexc7Dkk6f9QmQGYqeMD6GGiL87u5kQU2AtjyNMwA7: all dials failed\n  * [/ip4/11.0.0.2/udp/42410/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202649668524405,"type":"EndHolePunch"}
+T 3 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42410/quic-v1"],"RTT":422211592},"role":"dial","ts":1793202650304713296,"type":"StartHolePunch"}
+T 3 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202650304764813,"type":"HolePunchAttempt"}
+T 3 classical A event {"evt":{"Success":false,"EllapsedTime":5001711243,"Error":"failed to dial: failed to dial 12D3KooWCjVexc7Dkk6f9QmQGYqeMD6GGiL87u5kQU2AtjyNMwA7: all dials failed\n  * [/ip4/11.0.0.2/udp/42410/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202655306476880,"type":"EndHolePunch"}
+T 3 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1703.717,"total_ms":59241.145}
+T 4 hybrid B ready 12D3KooWPk8ciBFQfrjEV9qFm18Y16n542vNDL68CnWnUVMSdPk3
+T 4 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/42171/quic-v1"],"RTT":437354631},"role":"listen","ts":1793202705730287396,"type":"StartHolePunch"}
+T 4 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202705730708488,"type":"HolePunchAttempt"}
+T 4 hybrid B event {"evt":{"Success":false,"EllapsedTime":5009485894,"Error":"failed to dial: failed to dial 12D3KooWCKRWPb8ieYWPpUGiW9eCQVnyDKUoA653AkwSeeejpPqP: all dials failed\n  * [/ip4/11.0.0.1/udp/42171/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202710733430048,"type":"EndHolePunch"}
+T 4 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/42171/quic-v1"],"RTT":446080555},"role":"listen","ts":1793202711403680635,"type":"StartHolePunch"}
+T 4 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202711404017444,"type":"HolePunchAttempt"}
+T 4 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002215665,"Error":"failed to dial: failed to dial 12D3KooWCKRWPb8ieYWPpUGiW9eCQVnyDKUoA653AkwSeeejpPqP: all dials failed\n  * [/ip4/11.0.0.1/udp/42171/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202716405336437,"type":"EndHolePunch"}
+T 4 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/42171/quic-v1"],"RTT":424750574},"role":"listen","ts":1793202717043425668,"type":"StartHolePunch"}
+T 4 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202717043626510,"type":"HolePunchAttempt"}
+T 4 hybrid B event {"evt":{"Success":false,"EllapsedTime":5007135931,"Error":"failed to dial: failed to dial 12D3KooWCKRWPb8ieYWPpUGiW9eCQVnyDKUoA653AkwSeeejpPqP: all dials failed\n  * [/ip4/11.0.0.1/udp/42171/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202722049853795,"type":"EndHolePunch"}
+T 4 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42203/quic-v1"],"RTT":429662315},"role":"dial","ts":1793202705608828081,"type":"StartHolePunch"}
+T 4 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202705608995673,"type":"HolePunchAttempt"}
+T 4 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002642369,"Error":"failed to dial: failed to dial 12D3KooWPk8ciBFQfrjEV9qFm18Y16n542vNDL68CnWnUVMSdPk3: all dials failed\n  * [/ip4/11.0.0.2/udp/42203/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202710611639341,"type":"EndHolePunch"}
+T 4 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42203/quic-v1"],"RTT":446186830},"role":"dial","ts":1793202711287405178,"type":"StartHolePunch"}
+T 4 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202711287589128,"type":"HolePunchAttempt"}
+T 4 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003072934,"Error":"failed to dial: failed to dial 12D3KooWPk8ciBFQfrjEV9qFm18Y16n542vNDL68CnWnUVMSdPk3: all dials failed\n  * [/ip4/11.0.0.2/udp/42203/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202716290662179,"type":"EndHolePunch"}
+T 4 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42203/quic-v1"],"RTT":424463199},"role":"dial","ts":1793202716932143077,"type":"StartHolePunch"}
+T 4 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202716932201561,"type":"HolePunchAttempt"}
+T 4 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001479777,"Error":"failed to dial: failed to dial 12D3KooWPk8ciBFQfrjEV9qFm18Y16n542vNDL68CnWnUVMSdPk3: all dials failed\n  * [/ip4/11.0.0.2/udp/42203/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202721933681796,"type":"EndHolePunch"}
+T 4 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1788.216,"total_ms":59235.048}
+T 4 classical B ready 12D3KooWDNbTksWEomEx7mqcRuK3aUn8WweC23mYPtNuKs2wGoeU
+T 4 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38407/quic-v1"],"RTT":425158491},"role":"listen","ts":1793202770104455029,"type":"StartHolePunch"}
+T 4 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202770104928304,"type":"HolePunchAttempt"}
+T 4 classical B event {"evt":{"Success":false,"EllapsedTime":5002459648,"Error":"failed to dial: failed to dial 12D3KooWB98aMsRFSf51xPPzKnsPy7tBPpJd1UBbweCtNFhhMuJP: all dials failed\n  * [/ip4/11.0.0.1/udp/38407/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202775106074140,"type":"EndHolePunch"}
+T 4 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38407/quic-v1"],"RTT":423219282},"role":"listen","ts":1793202775742042846,"type":"StartHolePunch"}
+T 4 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202775742110588,"type":"HolePunchAttempt"}
+T 4 classical B event {"evt":{"Success":false,"EllapsedTime":5002083677,"Error":"failed to dial: failed to dial 12D3KooWB98aMsRFSf51xPPzKnsPy7tBPpJd1UBbweCtNFhhMuJP: all dials failed\n  * [/ip4/11.0.0.1/udp/38407/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202780743468357,"type":"EndHolePunch"}
+T 4 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38407/quic-v1"],"RTT":424083332},"role":"listen","ts":1793202781381476371,"type":"StartHolePunch"}
+T 4 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202781381653563,"type":"HolePunchAttempt"}
+T 4 classical B event {"evt":{"Success":false,"EllapsedTime":5004153786,"Error":"failed to dial: failed to dial 12D3KooWB98aMsRFSf51xPPzKnsPy7tBPpJd1UBbweCtNFhhMuJP: all dials failed\n  * [/ip4/11.0.0.1/udp/38407/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202786384366257,"type":"EndHolePunch"}
+T 4 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46141/quic-v1"],"RTT":424405174},"role":"dial","ts":1793202769993647822,"type":"StartHolePunch"}
+T 4 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202769993977547,"type":"HolePunchAttempt"}
+T 4 classical A event {"evt":{"Success":false,"EllapsedTime":5002399286,"Error":"failed to dial: failed to dial 12D3KooWDNbTksWEomEx7mqcRuK3aUn8WweC23mYPtNuKs2wGoeU: all dials failed\n  * [/ip4/11.0.0.2/udp/46141/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202774996376649,"type":"EndHolePunch"}
+T 4 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46141/quic-v1"],"RTT":424601707},"role":"dial","ts":1793202775632235447,"type":"StartHolePunch"}
+T 4 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202775632378630,"type":"HolePunchAttempt"}
+T 4 classical A event {"evt":{"Success":false,"EllapsedTime":5002615435,"Error":"failed to dial: failed to dial 12D3KooWDNbTksWEomEx7mqcRuK3aUn8WweC23mYPtNuKs2wGoeU: all dials failed\n  * [/ip4/11.0.0.2/udp/46141/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202780634994615,"type":"EndHolePunch"}
+T 4 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46141/quic-v1"],"RTT":423936757},"role":"dial","ts":1793202781270136397,"type":"StartHolePunch"}
+T 4 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202781270274447,"type":"HolePunchAttempt"}
+T 4 classical A event {"evt":{"Success":false,"EllapsedTime":5002950569,"Error":"failed to dial: failed to dial 12D3KooWDNbTksWEomEx7mqcRuK3aUn8WweC23mYPtNuKs2wGoeU: all dials failed\n  * [/ip4/11.0.0.2/udp/46141/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202786273225932,"type":"EndHolePunch"}
+T 4 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1705.876,"total_ms":59235.59}
+T 5 hybrid B ready 12D3KooWLKU1RGkTA38ThkSVp2KWTeoR5BpKcSH2PPTYAVazhZAf
+T 5 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47551/quic-v1"],"RTT":424484740},"role":"listen","ts":1793202833919703112,"type":"StartHolePunch"}
+T 5 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793202833920048421,"type":"HolePunchAttempt"}
+T 5 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002752247,"Error":"failed to dial: failed to dial 12D3KooWBYj7DtgCfccSV828qntQaHLivD29JqyeCHA6sdrqArAE: all dials failed\n  * [/ip4/11.0.0.1/udp/47551/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202841854936838,"type":"EndHolePunch"}
+T 5 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47551/quic-v1"],"RTT":422253116},"role":"listen","ts":1793202842489966420,"type":"StartHolePunch"}
+T 5 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793202842490107495,"type":"HolePunchAttempt"}
+T 5 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002840476,"Error":"failed to dial: failed to dial 12D3KooWBYj7DtgCfccSV828qntQaHLivD29JqyeCHA6sdrqArAE: all dials failed\n  * [/ip4/11.0.0.1/udp/47551/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202847492350947,"type":"EndHolePunch"}
+T 5 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/47551/quic-v1"],"RTT":424265016},"role":"listen","ts":1793202848130507370,"type":"StartHolePunch"}
+T 5 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793202848130647253,"type":"HolePunchAttempt"}
+T 5 hybrid B event {"evt":{"Success":false,"EllapsedTime":5005273494,"Error":"failed to dial: failed to dial 12D3KooWBYj7DtgCfccSV828qntQaHLivD29JqyeCHA6sdrqArAE: all dials failed\n  * [/ip4/11.0.0.1/udp/47551/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202853134456922,"type":"EndHolePunch"}
+T 5 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53072/quic-v1"],"RTT":424088741},"role":"dial","ts":1793202833808222521,"type":"StartHolePunch"}
+T 5 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793202833808490188,"type":"HolePunchAttempt"}
+T 5 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002997410,"Error":"failed to dial: failed to dial 12D3KooWLKU1RGkTA38ThkSVp2KWTeoR5BpKcSH2PPTYAVazhZAf: all dials failed\n  * [/ip4/11.0.0.2/udp/53072/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202841745139980,"type":"EndHolePunch"}
+T 5 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53072/quic-v1"],"RTT":422076658},"role":"dial","ts":1793202842379418171,"type":"StartHolePunch"}
+T 5 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793202842379522671,"type":"HolePunchAttempt"}
+T 5 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002651827,"Error":"failed to dial: failed to dial 12D3KooWLKU1RGkTA38ThkSVp2KWTeoR5BpKcSH2PPTYAVazhZAf: all dials failed\n  * [/ip4/11.0.0.2/udp/53072/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202847382175047,"type":"EndHolePunch"}
+T 5 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53072/quic-v1"],"RTT":423744624},"role":"dial","ts":1793202848019216621,"type":"StartHolePunch"}
+T 5 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793202848019379237,"type":"HolePunchAttempt"}
+T 5 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003442727,"Error":"failed to dial: failed to dial 12D3KooWLKU1RGkTA38ThkSVp2KWTeoR5BpKcSH2PPTYAVazhZAf: all dials failed\n  * [/ip4/11.0.0.2/udp/53072/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202853022822239,"type":"EndHolePunch"}
+T 5 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1702.881,"total_ms":59237.07}
+T 5 classical B ready 12D3KooWM9wdzZD6QEn65hqyAmXyxUzavoho9eDEGsRUtALB1cJR
+T 5 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41073/quic-v1"],"RTT":424408841},"role":"listen","ts":1793202900708139353,"type":"StartHolePunch"}
+T 5 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202900708848395,"type":"HolePunchAttempt"}
+T 5 classical B event {"evt":{"Success":false,"EllapsedTime":5002406115,"Error":"failed to dial: failed to dial 12D3KooWMoUknhx6UxmoYGp8QJvB39ZPiyqDca6TRNzKd9xS4XUo: all dials failed\n  * [/ip4/11.0.0.1/udp/41073/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202908649615521,"type":"EndHolePunch"}
+T 5 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41073/quic-v1"],"RTT":424858557},"role":"listen","ts":1793202909287993869,"type":"StartHolePunch"}
+T 5 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202909288145028,"type":"HolePunchAttempt"}
+T 5 classical B event {"evt":{"Success":false,"EllapsedTime":5002437924,"Error":"failed to dial: failed to dial 12D3KooWMoUknhx6UxmoYGp8QJvB39ZPiyqDca6TRNzKd9xS4XUo: all dials failed\n  * [/ip4/11.0.0.1/udp/41073/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202914289733246,"type":"EndHolePunch"}
+T 5 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41073/quic-v1"],"RTT":423583749},"role":"listen","ts":1793202914925714511,"type":"StartHolePunch"}
+T 5 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202914925789036,"type":"HolePunchAttempt"}
+T 5 classical B event {"evt":{"Success":false,"EllapsedTime":5002259220,"Error":"failed to dial: failed to dial 12D3KooWMoUknhx6UxmoYGp8QJvB39ZPiyqDca6TRNzKd9xS4XUo: all dials failed\n  * [/ip4/11.0.0.1/udp/41073/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202919927557563,"type":"EndHolePunch"}
+T 5 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53266/quic-v1"],"RTT":423802374},"role":"dial","ts":1793202900596950354,"type":"StartHolePunch"}
+T 5 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202900597349745,"type":"HolePunchAttempt"}
+T 5 classical A event {"evt":{"Success":false,"EllapsedTime":5002820769,"Error":"failed to dial: failed to dial 12D3KooWM9wdzZD6QEn65hqyAmXyxUzavoho9eDEGsRUtALB1cJR: all dials failed\n  * [/ip4/11.0.0.2/udp/53266/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202908539968630,"type":"EndHolePunch"}
+T 5 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53266/quic-v1"],"RTT":422722999},"role":"dial","ts":1793202909175459845,"type":"StartHolePunch"}
+T 5 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202909175498712,"type":"HolePunchAttempt"}
+T 5 classical A event {"evt":{"Success":false,"EllapsedTime":5001889252,"Error":"failed to dial: failed to dial 12D3KooWM9wdzZD6QEn65hqyAmXyxUzavoho9eDEGsRUtALB1cJR: all dials failed\n  * [/ip4/11.0.0.2/udp/53266/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202914177388147,"type":"EndHolePunch"}
+T 5 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/53266/quic-v1"],"RTT":422204807},"role":"dial","ts":1793202914814650637,"type":"StartHolePunch"}
+T 5 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202914814717003,"type":"HolePunchAttempt"}
+T 5 classical A event {"evt":{"Success":false,"EllapsedTime":5002100452,"Error":"failed to dial: failed to dial 12D3KooWM9wdzZD6QEn65hqyAmXyxUzavoho9eDEGsRUtALB1cJR: all dials failed\n  * [/ip4/11.0.0.2/udp/53266/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202919816817822,"type":"EndHolePunch"}
+T 5 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1709.121,"total_ms":59238.873}
+T 6 classical B ready 12D3KooWC1AqnGLYBqxqsfLJTxq5vRSsyYEd9CB8ntwDVhUg5zC2
+T 6 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35841/quic-v1"],"RTT":424205890},"role":"listen","ts":1793202967487665985,"type":"StartHolePunch"}
+T 6 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793202967488402343,"type":"HolePunchAttempt"}
+T 6 classical B event {"evt":{"Success":false,"EllapsedTime":5002197756,"Error":"failed to dial: failed to dial 12D3KooWJJyBT3RDghYAuwmnFoVjqMiBBNjHDQDMeKNvddrLMFEB: all dials failed\n  * [/ip4/11.0.0.1/udp/35841/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202972489293345,"type":"EndHolePunch"}
+T 6 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35841/quic-v1"],"RTT":423574582},"role":"listen","ts":1793202973126751727,"type":"StartHolePunch"}
+T 6 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793202973126937627,"type":"HolePunchAttempt"}
+T 6 classical B event {"evt":{"Success":false,"EllapsedTime":5003434294,"Error":"failed to dial: failed to dial 12D3KooWJJyBT3RDghYAuwmnFoVjqMiBBNjHDQDMeKNvddrLMFEB: all dials failed\n  * [/ip4/11.0.0.1/udp/35841/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793202981078394440,"type":"EndHolePunch"}
+T 6 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35841/quic-v1"],"RTT":422999466},"role":"listen","ts":1793202981714600472,"type":"StartHolePunch"}
+T 6 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793202981714717622,"type":"HolePunchAttempt"}
+T 6 classical B event {"evt":{"Success":false,"EllapsedTime":5005204560,"Error":"failed to dial: failed to dial 12D3KooWJJyBT3RDghYAuwmnFoVjqMiBBNjHDQDMeKNvddrLMFEB: all dials failed\n  * [/ip4/11.0.0.1/udp/35841/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793202986718477424,"type":"EndHolePunch"}
+T 6 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52334/quic-v1"],"RTT":425265648},"role":"dial","ts":1793202967377949244,"type":"StartHolePunch"}
+T 6 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793202967378313711,"type":"HolePunchAttempt"}
+T 6 classical A event {"evt":{"Success":false,"EllapsedTime":5003029402,"Error":"failed to dial: failed to dial 12D3KooWC1AqnGLYBqxqsfLJTxq5vRSsyYEd9CB8ntwDVhUg5zC2: all dials failed\n  * [/ip4/11.0.0.2/udp/52334/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202972381343388,"type":"EndHolePunch"}
+T 6 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52334/quic-v1"],"RTT":424028607},"role":"dial","ts":1793202973015864678,"type":"StartHolePunch"}
+T 6 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793202973015993561,"type":"HolePunchAttempt"}
+T 6 classical A event {"evt":{"Success":false,"EllapsedTime":5002113835,"Error":"failed to dial: failed to dial 12D3KooWC1AqnGLYBqxqsfLJTxq5vRSsyYEd9CB8ntwDVhUg5zC2: all dials failed\n  * [/ip4/11.0.0.2/udp/52334/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202980967638291,"type":"EndHolePunch"}
+T 6 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52334/quic-v1"],"RTT":423489974},"role":"dial","ts":1793202981602823431,"type":"StartHolePunch"}
+T 6 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793202981602862664,"type":"HolePunchAttempt"}
+T 6 classical A event {"evt":{"Success":false,"EllapsedTime":5001385085,"Error":"failed to dial: failed to dial 12D3KooWC1AqnGLYBqxqsfLJTxq5vRSsyYEd9CB8ntwDVhUg5zC2: all dials failed\n  * [/ip4/11.0.0.2/udp/52334/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793202986604248575,"type":"EndHolePunch"}
+T 6 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1709.288,"total_ms":59234.503}
+T 6 hybrid B ready 12D3KooWL9DCwr9rinX2bEunVZ7zm8Nt1dBhpQTmk4zG1dTyACtT
+T 6 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43591/quic-v1"],"RTT":422521882},"role":"listen","ts":1793203034297159212,"type":"StartHolePunch"}
+T 6 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203034297304412,"type":"HolePunchAttempt"}
+T 6 hybrid B event {"evt":{"Success":false,"EllapsedTime":5000989360,"Error":"failed to dial: failed to dial 12D3KooWRWMP4hvNCthqYgaPFMe6UjWfFPjJsvpMPYSZvxFVP38p: all dials failed\n  * [/ip4/11.0.0.1/udp/43591/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203039297934623,"type":"EndHolePunch"}
+T 6 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43591/quic-v1"],"RTT":423621149},"role":"listen","ts":1793203039934885446,"type":"StartHolePunch"}
+T 6 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203039935017263,"type":"HolePunchAttempt"}
+T 6 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002562178,"Error":"failed to dial: failed to dial 12D3KooWRWMP4hvNCthqYgaPFMe6UjWfFPjJsvpMPYSZvxFVP38p: all dials failed\n  * [/ip4/11.0.0.1/udp/43591/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203044936571289,"type":"EndHolePunch"}
+T 6 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43591/quic-v1"],"RTT":425909332},"role":"listen","ts":1793203045577084554,"type":"StartHolePunch"}
+T 6 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203045577480921,"type":"HolePunchAttempt"}
+T 6 hybrid B event {"evt":{"Success":false,"EllapsedTime":5006698085,"Error":"failed to dial: failed to dial 12D3KooWRWMP4hvNCthqYgaPFMe6UjWfFPjJsvpMPYSZvxFVP38p: all dials failed\n  * [/ip4/11.0.0.1/udp/43591/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203053511776578,"type":"EndHolePunch"}
+T 6 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43617/quic-v1"],"RTT":422465232},"role":"dial","ts":1793203034186953063,"type":"StartHolePunch"}
+T 6 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203034187622138,"type":"HolePunchAttempt"}
+T 6 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002978618,"Error":"failed to dial: failed to dial 12D3KooWL9DCwr9rinX2bEunVZ7zm8Nt1dBhpQTmk4zG1dTyACtT: all dials failed\n  * [/ip4/11.0.0.2/udp/43617/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203039190601490,"type":"EndHolePunch"}
+T 6 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43617/quic-v1"],"RTT":423761032},"role":"dial","ts":1793203039823434280,"type":"StartHolePunch"}
+T 6 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203039823794988,"type":"HolePunchAttempt"}
+T 6 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002612685,"Error":"failed to dial: failed to dial 12D3KooWL9DCwr9rinX2bEunVZ7zm8Nt1dBhpQTmk4zG1dTyACtT: all dials failed\n  * [/ip4/11.0.0.2/udp/43617/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203044826408315,"type":"EndHolePunch"}
+T 6 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/43617/quic-v1"],"RTT":425028966},"role":"dial","ts":1793203045465506338,"type":"StartHolePunch"}
+T 6 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203045465665746,"type":"HolePunchAttempt"}
+T 6 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002356752,"Error":"failed to dial: failed to dial 12D3KooWL9DCwr9rinX2bEunVZ7zm8Nt1dBhpQTmk4zG1dTyACtT: all dials failed\n  * [/ip4/11.0.0.2/udp/43617/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203053396990762,"type":"EndHolePunch"}
+T 6 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1701.745,"total_ms":59224.926}
+T 7 classical B ready 12D3KooWCNX4noea4Lg7JriuZZxkpvzJiCFBtN86VEWk3mMps8TC
+T 7 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54389/quic-v1"],"RTT":424481715},"role":"listen","ts":1793203101155640725,"type":"StartHolePunch"}
+T 7 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203101156166250,"type":"HolePunchAttempt"}
+T 7 classical B event {"evt":{"Success":false,"EllapsedTime":5003263795,"Error":"failed to dial: failed to dial 12D3KooWLiKdukHTExjDFJwHA3LZjq676zSq1zNDenQHcXm8Ej63: all dials failed\n  * [/ip4/11.0.0.1/udp/54389/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203106157999127,"type":"EndHolePunch"}
+T 7 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54389/quic-v1"],"RTT":425751390},"role":"listen","ts":1793203106798186333,"type":"StartHolePunch"}
+T 7 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203106798324658,"type":"HolePunchAttempt"}
+T 7 classical B event {"evt":{"Success":false,"EllapsedTime":5002751148,"Error":"failed to dial: failed to dial 12D3KooWLiKdukHTExjDFJwHA3LZjq676zSq1zNDenQHcXm8Ej63: all dials failed\n  * [/ip4/11.0.0.1/udp/54389/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203111800034243,"type":"EndHolePunch"}
+T 7 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/54389/quic-v1"],"RTT":425139057},"role":"listen","ts":1793203112439555766,"type":"StartHolePunch"}
+T 7 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203112439717191,"type":"HolePunchAttempt"}
+T 7 classical B event {"evt":{"Success":false,"EllapsedTime":5004505372,"Error":"failed to dial: failed to dial 12D3KooWLiKdukHTExjDFJwHA3LZjq676zSq1zNDenQHcXm8Ej63: all dials failed\n  * [/ip4/11.0.0.1/udp/54389/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203120340880906,"type":"EndHolePunch"}
+T 7 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46476/quic-v1"],"RTT":423861682},"role":"dial","ts":1793203101044588767,"type":"StartHolePunch"}
+T 7 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203101044954059,"type":"HolePunchAttempt"}
+T 7 classical A event {"evt":{"Success":false,"EllapsedTime":5003034810,"Error":"failed to dial: failed to dial 12D3KooWCNX4noea4Lg7JriuZZxkpvzJiCFBtN86VEWk3mMps8TC: all dials failed\n  * [/ip4/11.0.0.2/udp/46476/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203106047988961,"type":"EndHolePunch"}
+T 7 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46476/quic-v1"],"RTT":423996799},"role":"dial","ts":1793203106686057017,"type":"StartHolePunch"}
+T 7 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203106686175359,"type":"HolePunchAttempt"}
+T 7 classical A event {"evt":{"Success":false,"EllapsedTime":5004103185,"Error":"failed to dial: failed to dial 12D3KooWCNX4noea4Lg7JriuZZxkpvzJiCFBtN86VEWk3mMps8TC: all dials failed\n  * [/ip4/11.0.0.2/udp/46476/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203111690279094,"type":"EndHolePunch"}
+T 7 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46476/quic-v1"],"RTT":424153732},"role":"dial","ts":1793203112328176100,"type":"StartHolePunch"}
+T 7 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203112329365475,"type":"HolePunchAttempt"}
+T 7 classical A event {"evt":{"Success":false,"EllapsedTime":5003938460,"Error":"failed to dial: failed to dial 12D3KooWCNX4noea4Lg7JriuZZxkpvzJiCFBtN86VEWk3mMps8TC: all dials failed\n  * [/ip4/11.0.0.2/udp/46476/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203120231411757,"type":"EndHolePunch"}
+T 7 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1707.871,"total_ms":59235.941}
+T 7 hybrid B ready 12D3KooWHVcBi9xWUPRFTD4pcxDZiLnB4zpeniNwhN5PxnHKsNcv
+T 7 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43575/quic-v1"],"RTT":424437991},"role":"listen","ts":1793203167925902640,"type":"StartHolePunch"}
+T 7 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203167926402956,"type":"HolePunchAttempt"}
+T 7 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001817248,"Error":"failed to dial: failed to dial 12D3KooWMRYx9SPsSK6CPzJKvjSsuYqj8rDoZJN2scSyPsT2SJRd: all dials failed\n  * [/ip4/11.0.0.1/udp/43575/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203172927341533,"type":"EndHolePunch"}
+T 7 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43575/quic-v1"],"RTT":421308765},"role":"listen","ts":1793203173560110799,"type":"StartHolePunch"}
+T 7 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203173560293765,"type":"HolePunchAttempt"}
+T 7 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001622595,"Error":"failed to dial: failed to dial 12D3KooWMRYx9SPsSK6CPzJKvjSsuYqj8rDoZJN2scSyPsT2SJRd: all dials failed\n  * [/ip4/11.0.0.1/udp/43575/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203178561143609,"type":"EndHolePunch"}
+T 7 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43575/quic-v1"],"RTT":425595924},"role":"listen","ts":1793203179200654315,"type":"StartHolePunch"}
+T 7 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203179201145465,"type":"HolePunchAttempt"}
+T 7 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004688798,"Error":"failed to dial: failed to dial 12D3KooWMRYx9SPsSK6CPzJKvjSsuYqj8rDoZJN2scSyPsT2SJRd: all dials failed\n  * [/ip4/11.0.0.1/udp/43575/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203184205100700,"type":"EndHolePunch"}
+T 7 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40771/quic-v1"],"RTT":424348432},"role":"dial","ts":1793203167814635265,"type":"StartHolePunch"}
+T 7 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203167814949132,"type":"HolePunchAttempt"}
+T 7 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002308811,"Error":"failed to dial: failed to dial 12D3KooWHVcBi9xWUPRFTD4pcxDZiLnB4zpeniNwhN5PxnHKsNcv: all dials failed\n  * [/ip4/11.0.0.2/udp/40771/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203172817257851,"type":"EndHolePunch"}
+T 7 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40771/quic-v1"],"RTT":421000858},"role":"dial","ts":1793203173449373074,"type":"StartHolePunch"}
+T 7 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203173449415974,"type":"HolePunchAttempt"}
+T 7 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002575926,"Error":"failed to dial: failed to dial 12D3KooWHVcBi9xWUPRFTD4pcxDZiLnB4zpeniNwhN5PxnHKsNcv: all dials failed\n  * [/ip4/11.0.0.2/udp/40771/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203178451992634,"type":"EndHolePunch"}
+T 7 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40771/quic-v1"],"RTT":425097349},"role":"dial","ts":1793203179090299116,"type":"StartHolePunch"}
+T 7 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203179090447341,"type":"HolePunchAttempt"}
+T 7 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002504885,"Error":"failed to dial: failed to dial 12D3KooWHVcBi9xWUPRFTD4pcxDZiLnB4zpeniNwhN5PxnHKsNcv: all dials failed\n  * [/ip4/11.0.0.2/udp/40771/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203184092953051,"type":"EndHolePunch"}
+T 7 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1709.136,"total_ms":59233.042}
+T 8 hybrid B ready 12D3KooWJYa8pn3AhrF59G9cgTb166sNMQzaDo7fP5pxcbamYsfH
+T 8 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/55709/quic-v1"],"RTT":423844999},"role":"listen","ts":1793203234600122697,"type":"StartHolePunch"}
+T 8 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203234600327206,"type":"HolePunchAttempt"}
+T 8 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002567768,"Error":"failed to dial: failed to dial 12D3KooWJKBswUeQ5nXyyoLM34v63Bf8xstCrgokgaJ2Tq1V1NAb: all dials failed\n  * [/ip4/11.0.0.1/udp/55709/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203239601588449,"type":"EndHolePunch"}
+T 8 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/55709/quic-v1"],"RTT":425332474},"role":"listen","ts":1793203240240931222,"type":"StartHolePunch"}
+T 8 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203240241079997,"type":"HolePunchAttempt"}
+T 8 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002715949,"Error":"failed to dial: failed to dial 12D3KooWJKBswUeQ5nXyyoLM34v63Bf8xstCrgokgaJ2Tq1V1NAb: all dials failed\n  * [/ip4/11.0.0.1/udp/55709/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203245243242141,"type":"EndHolePunch"}
+T 8 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/55709/quic-v1"],"RTT":424765332},"role":"listen","ts":1793203245881652114,"type":"StartHolePunch"}
+T 8 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203245881734981,"type":"HolePunchAttempt"}
+T 8 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002770535,"Error":"failed to dial: failed to dial 12D3KooWJKBswUeQ5nXyyoLM34v63Bf8xstCrgokgaJ2Tq1V1NAb: all dials failed\n  * [/ip4/11.0.0.1/udp/55709/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203250883723141,"type":"EndHolePunch"}
+T 8 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/55909/quic-v1"],"RTT":424800257},"role":"dial","ts":1793203234489588565,"type":"StartHolePunch"}
+T 8 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203234489999690,"type":"HolePunchAttempt"}
+T 8 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003741377,"Error":"failed to dial: failed to dial 12D3KooWJYa8pn3AhrF59G9cgTb166sNMQzaDo7fP5pxcbamYsfH: all dials failed\n  * [/ip4/11.0.0.2/udp/55909/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203239493741433,"type":"EndHolePunch"}
+T 8 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/55909/quic-v1"],"RTT":422589899},"role":"dial","ts":1793203240128750023,"type":"StartHolePunch"}
+T 8 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203240128808598,"type":"HolePunchAttempt"}
+T 8 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003041869,"Error":"failed to dial: failed to dial 12D3KooWJYa8pn3AhrF59G9cgTb166sNMQzaDo7fP5pxcbamYsfH: all dials failed\n  * [/ip4/11.0.0.2/udp/55909/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203245131851017,"type":"EndHolePunch"}
+T 8 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/55909/quic-v1"],"RTT":423948124},"role":"dial","ts":1793203245770623715,"type":"StartHolePunch"}
+T 8 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203245770694481,"type":"HolePunchAttempt"}
+T 8 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001546235,"Error":"failed to dial: failed to dial 12D3KooWJYa8pn3AhrF59G9cgTb166sNMQzaDo7fP5pxcbamYsfH: all dials failed\n  * [/ip4/11.0.0.2/udp/55909/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203250772240992,"type":"EndHolePunch"}
+T 8 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1713.277,"total_ms":59239.628}
+T 8 classical B ready 12D3KooWDPKMfKaVsJ8fcCLjYAbFpcHRgLv7Hg41VKHeJEc89NZq
+T 8 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35922/quic-v1"],"RTT":424507383},"role":"listen","ts":1793203301712089362,"type":"StartHolePunch"}
+T 8 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203301712582895,"type":"HolePunchAttempt"}
+T 8 classical B event {"evt":{"Success":false,"EllapsedTime":5002568044,"Error":"failed to dial: failed to dial 12D3KooWGUkYGUgtbA6rrG9Y2nPQFSzhqgBve1gvcpLVx4FdEWkP: all dials failed\n  * [/ip4/11.0.0.1/udp/35922/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203306713324755,"type":"EndHolePunch"}
+T 8 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35922/quic-v1"],"RTT":424318090},"role":"listen","ts":1793203307351035128,"type":"StartHolePunch"}
+T 8 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203307351117720,"type":"HolePunchAttempt"}
+T 8 classical B event {"evt":{"Success":false,"EllapsedTime":5002455981,"Error":"failed to dial: failed to dial 12D3KooWGUkYGUgtbA6rrG9Y2nPQFSzhqgBve1gvcpLVx4FdEWkP: all dials failed\n  * [/ip4/11.0.0.1/udp/35922/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203312352654239,"type":"EndHolePunch"}
+T 8 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35922/quic-v1"],"RTT":424847373},"role":"listen","ts":1793203312991653445,"type":"StartHolePunch"}
+T 8 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203312991706153,"type":"HolePunchAttempt"}
+T 8 classical B event {"evt":{"Success":false,"EllapsedTime":5002032390,"Error":"failed to dial: failed to dial 12D3KooWGUkYGUgtbA6rrG9Y2nPQFSzhqgBve1gvcpLVx4FdEWkP: all dials failed\n  * [/ip4/11.0.0.1/udp/35922/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203317992673697,"type":"EndHolePunch"}
+T 8 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51544/quic-v1"],"RTT":425442015},"role":"dial","ts":1793203301600980296,"type":"StartHolePunch"}
+T 8 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203301601650471,"type":"HolePunchAttempt"}
+T 8 classical A event {"evt":{"Success":false,"EllapsedTime":5003708927,"Error":"failed to dial: failed to dial 12D3KooWDPKMfKaVsJ8fcCLjYAbFpcHRgLv7Hg41VKHeJEc89NZq: all dials failed\n  * [/ip4/11.0.0.2/udp/51544/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203306605359581,"type":"EndHolePunch"}
+T 8 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51544/quic-v1"],"RTT":425224857},"role":"dial","ts":1793203307241094171,"type":"StartHolePunch"}
+T 8 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203307241238179,"type":"HolePunchAttempt"}
+T 8 classical A event {"evt":{"Success":false,"EllapsedTime":5003217776,"Error":"failed to dial: failed to dial 12D3KooWDPKMfKaVsJ8fcCLjYAbFpcHRgLv7Hg41VKHeJEc89NZq: all dials failed\n  * [/ip4/11.0.0.2/udp/51544/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203312244456322,"type":"EndHolePunch"}
+T 8 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51544/quic-v1"],"RTT":422733907},"role":"dial","ts":1793203312879765671,"type":"StartHolePunch"}
+T 8 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203312879841571,"type":"HolePunchAttempt"}
+T 8 classical A event {"evt":{"Success":false,"EllapsedTime":5002146743,"Error":"failed to dial: failed to dial 12D3KooWDPKMfKaVsJ8fcCLjYAbFpcHRgLv7Hg41VKHeJEc89NZq: all dials failed\n  * [/ip4/11.0.0.2/udp/51544/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203317881988956,"type":"EndHolePunch"}
+T 8 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1711.679,"total_ms":59234.628}
+T 9 classical B ready 12D3KooWKWAg8igPUJTDDxcPdNgVtza2EyC9j4F8R94R3AEVVthz
+T 9 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50681/quic-v1"],"RTT":425260057},"role":"listen","ts":1793203368481625622,"type":"StartHolePunch"}
+T 9 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203368482070022,"type":"HolePunchAttempt"}
+T 9 classical B event {"evt":{"Success":false,"EllapsedTime":5002558099,"Error":"failed to dial: failed to dial 12D3KooWCjw1zfRrnc2SnF35Z53Qzce8ANfnWj2ZkD9hsonFcmj8: all dials failed\n  * [/ip4/11.0.0.1/udp/50681/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203373484048741,"type":"EndHolePunch"}
+T 9 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50681/quic-v1"],"RTT":424648641},"role":"listen","ts":1793203374122244672,"type":"StartHolePunch"}
+T 9 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203374122323139,"type":"HolePunchAttempt"}
+T 9 classical B event {"evt":{"Success":false,"EllapsedTime":5002084365,"Error":"failed to dial: failed to dial 12D3KooWCjw1zfRrnc2SnF35Z53Qzce8ANfnWj2ZkD9hsonFcmj8: all dials failed\n  * [/ip4/11.0.0.1/udp/50681/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203379123913466,"type":"EndHolePunch"}
+T 9 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50681/quic-v1"],"RTT":423571190},"role":"listen","ts":1793203379760996198,"type":"StartHolePunch"}
+T 9 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203379761129572,"type":"HolePunchAttempt"}
+T 9 classical B event {"evt":{"Success":false,"EllapsedTime":5004419757,"Error":"failed to dial: failed to dial 12D3KooWCjw1zfRrnc2SnF35Z53Qzce8ANfnWj2ZkD9hsonFcmj8: all dials failed\n  * [/ip4/11.0.0.1/udp/50681/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203384764352299,"type":"EndHolePunch"}
+T 9 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40633/quic-v1"],"RTT":425128240},"role":"dial","ts":1793203368370758740,"type":"StartHolePunch"}
+T 9 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203368371034198,"type":"HolePunchAttempt"}
+T 9 classical A event {"evt":{"Success":false,"EllapsedTime":5001759910,"Error":"failed to dial: failed to dial 12D3KooWKWAg8igPUJTDDxcPdNgVtza2EyC9j4F8R94R3AEVVthz: all dials failed\n  * [/ip4/11.0.0.2/udp/40633/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203373372794567,"type":"EndHolePunch"}
+T 9 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40633/quic-v1"],"RTT":421826224},"role":"dial","ts":1793203374010228656,"type":"StartHolePunch"}
+T 9 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203374010285031,"type":"HolePunchAttempt"}
+T 9 classical A event {"evt":{"Success":false,"EllapsedTime":5001161327,"Error":"failed to dial: failed to dial 12D3KooWKWAg8igPUJTDDxcPdNgVtza2EyC9j4F8R94R3AEVVthz: all dials failed\n  * [/ip4/11.0.0.2/udp/40633/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203379011446908,"type":"EndHolePunch"}
+T 9 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/40633/quic-v1"],"RTT":425901357},"role":"dial","ts":1793203379651272948,"type":"StartHolePunch"}
+T 9 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203379651568665,"type":"HolePunchAttempt"}
+T 9 classical A event {"evt":{"Success":false,"EllapsedTime":5001739561,"Error":"failed to dial: failed to dial 12D3KooWKWAg8igPUJTDDxcPdNgVtza2EyC9j4F8R94R3AEVVthz: all dials failed\n  * [/ip4/11.0.0.2/udp/40633/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203384653308317,"type":"EndHolePunch"}
+T 9 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1702.995,"total_ms":59243.559}
+T 9 hybrid B ready 12D3KooWCr4G9DHZMa7pmV3Qii6KGNNXQzS41UcfPBgCoUWVmGaM
+T 9 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52303/quic-v1"],"RTT":423360265},"role":"listen","ts":1793203432313843964,"type":"StartHolePunch"}
+T 9 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203432314154256,"type":"HolePunchAttempt"}
+T 9 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001756244,"Error":"failed to dial: failed to dial 12D3KooWGxtX19Z3x3McAZ94Bw1q78y9zdPz8GvfaXUSkZCybatJ: all dials failed\n  * [/ip4/11.0.0.1/udp/52303/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203440405245637,"type":"EndHolePunch"}
+T 9 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52303/quic-v1"],"RTT":423820891},"role":"listen","ts":1793203441042802194,"type":"StartHolePunch"}
+T 9 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203441042867736,"type":"HolePunchAttempt"}
+T 9 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002563507,"Error":"failed to dial: failed to dial 12D3KooWGxtX19Z3x3McAZ94Bw1q78y9zdPz8GvfaXUSkZCybatJ: all dials failed\n  * [/ip4/11.0.0.1/udp/52303/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203446044461729,"type":"EndHolePunch"}
+T 9 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52303/quic-v1"],"RTT":425894299},"role":"listen","ts":1793203446684320311,"type":"StartHolePunch"}
+T 9 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203446684502910,"type":"HolePunchAttempt"}
+T 9 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004996477,"Error":"failed to dial: failed to dial 12D3KooWGxtX19Z3x3McAZ94Bw1q78y9zdPz8GvfaXUSkZCybatJ: all dials failed\n  * [/ip4/11.0.0.1/udp/52303/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203451689015937,"type":"EndHolePunch"}
+T 9 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52292/quic-v1"],"RTT":423453307},"role":"dial","ts":1793203432203168023,"type":"StartHolePunch"}
+T 9 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203432203629198,"type":"HolePunchAttempt"}
+T 9 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001802444,"Error":"failed to dial: failed to dial 12D3KooWCr4G9DHZMa7pmV3Qii6KGNNXQzS41UcfPBgCoUWVmGaM: all dials failed\n  * [/ip4/11.0.0.2/udp/52292/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203440295765213,"type":"EndHolePunch"}
+T 9 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52292/quic-v1"],"RTT":423939874},"role":"dial","ts":1793203440932124236,"type":"StartHolePunch"}
+T 9 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203440932264853,"type":"HolePunchAttempt"}
+T 9 hybrid A event {"evt":{"Success":false,"EllapsedTime":5004280743,"Error":"failed to dial: failed to dial 12D3KooWCr4G9DHZMa7pmV3Qii6KGNNXQzS41UcfPBgCoUWVmGaM: all dials failed\n  * [/ip4/11.0.0.2/udp/52292/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203445936545688,"type":"EndHolePunch"}
+T 9 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52292/quic-v1"],"RTT":425453015},"role":"dial","ts":1793203446574099128,"type":"StartHolePunch"}
+T 9 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203446574248269,"type":"HolePunchAttempt"}
+T 9 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002424127,"Error":"failed to dial: failed to dial 12D3KooWCr4G9DHZMa7pmV3Qii6KGNNXQzS41UcfPBgCoUWVmGaM: all dials failed\n  * [/ip4/11.0.0.2/udp/52292/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203451576673221,"type":"EndHolePunch"}
+T 9 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1711.681,"total_ms":59232.546}
+T 10 classical B ready 12D3KooWF5HnoZf75y7QGSxrmeBKtN7JQS7ZoBWkZq4QCdX58u1b
+T 10 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58690/quic-v1"],"RTT":425211291},"role":"listen","ts":1793203499268465428,"type":"StartHolePunch"}
+T 10 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203499268639870,"type":"HolePunchAttempt"}
+T 10 classical B event {"evt":{"Success":false,"EllapsedTime":5002199499,"Error":"failed to dial: failed to dial 12D3KooWPe4PiagzHPeYv3kAAfkzYArxrFNahLa1ybFLoRXTxJCF: all dials failed\n  * [/ip4/11.0.0.1/udp/58690/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203504269934388,"type":"EndHolePunch"}
+T 10 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58690/quic-v1"],"RTT":423792565},"role":"listen","ts":1793203507831263824,"type":"StartHolePunch"}
+T 10 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203507831407741,"type":"HolePunchAttempt"}
+T 10 classical B event {"evt":{"Success":false,"EllapsedTime":5002164802,"Error":"failed to dial: failed to dial 12D3KooWPe4PiagzHPeYv3kAAfkzYArxrFNahLa1ybFLoRXTxJCF: all dials failed\n  * [/ip4/11.0.0.1/udp/58690/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203512833276368,"type":"EndHolePunch"}
+T 10 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58690/quic-v1"],"RTT":423915582},"role":"listen","ts":1793203513470534458,"type":"StartHolePunch"}
+T 10 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203513470662699,"type":"HolePunchAttempt"}
+T 10 classical B event {"evt":{"Success":false,"EllapsedTime":5002619560,"Error":"failed to dial: failed to dial 12D3KooWPe4PiagzHPeYv3kAAfkzYArxrFNahLa1ybFLoRXTxJCF: all dials failed\n  * [/ip4/11.0.0.1/udp/58690/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203518472478985,"type":"EndHolePunch"}
+T 10 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46317/quic-v1"],"RTT":423435983},"role":"dial","ts":1793203499156339871,"type":"StartHolePunch"}
+T 10 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203499156471229,"type":"HolePunchAttempt"}
+T 10 classical A event {"evt":{"Success":false,"EllapsedTime":5001458419,"Error":"failed to dial: failed to dial 12D3KooWF5HnoZf75y7QGSxrmeBKtN7JQS7ZoBWkZq4QCdX58u1b: all dials failed\n  * [/ip4/11.0.0.2/udp/46317/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203504157930381,"type":"EndHolePunch"}
+T 10 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46317/quic-v1"],"RTT":423462933},"role":"dial","ts":1793203507720370175,"type":"StartHolePunch"}
+T 10 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203507720433058,"type":"HolePunchAttempt"}
+T 10 classical A event {"evt":{"Success":false,"EllapsedTime":5001969002,"Error":"failed to dial: failed to dial 12D3KooWF5HnoZf75y7QGSxrmeBKtN7JQS7ZoBWkZq4QCdX58u1b: all dials failed\n  * [/ip4/11.0.0.2/udp/46317/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203512722403069,"type":"EndHolePunch"}
+T 10 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/46317/quic-v1"],"RTT":424157673},"role":"dial","ts":1793203513360956133,"type":"StartHolePunch"}
+T 10 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203513361106558,"type":"HolePunchAttempt"}
+T 10 classical A event {"evt":{"Success":false,"EllapsedTime":5001944985,"Error":"failed to dial: failed to dial 12D3KooWF5HnoZf75y7QGSxrmeBKtN7JQS7ZoBWkZq4QCdX58u1b: all dials failed\n  * [/ip4/11.0.0.2/udp/46317/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203518363051727,"type":"EndHolePunch"}
+T 10 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1710.654,"total_ms":59237.459}
+T 10 hybrid B ready 12D3KooWCmswANNbApV6fBoGzn3tT26rmXWDYHiVEivU7915D8EF
+T 10 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39068/quic-v1"],"RTT":428357473},"role":"listen","ts":1793203566140800111,"type":"StartHolePunch"}
+T 10 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203566141542152,"type":"HolePunchAttempt"}
+T 10 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003757281,"Error":"failed to dial: failed to dial 12D3KooWFb4vSVXmoqob2bQ1qvb7WHJGmuTMqwM6ozcgKq1GssAZ: all dials failed\n  * [/ip4/11.0.0.1/udp/39068/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203571143260354,"type":"EndHolePunch"}
+T 10 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39068/quic-v1"],"RTT":423948765},"role":"listen","ts":1793203571780711769,"type":"StartHolePunch"}
+T 10 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203571780752836,"type":"HolePunchAttempt"}
+T 10 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002362161,"Error":"failed to dial: failed to dial 12D3KooWFb4vSVXmoqob2bQ1qvb7WHJGmuTMqwM6ozcgKq1GssAZ: all dials failed\n  * [/ip4/11.0.0.1/udp/39068/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203579598924058,"type":"EndHolePunch"}
+T 10 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/39068/quic-v1"],"RTT":427400382},"role":"listen","ts":1793203580241993722,"type":"StartHolePunch"}
+T 10 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203580242125905,"type":"HolePunchAttempt"}
+T 10 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004683619,"Error":"failed to dial: failed to dial 12D3KooWFb4vSVXmoqob2bQ1qvb7WHJGmuTMqwM6ozcgKq1GssAZ: all dials failed\n  * [/ip4/11.0.0.1/udp/39068/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203585245710715,"type":"EndHolePunch"}
+T 10 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35785/quic-v1"],"RTT":425306715},"role":"dial","ts":1793203566027883745,"type":"StartHolePunch"}
+T 10 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203566028287628,"type":"HolePunchAttempt"}
+T 10 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003486543,"Error":"failed to dial: failed to dial 12D3KooWCmswANNbApV6fBoGzn3tT26rmXWDYHiVEivU7915D8EF: all dials failed\n  * [/ip4/11.0.0.2/udp/35785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203571031775088,"type":"EndHolePunch"}
+T 10 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35785/quic-v1"],"RTT":425645515},"role":"dial","ts":1793203571671038662,"type":"StartHolePunch"}
+T 10 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203571671160395,"type":"HolePunchAttempt"}
+T 10 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002268019,"Error":"failed to dial: failed to dial 12D3KooWCmswANNbApV6fBoGzn3tT26rmXWDYHiVEivU7915D8EF: all dials failed\n  * [/ip4/11.0.0.2/udp/35785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203579489994733,"type":"EndHolePunch"}
+T 10 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35785/quic-v1"],"RTT":425221832},"role":"dial","ts":1793203580130250598,"type":"StartHolePunch"}
+T 10 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203580130408173,"type":"HolePunchAttempt"}
+T 10 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002704627,"Error":"failed to dial: failed to dial 12D3KooWCmswANNbApV6fBoGzn3tT26rmXWDYHiVEivU7915D8EF: all dials failed\n  * [/ip4/11.0.0.2/udp/35785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203585133113441,"type":"EndHolePunch"}
+T 10 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1713.9,"total_ms":59233.704}
+T 11 hybrid B ready 12D3KooWPwBfmqxw3ky7WPDRALwE4HwqT8T8v7hewof3M7EutZMY
+T 11 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/48610/quic-v1"],"RTT":425129891},"role":"listen","ts":1793203632909730936,"type":"StartHolePunch"}
+T 11 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203632909884203,"type":"HolePunchAttempt"}
+T 11 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002251657,"Error":"failed to dial: failed to dial 12D3KooWMPDsvMtDJTq8YDfZbknfK7kjz4HWcuKHhuqVNU88Fi5E: all dials failed\n  * [/ip4/11.0.0.1/udp/48610/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203637911796096,"type":"EndHolePunch"}
+T 11 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/48610/quic-v1"],"RTT":425231458},"role":"listen","ts":1793203638550500869,"type":"StartHolePunch"}
+T 11 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203638550566136,"type":"HolePunchAttempt"}
+T 11 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001231681,"Error":"failed to dial: failed to dial 12D3KooWMPDsvMtDJTq8YDfZbknfK7kjz4HWcuKHhuqVNU88Fi5E: all dials failed\n  * [/ip4/11.0.0.1/udp/48610/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203643551618746,"type":"EndHolePunch"}
+T 11 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/48610/quic-v1"],"RTT":424137782},"role":"listen","ts":1793203644189325086,"type":"StartHolePunch"}
+T 11 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203644189491828,"type":"HolePunchAttempt"}
+T 11 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004614868,"Error":"failed to dial: failed to dial 12D3KooWMPDsvMtDJTq8YDfZbknfK7kjz4HWcuKHhuqVNU88Fi5E: all dials failed\n  * [/ip4/11.0.0.1/udp/48610/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203652026497913,"type":"EndHolePunch"}
+T 11 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37772/quic-v1"],"RTT":426087074},"role":"dial","ts":1793203632799479045,"type":"StartHolePunch"}
+T 11 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203632799924453,"type":"HolePunchAttempt"}
+T 11 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003108418,"Error":"failed to dial: failed to dial 12D3KooWPwBfmqxw3ky7WPDRALwE4HwqT8T8v7hewof3M7EutZMY: all dials failed\n  * [/ip4/11.0.0.2/udp/37772/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203637803033422,"type":"EndHolePunch"}
+T 11 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37772/quic-v1"],"RTT":421730340},"role":"dial","ts":1793203638438755178,"type":"StartHolePunch"}
+T 11 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203638438835478,"type":"HolePunchAttempt"}
+T 11 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003990527,"Error":"failed to dial: failed to dial 12D3KooWPwBfmqxw3ky7WPDRALwE4HwqT8T8v7hewof3M7EutZMY: all dials failed\n  * [/ip4/11.0.0.2/udp/37772/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203643442826647,"type":"EndHolePunch"}
+T 11 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37772/quic-v1"],"RTT":422539574},"role":"dial","ts":1793203644078024712,"type":"StartHolePunch"}
+T 11 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203644078177703,"type":"HolePunchAttempt"}
+T 11 hybrid A event {"evt":{"Success":false,"EllapsedTime":5004232894,"Error":"failed to dial: failed to dial 12D3KooWPwBfmqxw3ky7WPDRALwE4HwqT8T8v7hewof3M7EutZMY: all dials failed\n  * [/ip4/11.0.0.2/udp/37772/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203651915805931,"type":"EndHolePunch"}
+T 11 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1707.762,"total_ms":59234.814}
+T 11 classical B ready 12D3KooWCJmXas1dL2mnmP4rTYMKiyskPcmhBKecUFygykkqkyGL
+T 11 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44720/quic-v1"],"RTT":423489241},"role":"listen","ts":1793203699843691030,"type":"StartHolePunch"}
+T 11 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203699843857038,"type":"HolePunchAttempt"}
+T 11 classical B event {"evt":{"Success":false,"EllapsedTime":5002642523,"Error":"failed to dial: failed to dial 12D3KooWQwaptZtDyBjmq5QG6h1GX8k7BRRvEgprYyG6yFbvHfXX: all dials failed\n  * [/ip4/11.0.0.1/udp/44720/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203704845438749,"type":"EndHolePunch"}
+T 11 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44720/quic-v1"],"RTT":425753315},"role":"listen","ts":1793203705485472322,"type":"StartHolePunch"}
+T 11 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203705485695530,"type":"HolePunchAttempt"}
+T 11 classical B event {"evt":{"Success":false,"EllapsedTime":5002721861,"Error":"failed to dial: failed to dial 12D3KooWQwaptZtDyBjmq5QG6h1GX8k7BRRvEgprYyG6yFbvHfXX: all dials failed\n  * [/ip4/11.0.0.1/udp/44720/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203710487525290,"type":"EndHolePunch"}
+T 11 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44720/quic-v1"],"RTT":425808224},"role":"listen","ts":1793203711127201363,"type":"StartHolePunch"}
+T 11 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203711127246738,"type":"HolePunchAttempt"}
+T 11 classical B event {"evt":{"Success":false,"EllapsedTime":5002049806,"Error":"failed to dial: failed to dial 12D3KooWQwaptZtDyBjmq5QG6h1GX8k7BRRvEgprYyG6yFbvHfXX: all dials failed\n  * [/ip4/11.0.0.1/udp/44720/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203716128955865,"type":"EndHolePunch"}
+T 11 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52370/quic-v1"],"RTT":425480974},"role":"dial","ts":1793203699733860806,"type":"StartHolePunch"}
+T 11 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203699734410439,"type":"HolePunchAttempt"}
+T 11 classical A event {"evt":{"Success":false,"EllapsedTime":5001830952,"Error":"failed to dial: failed to dial 12D3KooWCJmXas1dL2mnmP4rTYMKiyskPcmhBKecUFygykkqkyGL: all dials failed\n  * [/ip4/11.0.0.2/udp/52370/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203704736241116,"type":"EndHolePunch"}
+T 11 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52370/quic-v1"],"RTT":423940149},"role":"dial","ts":1793203705373491689,"type":"StartHolePunch"}
+T 11 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203705373555214,"type":"HolePunchAttempt"}
+T 11 classical A event {"evt":{"Success":false,"EllapsedTime":5002532752,"Error":"failed to dial: failed to dial 12D3KooWCJmXas1dL2mnmP4rTYMKiyskPcmhBKecUFygykkqkyGL: all dials failed\n  * [/ip4/11.0.0.2/udp/52370/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203710376088608,"type":"EndHolePunch"}
+T 11 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52370/quic-v1"],"RTT":425037857},"role":"dial","ts":1793203711016654581,"type":"StartHolePunch"}
+T 11 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203711016790614,"type":"HolePunchAttempt"}
+T 11 classical A event {"evt":{"Success":false,"EllapsedTime":5004663268,"Error":"failed to dial: failed to dial 12D3KooWCJmXas1dL2mnmP4rTYMKiyskPcmhBKecUFygykkqkyGL: all dials failed\n  * [/ip4/11.0.0.2/udp/52370/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203716021454432,"type":"EndHolePunch"}
+T 11 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1710.097,"total_ms":59237.618}
+T 12 classical B ready 12D3KooWMCjtMUN25qng1tc3idqgT54s3KpjPPwKsfYk28hpAGFM
+T 12 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44828/quic-v1"],"RTT":424989182},"role":"listen","ts":1793203766670732972,"type":"StartHolePunch"}
+T 12 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203766671276281,"type":"HolePunchAttempt"}
+T 12 classical B event {"evt":{"Success":false,"EllapsedTime":5004063951,"Error":"failed to dial: failed to dial 12D3KooWJ29ZmECkXy9nSuP1ize5MgLuGq3PZTBK3HsEHyo1oycf: all dials failed\n  * [/ip4/11.0.0.1/udp/44828/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203771673418807,"type":"EndHolePunch"}
+T 12 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44828/quic-v1"],"RTT":426272974},"role":"listen","ts":1793203772314009439,"type":"StartHolePunch"}
+T 12 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203772314054539,"type":"HolePunchAttempt"}
+T 12 classical B event {"evt":{"Success":false,"EllapsedTime":5001994714,"Error":"failed to dial: failed to dial 12D3KooWJ29ZmECkXy9nSuP1ize5MgLuGq3PZTBK3HsEHyo1oycf: all dials failed\n  * [/ip4/11.0.0.1/udp/44828/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203777315639732,"type":"EndHolePunch"}
+T 12 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44828/quic-v1"],"RTT":423355591},"role":"listen","ts":1793203777951655189,"type":"StartHolePunch"}
+T 12 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203777951797456,"type":"HolePunchAttempt"}
+T 12 classical B event {"evt":{"Success":false,"EllapsedTime":5003548739,"Error":"failed to dial: failed to dial 12D3KooWJ29ZmECkXy9nSuP1ize5MgLuGq3PZTBK3HsEHyo1oycf: all dials failed\n  * [/ip4/11.0.0.1/udp/44828/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203782954827866,"type":"EndHolePunch"}
+T 12 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/32790/quic-v1"],"RTT":424819507},"role":"dial","ts":1793203766559380531,"type":"StartHolePunch"}
+T 12 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203766559736198,"type":"HolePunchAttempt"}
+T 12 classical A event {"evt":{"Success":false,"EllapsedTime":5002608010,"Error":"failed to dial: failed to dial 12D3KooWMCjtMUN25qng1tc3idqgT54s3KpjPPwKsfYk28hpAGFM: all dials failed\n  * [/ip4/11.0.0.2/udp/32790/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203771562344483,"type":"EndHolePunch"}
+T 12 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/32790/quic-v1"],"RTT":425233748},"role":"dial","ts":1793203772203374106,"type":"StartHolePunch"}
+T 12 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203772203539106,"type":"HolePunchAttempt"}
+T 12 classical A event {"evt":{"Success":false,"EllapsedTime":5002823976,"Error":"failed to dial: failed to dial 12D3KooWMCjtMUN25qng1tc3idqgT54s3KpjPPwKsfYk28hpAGFM: all dials failed\n  * [/ip4/11.0.0.2/udp/32790/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203777206363358,"type":"EndHolePunch"}
+T 12 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/32790/quic-v1"],"RTT":421960699},"role":"dial","ts":1793203777840669415,"type":"StartHolePunch"}
+T 12 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203777840721848,"type":"HolePunchAttempt"}
+T 12 classical A event {"evt":{"Success":false,"EllapsedTime":5001559436,"Error":"failed to dial: failed to dial 12D3KooWMCjtMUN25qng1tc3idqgT54s3KpjPPwKsfYk28hpAGFM: all dials failed\n  * [/ip4/11.0.0.2/udp/32790/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203782842281650,"type":"EndHolePunch"}
+T 12 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.347,"total_ms":59236.761}
+T 12 hybrid B ready 12D3KooWNzA6CScpZ78FNNgHZeM5z7W3FnxeKfLxMk9pZ63H2BYv
+T 12 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50477/quic-v1"],"RTT":423159883},"role":"listen","ts":1793203833228991814,"type":"StartHolePunch"}
+T 12 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203833229417697,"type":"HolePunchAttempt"}
+T 12 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002361794,"Error":"failed to dial: failed to dial 12D3KooWNwAA4vQiqb6xN8Sj5LugWmbe6aFFUp5YiUzMLUDJfziz: all dials failed\n  * [/ip4/11.0.0.1/udp/50477/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203838230859341,"type":"EndHolePunch"}
+T 12 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50477/quic-v1"],"RTT":423950507},"role":"listen","ts":1793203838868110556,"type":"StartHolePunch"}
+T 12 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203838868257222,"type":"HolePunchAttempt"}
+T 12 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002485407,"Error":"failed to dial: failed to dial 12D3KooWNwAA4vQiqb6xN8Sj5LugWmbe6aFFUp5YiUzMLUDJfziz: all dials failed\n  * [/ip4/11.0.0.1/udp/50477/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203843869627183,"type":"EndHolePunch"}
+T 12 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/50477/quic-v1"],"RTT":421648757},"role":"listen","ts":1793203844503038481,"type":"StartHolePunch"}
+T 12 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203844503090823,"type":"HolePunchAttempt"}
+T 12 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002270264,"Error":"failed to dial: failed to dial 12D3KooWNwAA4vQiqb6xN8Sj5LugWmbe6aFFUp5YiUzMLUDJfziz: all dials failed\n  * [/ip4/11.0.0.1/udp/50477/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203849504675100,"type":"EndHolePunch"}
+T 12 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/54480/quic-v1"],"RTT":422177032},"role":"dial","ts":1793203833118177090,"type":"StartHolePunch"}
+T 12 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203833118503790,"type":"HolePunchAttempt"}
+T 12 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003887769,"Error":"failed to dial: failed to dial 12D3KooWNzA6CScpZ78FNNgHZeM5z7W3FnxeKfLxMk9pZ63H2BYv: all dials failed\n  * [/ip4/11.0.0.2/udp/54480/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203838122392016,"type":"EndHolePunch"}
+T 12 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/54480/quic-v1"],"RTT":424039241},"role":"dial","ts":1793203838756524090,"type":"StartHolePunch"}
+T 12 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203838756615390,"type":"HolePunchAttempt"}
+T 12 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002714343,"Error":"failed to dial: failed to dial 12D3KooWNzA6CScpZ78FNNgHZeM5z7W3FnxeKfLxMk9pZ63H2BYv: all dials failed\n  * [/ip4/11.0.0.2/udp/54480/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203843759329642,"type":"EndHolePunch"}
+T 12 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/54480/quic-v1"],"RTT":421213891},"role":"dial","ts":1793203844392299382,"type":"StartHolePunch"}
+T 12 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203844392340632,"type":"HolePunchAttempt"}
+T 12 hybrid A event {"evt":{"Success":false,"EllapsedTime":5000997152,"Error":"failed to dial: failed to dial 12D3KooWNzA6CScpZ78FNNgHZeM5z7W3FnxeKfLxMk9pZ63H2BYv: all dials failed\n  * [/ip4/11.0.0.2/udp/54480/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203849393338151,"type":"EndHolePunch"}
+T 12 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1720.034,"total_ms":59235.741}
+T 13 hybrid B ready 12D3KooWJZgY6cvsTwYy1xXWy1BxNTL2iaXfsRzxbbMH1KakJXSR
+T 13 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60329/quic-v1"],"RTT":423685682},"role":"listen","ts":1793203898989244925,"type":"StartHolePunch"}
+T 13 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793203898989737450,"type":"HolePunchAttempt"}
+T 13 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001909235,"Error":"failed to dial: failed to dial 12D3KooWAQCyaDvWvFNHisXef5fN8rK9AewSKzqHSL1MP6A3QuHF: all dials failed\n  * [/ip4/11.0.0.1/udp/60329/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203903990799593,"type":"EndHolePunch"}
+T 13 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60329/quic-v1"],"RTT":422510607},"role":"listen","ts":1793203904626054950,"type":"StartHolePunch"}
+T 13 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793203904626269267,"type":"HolePunchAttempt"}
+T 13 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002829340,"Error":"failed to dial: failed to dial 12D3KooWAQCyaDvWvFNHisXef5fN8rK9AewSKzqHSL1MP6A3QuHF: all dials failed\n  * [/ip4/11.0.0.1/udp/60329/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203909627737035,"type":"EndHolePunch"}
+T 13 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60329/quic-v1"],"RTT":424209099},"role":"listen","ts":1793203910265787217,"type":"StartHolePunch"}
+T 13 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793203910265855783,"type":"HolePunchAttempt"}
+T 13 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003489753,"Error":"failed to dial: failed to dial 12D3KooWAQCyaDvWvFNHisXef5fN8rK9AewSKzqHSL1MP6A3QuHF: all dials failed\n  * [/ip4/11.0.0.1/udp/60329/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203915268707535,"type":"EndHolePunch"}
+T 13 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/56785/quic-v1"],"RTT":424636449},"role":"dial","ts":1793203898879436334,"type":"StartHolePunch"}
+T 13 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793203898880111184,"type":"HolePunchAttempt"}
+T 13 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002797027,"Error":"failed to dial: failed to dial 12D3KooWJZgY6cvsTwYy1xXWy1BxNTL2iaXfsRzxbbMH1KakJXSR: all dials failed\n  * [/ip4/11.0.0.2/udp/56785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203903882907752,"type":"EndHolePunch"}
+T 13 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/56785/quic-v1"],"RTT":422115249},"role":"dial","ts":1793203904514734042,"type":"StartHolePunch"}
+T 13 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793203904514795367,"type":"HolePunchAttempt"}
+T 13 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002929301,"Error":"failed to dial: failed to dial 12D3KooWJZgY6cvsTwYy1xXWy1BxNTL2iaXfsRzxbbMH1KakJXSR: all dials failed\n  * [/ip4/11.0.0.2/udp/56785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203909517725586,"type":"EndHolePunch"}
+T 13 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/56785/quic-v1"],"RTT":424368874},"role":"dial","ts":1793203910155652476,"type":"StartHolePunch"}
+T 13 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793203910155971842,"type":"HolePunchAttempt"}
+T 13 hybrid A event {"evt":{"Success":false,"EllapsedTime":5004092735,"Error":"failed to dial: failed to dial 12D3KooWJZgY6cvsTwYy1xXWy1BxNTL2iaXfsRzxbbMH1KakJXSR: all dials failed\n  * [/ip4/11.0.0.2/udp/56785/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203915160064852,"type":"EndHolePunch"}
+T 13 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1712.962,"total_ms":59236.012}
+T 13 classical B ready 12D3KooWCEZgFMz3Sir2UQ7y9yLoxFA4oBeMduQ9QsR278jHa1UX
+T 13 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41634/quic-v1"],"RTT":423886432},"role":"listen","ts":1793203965793058523,"type":"StartHolePunch"}
+T 13 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793203965793437198,"type":"HolePunchAttempt"}
+T 13 classical B event {"evt":{"Success":false,"EllapsedTime":5002749085,"Error":"failed to dial: failed to dial 12D3KooWAeC4yxMwV9ZzZt2tC56dEt6MgjhTVwKSQvLH6b2Svi4p: all dials failed\n  * [/ip4/11.0.0.1/udp/41634/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203970795033300,"type":"EndHolePunch"}
+T 13 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41634/quic-v1"],"RTT":425129799},"role":"listen","ts":1793203971434037731,"type":"StartHolePunch"}
+T 13 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793203971434242239,"type":"HolePunchAttempt"}
+T 13 classical B event {"evt":{"Success":false,"EllapsedTime":5002920960,"Error":"failed to dial: failed to dial 12D3KooWAeC4yxMwV9ZzZt2tC56dEt6MgjhTVwKSQvLH6b2Svi4p: all dials failed\n  * [/ip4/11.0.0.1/udp/41634/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793203976436034233,"type":"EndHolePunch"}
+T 13 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/41634/quic-v1"],"RTT":424457698},"role":"listen","ts":1793203977073286914,"type":"StartHolePunch"}
+T 13 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793203977073434039,"type":"HolePunchAttempt"}
+T 13 classical B event {"evt":{"Success":false,"EllapsedTime":5004260578,"Error":"failed to dial: failed to dial 12D3KooWAeC4yxMwV9ZzZt2tC56dEt6MgjhTVwKSQvLH6b2Svi4p: all dials failed\n  * [/ip4/11.0.0.1/udp/41634/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793203982077285325,"type":"EndHolePunch"}
+T 13 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42325/quic-v1"],"RTT":422537374},"role":"dial","ts":1793203965681024082,"type":"StartHolePunch"}
+T 13 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793203965681145357,"type":"HolePunchAttempt"}
+T 13 classical A event {"evt":{"Success":false,"EllapsedTime":5001893652,"Error":"failed to dial: failed to dial 12D3KooWCEZgFMz3Sir2UQ7y9yLoxFA4oBeMduQ9QsR278jHa1UX: all dials failed\n  * [/ip4/11.0.0.2/udp/42325/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203970683039834,"type":"EndHolePunch"}
+T 13 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42325/quic-v1"],"RTT":424527824},"role":"dial","ts":1793203971323229515,"type":"StartHolePunch"}
+T 13 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793203971323373798,"type":"HolePunchAttempt"}
+T 13 classical A event {"evt":{"Success":false,"EllapsedTime":5001902636,"Error":"failed to dial: failed to dial 12D3KooWCEZgFMz3Sir2UQ7y9yLoxFA4oBeMduQ9QsR278jHa1UX: all dials failed\n  * [/ip4/11.0.0.2/udp/42325/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203976325277167,"type":"EndHolePunch"}
+T 13 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/42325/quic-v1"],"RTT":423039249},"role":"dial","ts":1793203976962133940,"type":"StartHolePunch"}
+T 13 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793203976962236332,"type":"HolePunchAttempt"}
+T 13 classical A event {"evt":{"Success":false,"EllapsedTime":5002537152,"Error":"failed to dial: failed to dial 12D3KooWCEZgFMz3Sir2UQ7y9yLoxFA4oBeMduQ9QsR278jHa1UX: all dials failed\n  * [/ip4/11.0.0.2/udp/42325/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793203981964774309,"type":"EndHolePunch"}
+T 13 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1705.02,"total_ms":59240.349}
+T 14 hybrid B ready 12D3KooWNNQUNf2Gga1qD495fDyK7BxqTFqz6vjkfBdDmReLNnHf
+T 14 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/57246/quic-v1"],"RTT":425178382},"role":"listen","ts":1793204029686914929,"type":"StartHolePunch"}
+T 14 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204029687357587,"type":"HolePunchAttempt"}
+T 14 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003535494,"Error":"failed to dial: failed to dial 12D3KooWGmQJ3xC1XSw3sBnqkCN6pEu2YKMFhjL1hqrtSbo4wqYK: all dials failed\n  * [/ip4/11.0.0.1/udp/57246/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204034689507997,"type":"EndHolePunch"}
+T 14 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/57246/quic-v1"],"RTT":426802349},"role":"listen","ts":1793204035331286078,"type":"StartHolePunch"}
+T 14 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204035331396628,"type":"HolePunchAttempt"}
+T 14 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002118419,"Error":"failed to dial: failed to dial 12D3KooWGmQJ3xC1XSw3sBnqkCN6pEu2YKMFhjL1hqrtSbo4wqYK: all dials failed\n  * [/ip4/11.0.0.1/udp/57246/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204040332414497,"type":"EndHolePunch"}
+T 14 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/57246/quic-v1"],"RTT":424049324},"role":"listen","ts":1793204040970177303,"type":"StartHolePunch"}
+T 14 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204040970309578,"type":"HolePunchAttempt"}
+T 14 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004184447,"Error":"failed to dial: failed to dial 12D3KooWGmQJ3xC1XSw3sBnqkCN6pEu2YKMFhjL1hqrtSbo4wqYK: all dials failed\n  * [/ip4/11.0.0.1/udp/57246/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204045973348239,"type":"EndHolePunch"}
+T 14 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49555/quic-v1"],"RTT":425295716},"role":"dial","ts":1793204029576251454,"type":"StartHolePunch"}
+T 14 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204029576645988,"type":"HolePunchAttempt"}
+T 14 hybrid A event {"evt":{"Success":false,"EllapsedTime":5005797918,"Error":"failed to dial: failed to dial 12D3KooWNNQUNf2Gga1qD495fDyK7BxqTFqz6vjkfBdDmReLNnHf: all dials failed\n  * [/ip4/11.0.0.2/udp/49555/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204034582444731,"type":"EndHolePunch"}
+T 14 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49555/quic-v1"],"RTT":424818682},"role":"dial","ts":1793204035218928421,"type":"StartHolePunch"}
+T 14 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204035219000104,"type":"HolePunchAttempt"}
+T 14 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001628002,"Error":"failed to dial: failed to dial 12D3KooWNNQUNf2Gga1qD495fDyK7BxqTFqz6vjkfBdDmReLNnHf: all dials failed\n  * [/ip4/11.0.0.2/udp/49555/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204040220628656,"type":"EndHolePunch"}
+T 14 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49555/quic-v1"],"RTT":422860407},"role":"dial","ts":1793204040858113162,"type":"StartHolePunch"}
+T 14 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204040858172379,"type":"HolePunchAttempt"}
+T 14 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002314219,"Error":"failed to dial: failed to dial 12D3KooWNNQUNf2Gga1qD495fDyK7BxqTFqz6vjkfBdDmReLNnHf: all dials failed\n  * [/ip4/11.0.0.2/udp/49555/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204045860487056,"type":"EndHolePunch"}
+T 14 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.102,"total_ms":59235.389}
+T 14 classical B ready 12D3KooWDHNC5mxvxZBrenAVVD8oU4GNzdHxNPaHR8mkJt96TmAM
+T 14 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/40625/quic-v1"],"RTT":425452649},"role":"listen","ts":1793204097831545357,"type":"StartHolePunch"}
+T 14 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204097831747482,"type":"HolePunchAttempt"}
+T 14 classical B event {"evt":{"Success":false,"EllapsedTime":5002185151,"Error":"failed to dial: failed to dial 12D3KooWNU6c7gGLwDDpPJEBmmNwgaXWJn2zjGtfccGGYRxfcscQ: all dials failed\n  * [/ip4/11.0.0.1/udp/40625/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204102832711176,"type":"EndHolePunch"}
+T 14 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/40625/quic-v1"],"RTT":424278399},"role":"listen","ts":1793204103471112349,"type":"StartHolePunch"}
+T 14 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204103471307140,"type":"HolePunchAttempt"}
+T 14 classical B event {"evt":{"Success":false,"EllapsedTime":5003247477,"Error":"failed to dial: failed to dial 12D3KooWNU6c7gGLwDDpPJEBmmNwgaXWJn2zjGtfccGGYRxfcscQ: all dials failed\n  * [/ip4/11.0.0.1/udp/40625/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204108473417126,"type":"EndHolePunch"}
+T 14 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/40625/quic-v1"],"RTT":423253933},"role":"listen","ts":1793204109109590616,"type":"StartHolePunch"}
+T 14 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204109109697316,"type":"HolePunchAttempt"}
+T 14 classical B event {"evt":{"Success":false,"EllapsedTime":5003920127,"Error":"failed to dial: failed to dial 12D3KooWNU6c7gGLwDDpPJEBmmNwgaXWJn2zjGtfccGGYRxfcscQ: all dials failed\n  * [/ip4/11.0.0.1/udp/40625/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204114112798126,"type":"EndHolePunch"}
+T 14 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51429/quic-v1"],"RTT":424359432},"role":"dial","ts":1793204097719948624,"type":"StartHolePunch"}
+T 14 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204097720513933,"type":"HolePunchAttempt"}
+T 14 classical A event {"evt":{"Success":false,"EllapsedTime":5003162776,"Error":"failed to dial: failed to dial 12D3KooWDHNC5mxvxZBrenAVVD8oU4GNzdHxNPaHR8mkJt96TmAM: all dials failed\n  * [/ip4/11.0.0.2/udp/51429/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204102723676709,"type":"EndHolePunch"}
+T 14 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51429/quic-v1"],"RTT":422067583},"role":"dial","ts":1793204103358868908,"type":"StartHolePunch"}
+T 14 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204103358972583,"type":"HolePunchAttempt"}
+T 14 classical A event {"evt":{"Success":false,"EllapsedTime":5003076427,"Error":"failed to dial: failed to dial 12D3KooWDHNC5mxvxZBrenAVVD8oU4GNzdHxNPaHR8mkJt96TmAM: all dials failed\n  * [/ip4/11.0.0.2/udp/51429/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204108362049560,"type":"EndHolePunch"}
+T 14 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51429/quic-v1"],"RTT":423863333},"role":"dial","ts":1793204108999828683,"type":"StartHolePunch"}
+T 14 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204108999967924,"type":"HolePunchAttempt"}
+T 14 classical A event {"evt":{"Success":false,"EllapsedTime":5002050677,"Error":"failed to dial: failed to dial 12D3KooWDHNC5mxvxZBrenAVVD8oU4GNzdHxNPaHR8mkJt96TmAM: all dials failed\n  * [/ip4/11.0.0.2/udp/51429/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204114002018601,"type":"EndHolePunch"}
+T 14 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.36,"total_ms":59239.695}
+T 15 classical B ready 12D3KooWQRT5HkB2NCJQZNYiLg5pQtScCwUMJJzLRZAE3vcgyG2V
+T 15 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60312/quic-v1"],"RTT":426276366},"role":"listen","ts":1793204164065853778,"type":"StartHolePunch"}
+T 15 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204164066001269,"type":"HolePunchAttempt"}
+T 15 classical B event {"evt":{"Success":false,"EllapsedTime":5002186894,"Error":"failed to dial: failed to dial 12D3KooWCm4PdfFPLNCQReKYxNX4PGot9twkcxZ5cnZcYCt8K7GH: all dials failed\n  * [/ip4/11.0.0.1/udp/60312/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204169067654480,"type":"EndHolePunch"}
+T 15 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60312/quic-v1"],"RTT":425664857},"role":"listen","ts":1793204169707453019,"type":"StartHolePunch"}
+T 15 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204169707626453,"type":"HolePunchAttempt"}
+T 15 classical B event {"evt":{"Success":false,"EllapsedTime":5001978398,"Error":"failed to dial: failed to dial 12D3KooWCm4PdfFPLNCQReKYxNX4PGot9twkcxZ5cnZcYCt8K7GH: all dials failed\n  * [/ip4/11.0.0.1/udp/60312/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204174708979455,"type":"EndHolePunch"}
+T 15 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60312/quic-v1"],"RTT":424308098},"role":"listen","ts":1793204175347512169,"type":"StartHolePunch"}
+T 15 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204175347741061,"type":"HolePunchAttempt"}
+T 15 classical B event {"evt":{"Success":false,"EllapsedTime":5004800494,"Error":"failed to dial: failed to dial 12D3KooWCm4PdfFPLNCQReKYxNX4PGot9twkcxZ5cnZcYCt8K7GH: all dials failed\n  * [/ip4/11.0.0.1/udp/60312/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204180351025663,"type":"EndHolePunch"}
+T 15 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49584/quic-v1"],"RTT":424812633},"role":"dial","ts":1793204163954392254,"type":"StartHolePunch"}
+T 15 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204163954754978,"type":"HolePunchAttempt"}
+T 15 classical A event {"evt":{"Success":false,"EllapsedTime":5002767602,"Error":"failed to dial: failed to dial 12D3KooWQRT5HkB2NCJQZNYiLg5pQtScCwUMJJzLRZAE3vcgyG2V: all dials failed\n  * [/ip4/11.0.0.2/udp/49584/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204168957523039,"type":"EndHolePunch"}
+T 15 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49584/quic-v1"],"RTT":422703107},"role":"dial","ts":1793204169595101045,"type":"StartHolePunch"}
+T 15 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204169595172728,"type":"HolePunchAttempt"}
+T 15 classical A event {"evt":{"Success":false,"EllapsedTime":5002447502,"Error":"failed to dial: failed to dial 12D3KooWQRT5HkB2NCJQZNYiLg5pQtScCwUMJJzLRZAE3vcgyG2V: all dials failed\n  * [/ip4/11.0.0.2/udp/49584/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204174597620964,"type":"EndHolePunch"}
+T 15 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/49584/quic-v1"],"RTT":423158232},"role":"dial","ts":1793204175234989970,"type":"StartHolePunch"}
+T 15 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204175235409987,"type":"HolePunchAttempt"}
+T 15 classical A event {"evt":{"Success":false,"EllapsedTime":5002412027,"Error":"failed to dial: failed to dial 12D3KooWQRT5HkB2NCJQZNYiLg5pQtScCwUMJJzLRZAE3vcgyG2V: all dials failed\n  * [/ip4/11.0.0.2/udp/49584/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204180237822472,"type":"EndHolePunch"}
+T 15 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1705.424,"total_ms":59231.477}
+T 15 hybrid B ready 12D3KooWEjPJj4ELmzTp1K8XoLuN5oQCaRxnVM6E5yhy1CYSXZ3e
+T 15 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51701/quic-v1"],"RTT":424911633},"role":"listen","ts":1793204230801548277,"type":"StartHolePunch"}
+T 15 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204230802003310,"type":"HolePunchAttempt"}
+T 15 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003110434,"Error":"failed to dial: failed to dial 12D3KooWB2w2dxdrWyazgCdKCG9RAkaUbARa3NjDQGXYBuro8Hmb: all dials failed\n  * [/ip4/11.0.0.1/udp/51701/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204235803246862,"type":"EndHolePunch"}
+T 15 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51701/quic-v1"],"RTT":422877182},"role":"listen","ts":1793204236439210893,"type":"StartHolePunch"}
+T 15 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204236439372410,"type":"HolePunchAttempt"}
+T 15 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002534311,"Error":"failed to dial: failed to dial 12D3KooWB2w2dxdrWyazgCdKCG9RAkaUbARa3NjDQGXYBuro8Hmb: all dials failed\n  * [/ip4/11.0.0.1/udp/51701/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204241440669587,"type":"EndHolePunch"}
+T 15 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51701/quic-v1"],"RTT":425393249},"role":"listen","ts":1793204242080837177,"type":"StartHolePunch"}
+T 15 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204242080973210,"type":"HolePunchAttempt"}
+T 15 hybrid B event {"evt":{"Success":false,"EllapsedTime":5005211711,"Error":"failed to dial: failed to dial 12D3KooWB2w2dxdrWyazgCdKCG9RAkaUbARa3NjDQGXYBuro8Hmb: all dials failed\n  * [/ip4/11.0.0.1/udp/51701/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204247085068603,"type":"EndHolePunch"}
+T 15 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52571/quic-v1"],"RTT":424392799},"role":"dial","ts":1793204230690376602,"type":"StartHolePunch"}
+T 15 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204230691061811,"type":"HolePunchAttempt"}
+T 15 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002876319,"Error":"failed to dial: failed to dial 12D3KooWEjPJj4ELmzTp1K8XoLuN5oQCaRxnVM6E5yhy1CYSXZ3e: all dials failed\n  * [/ip4/11.0.0.2/udp/52571/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204235693937946,"type":"EndHolePunch"}
+T 15 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52571/quic-v1"],"RTT":425001282},"role":"dial","ts":1793204236329967977,"type":"StartHolePunch"}
+T 15 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204236330140402,"type":"HolePunchAttempt"}
+T 15 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002284885,"Error":"failed to dial: failed to dial 12D3KooWEjPJj4ELmzTp1K8XoLuN5oQCaRxnVM6E5yhy1CYSXZ3e: all dials failed\n  * [/ip4/11.0.0.2/udp/52571/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204241332425287,"type":"EndHolePunch"}
+T 15 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52571/quic-v1"],"RTT":425432940},"role":"dial","ts":1793204241970489311,"type":"StartHolePunch"}
+T 15 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204241970626352,"type":"HolePunchAttempt"}
+T 15 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003868335,"Error":"failed to dial: failed to dial 12D3KooWEjPJj4ELmzTp1K8XoLuN5oQCaRxnVM6E5yhy1CYSXZ3e: all dials failed\n  * [/ip4/11.0.0.2/udp/52571/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204246974495512,"type":"EndHolePunch"}
+T 15 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.028,"total_ms":59236.902}
+T 16 classical B ready 12D3KooWKSxmUuG9dqqUs7VD665bz78TxmrDUHTYR2ab9HbjVJPm
+T 16 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43660/quic-v1"],"RTT":424924924},"role":"listen","ts":1793204294690661596,"type":"StartHolePunch"}
+T 16 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204294691137162,"type":"HolePunchAttempt"}
+T 16 classical B event {"evt":{"Success":false,"EllapsedTime":5003432781,"Error":"failed to dial: failed to dial 12D3KooWD7WNbryNjgz7a4KbrB4g44qRyF8HvzptKxjEkshNcHWi: all dials failed\n  * [/ip4/11.0.0.1/udp/43660/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204302626049796,"type":"EndHolePunch"}
+T 16 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43660/quic-v1"],"RTT":425396091},"role":"listen","ts":1793204303265744661,"type":"StartHolePunch"}
+T 16 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204303265826611,"type":"HolePunchAttempt"}
+T 16 classical B event {"evt":{"Success":false,"EllapsedTime":5001071998,"Error":"failed to dial: failed to dial 12D3KooWD7WNbryNjgz7a4KbrB4g44qRyF8HvzptKxjEkshNcHWi: all dials failed\n  * [/ip4/11.0.0.1/udp/43660/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204308266377988,"type":"EndHolePunch"}
+T 16 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/43660/quic-v1"],"RTT":425781182},"role":"listen","ts":1793204308906746327,"type":"StartHolePunch"}
+T 16 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204308906936260,"type":"HolePunchAttempt"}
+T 16 classical B event {"evt":{"Success":false,"EllapsedTime":5005141769,"Error":"failed to dial: failed to dial 12D3KooWD7WNbryNjgz7a4KbrB4g44qRyF8HvzptKxjEkshNcHWi: all dials failed\n  * [/ip4/11.0.0.1/udp/43660/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204313910777921,"type":"EndHolePunch"}
+T 16 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50265/quic-v1"],"RTT":424434690},"role":"dial","ts":1793204294578887671,"type":"StartHolePunch"}
+T 16 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204294579204838,"type":"HolePunchAttempt"}
+T 16 classical A event {"evt":{"Success":false,"EllapsedTime":5002194319,"Error":"failed to dial: failed to dial 12D3KooWKSxmUuG9dqqUs7VD665bz78TxmrDUHTYR2ab9HbjVJPm: all dials failed\n  * [/ip4/11.0.0.2/udp/50265/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204302514225088,"type":"EndHolePunch"}
+T 16 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50265/quic-v1"],"RTT":424638007},"role":"dial","ts":1793204303154631745,"type":"StartHolePunch"}
+T 16 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204303154780153,"type":"HolePunchAttempt"}
+T 16 classical A event {"evt":{"Success":false,"EllapsedTime":5002929210,"Error":"failed to dial: failed to dial 12D3KooWKSxmUuG9dqqUs7VD665bz78TxmrDUHTYR2ab9HbjVJPm: all dials failed\n  * [/ip4/11.0.0.2/udp/50265/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204308157709455,"type":"EndHolePunch"}
+T 16 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50265/quic-v1"],"RTT":423356140},"role":"dial","ts":1793204308793637186,"type":"StartHolePunch"}
+T 16 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204308793679445,"type":"HolePunchAttempt"}
+T 16 classical A event {"evt":{"Success":false,"EllapsedTime":5002509377,"Error":"failed to dial: failed to dial 12D3KooWKSxmUuG9dqqUs7VD665bz78TxmrDUHTYR2ab9HbjVJPm: all dials failed\n  * [/ip4/11.0.0.2/udp/50265/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204313796189738,"type":"EndHolePunch"}
+T 16 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1706.424,"total_ms":59236.719}
+T 16 hybrid B ready 12D3KooWN7Req1Mzf1KBDKUHxzcn1kChdfuCESxoaC6kJwZdwoJP
+T 16 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60636/quic-v1"],"RTT":425342740},"role":"listen","ts":1793204361478206318,"type":"StartHolePunch"}
+T 16 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204361478464359,"type":"HolePunchAttempt"}
+T 16 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002482015,"Error":"failed to dial: failed to dial 12D3KooWNwC6K9mpYsUhn7RxWL6ME6JkAYpkAsakux9okBoLaH2S: all dials failed\n  * [/ip4/11.0.0.1/udp/60636/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204369462398463,"type":"EndHolePunch"}
+T 16 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60636/quic-v1"],"RTT":425395815},"role":"listen","ts":1793204370102617019,"type":"StartHolePunch"}
+T 16 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204370102819236,"type":"HolePunchAttempt"}
+T 16 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002242353,"Error":"failed to dial: failed to dial 12D3KooWNwC6K9mpYsUhn7RxWL6ME6JkAYpkAsakux9okBoLaH2S: all dials failed\n  * [/ip4/11.0.0.1/udp/60636/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204375103830138,"type":"EndHolePunch"}
+T 16 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/60636/quic-v1"],"RTT":425345582},"role":"listen","ts":1793204375743363944,"type":"StartHolePunch"}
+T 16 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204375743497503,"type":"HolePunchAttempt"}
+T 16 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003789043,"Error":"failed to dial: failed to dial 12D3KooWNwC6K9mpYsUhn7RxWL6ME6JkAYpkAsakux9okBoLaH2S: all dials failed\n  * [/ip4/11.0.0.1/udp/60636/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204380746056471,"type":"EndHolePunch"}
+T 16 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/57024/quic-v1"],"RTT":422434249},"role":"dial","ts":1793204361365304435,"type":"StartHolePunch"}
+T 16 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204361365469985,"type":"HolePunchAttempt"}
+T 16 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003219060,"Error":"failed to dial: failed to dial 12D3KooWN7Req1Mzf1KBDKUHxzcn1kChdfuCESxoaC6kJwZdwoJP: all dials failed\n  * [/ip4/11.0.0.2/udp/57024/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204369351478230,"type":"EndHolePunch"}
+T 16 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/57024/quic-v1"],"RTT":423926399},"role":"dial","ts":1793204369990554803,"type":"StartHolePunch"}
+T 16 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204369990697253,"type":"HolePunchAttempt"}
+T 16 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002292860,"Error":"failed to dial: failed to dial 12D3KooWN7Req1Mzf1KBDKUHxzcn1kChdfuCESxoaC6kJwZdwoJP: all dials failed\n  * [/ip4/11.0.0.2/udp/57024/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204374992990572,"type":"EndHolePunch"}
+T 16 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/57024/quic-v1"],"RTT":424336882},"role":"dial","ts":1793204375631930562,"type":"StartHolePunch"}
+T 16 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204375632070995,"type":"HolePunchAttempt"}
+T 16 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002051502,"Error":"failed to dial: failed to dial 12D3KooWN7Req1Mzf1KBDKUHxzcn1kChdfuCESxoaC6kJwZdwoJP: all dials failed\n  * [/ip4/11.0.0.2/udp/57024/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204380634122772,"type":"EndHolePunch"}
+T 16 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1701.858,"total_ms":59231.704}
+T 17 hybrid B ready 12D3KooWRCcGWb6JxpwR7gzr2Z7w97WLFAyBqhFeDYAMkDHHz24e
+T 17 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44884/quic-v1"],"RTT":425713440},"role":"listen","ts":1793204429696154742,"type":"StartHolePunch"}
+T 17 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204429696278767,"type":"HolePunchAttempt"}
+T 17 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001997922,"Error":"failed to dial: failed to dial 12D3KooWSkwkkXn5nmtxTPzbTMQJoyNAB8cviYomkhkcAuHBv2se: all dials failed\n  * [/ip4/11.0.0.1/udp/44884/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204434697102211,"type":"EndHolePunch"}
+T 17 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44884/quic-v1"],"RTT":425958557},"role":"listen","ts":1793204435337072900,"type":"StartHolePunch"}
+T 17 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204435337152650,"type":"HolePunchAttempt"}
+T 17 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002560848,"Error":"failed to dial: failed to dial 12D3KooWSkwkkXn5nmtxTPzbTMQJoyNAB8cviYomkhkcAuHBv2se: all dials failed\n  * [/ip4/11.0.0.1/udp/44884/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204440339231010,"type":"EndHolePunch"}
+T 17 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44884/quic-v1"],"RTT":423712724},"role":"listen","ts":1793204440976070550,"type":"StartHolePunch"}
+T 17 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204440976148467,"type":"HolePunchAttempt"}
+T 17 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002720532,"Error":"failed to dial: failed to dial 12D3KooWSkwkkXn5nmtxTPzbTMQJoyNAB8cviYomkhkcAuHBv2se: all dials failed\n  * [/ip4/11.0.0.1/udp/44884/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204445978428494,"type":"EndHolePunch"}
+T 17 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/38462/quic-v1"],"RTT":424394999},"role":"dial","ts":1793204429584216734,"type":"StartHolePunch"}
+T 17 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204429584442418,"type":"HolePunchAttempt"}
+T 17 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003776485,"Error":"failed to dial: failed to dial 12D3KooWRCcGWb6JxpwR7gzr2Z7w97WLFAyBqhFeDYAMkDHHz24e: all dials failed\n  * [/ip4/11.0.0.2/udp/38462/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204434588219728,"type":"EndHolePunch"}
+T 17 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/38462/quic-v1"],"RTT":424081591},"role":"dial","ts":1793204435225870701,"type":"StartHolePunch"}
+T 17 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204435226051743,"type":"HolePunchAttempt"}
+T 17 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003851652,"Error":"failed to dial: failed to dial 12D3KooWRCcGWb6JxpwR7gzr2Z7w97WLFAyBqhFeDYAMkDHHz24e: all dials failed\n  * [/ip4/11.0.0.2/udp/38462/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204440229904036,"type":"EndHolePunch"}
+T 17 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/38462/quic-v1"],"RTT":421786807},"role":"dial","ts":1793204440864771184,"type":"StartHolePunch"}
+T 17 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204440864830859,"type":"HolePunchAttempt"}
+T 17 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001147027,"Error":"failed to dial: failed to dial 12D3KooWRCcGWb6JxpwR7gzr2Z7w97WLFAyBqhFeDYAMkDHHz24e: all dials failed\n  * [/ip4/11.0.0.2/udp/38462/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204445865978345,"type":"EndHolePunch"}
+T 17 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1711.599,"total_ms":59230.554}
+T 17 classical B ready 12D3KooWP98Q5VnKybjYRGR2XkbKm4qUNdLe1yrH7RgucoMYBaD1
+T 17 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44951/quic-v1"],"RTT":425650923},"role":"listen","ts":1793204496501744567,"type":"StartHolePunch"}
+T 17 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204496502065950,"type":"HolePunchAttempt"}
+T 17 classical B event {"evt":{"Success":false,"EllapsedTime":5002503098,"Error":"failed to dial: failed to dial 12D3KooWHxxfrgpCqhArJkbUoxGiPcAr9ruEDSs3mwhQPaS4kqzT: all dials failed\n  * [/ip4/11.0.0.1/udp/44951/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204501503437560,"type":"EndHolePunch"}
+T 17 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44951/quic-v1"],"RTT":425659541},"role":"listen","ts":1793204502143412192,"type":"StartHolePunch"}
+T 17 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204502143589292,"type":"HolePunchAttempt"}
+T 17 classical B event {"evt":{"Success":false,"EllapsedTime":5002939156,"Error":"failed to dial: failed to dial 12D3KooWHxxfrgpCqhArJkbUoxGiPcAr9ruEDSs3mwhQPaS4kqzT: all dials failed\n  * [/ip4/11.0.0.1/udp/44951/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204507145397052,"type":"EndHolePunch"}
+T 17 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/44951/quic-v1"],"RTT":426202849},"role":"listen","ts":1793204507786452158,"type":"StartHolePunch"}
+T 17 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204507786746866,"type":"HolePunchAttempt"}
+T 17 classical B event {"evt":{"Success":false,"EllapsedTime":5007042844,"Error":"failed to dial: failed to dial 12D3KooWHxxfrgpCqhArJkbUoxGiPcAr9ruEDSs3mwhQPaS4kqzT: all dials failed\n  * [/ip4/11.0.0.1/udp/44951/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204512792257135,"type":"EndHolePunch"}
+T 17 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35452/quic-v1"],"RTT":424045749},"role":"dial","ts":1793204496390121159,"type":"StartHolePunch"}
+T 17 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204496390587651,"type":"HolePunchAttempt"}
+T 17 classical A event {"evt":{"Success":false,"EllapsedTime":5002604802,"Error":"failed to dial: failed to dial 12D3KooWP98Q5VnKybjYRGR2XkbKm4qUNdLe1yrH7RgucoMYBaD1: all dials failed\n  * [/ip4/11.0.0.2/udp/35452/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204501393191903,"type":"EndHolePunch"}
+T 17 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35452/quic-v1"],"RTT":424526999},"role":"dial","ts":1793204502031647251,"type":"StartHolePunch"}
+T 17 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204502031726267,"type":"HolePunchAttempt"}
+T 17 classical A event {"evt":{"Success":false,"EllapsedTime":5002516802,"Error":"failed to dial: failed to dial 12D3KooWP98Q5VnKybjYRGR2XkbKm4qUNdLe1yrH7RgucoMYBaD1: all dials failed\n  * [/ip4/11.0.0.2/udp/35452/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204507034243711,"type":"EndHolePunch"}
+T 17 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/35452/quic-v1"],"RTT":425718390},"role":"dial","ts":1793204507675665759,"type":"StartHolePunch"}
+T 17 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204507675839100,"type":"HolePunchAttempt"}
+T 17 classical A event {"evt":{"Success":false,"EllapsedTime":5003634035,"Error":"failed to dial: failed to dial 12D3KooWP98Q5VnKybjYRGR2XkbKm4qUNdLe1yrH7RgucoMYBaD1: all dials failed\n  * [/ip4/11.0.0.2/udp/35452/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204512679473319,"type":"EndHolePunch"}
+T 17 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1703.387,"total_ms":59237.002}
+T 18 classical B ready 12D3KooWKmUE9X8XNkndgm7r98Y1h8YLEGVg5omSF8qTAqLKh9MG
+T 18 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38042/quic-v1"],"RTT":426116682},"role":"listen","ts":1793204563293223152,"type":"StartHolePunch"}
+T 18 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204563293767194,"type":"HolePunchAttempt"}
+T 18 classical B event {"evt":{"Success":false,"EllapsedTime":5003239686,"Error":"failed to dial: failed to dial 12D3KooWErnZtL5Qh3z5YYv8dUN46FopNsPqRGt28gi3PpLCG2s6: all dials failed\n  * [/ip4/11.0.0.1/udp/38042/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204568295409771,"type":"EndHolePunch"}
+T 18 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38042/quic-v1"],"RTT":424967641},"role":"listen","ts":1793204568933768777,"type":"StartHolePunch"}
+T 18 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204568933835419,"type":"HolePunchAttempt"}
+T 18 classical B event {"evt":{"Success":false,"EllapsedTime":5001559299,"Error":"failed to dial: failed to dial 12D3KooWErnZtL5Qh3z5YYv8dUN46FopNsPqRGt28gi3PpLCG2s6: all dials failed\n  * [/ip4/11.0.0.1/udp/38042/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204573935278896,"type":"EndHolePunch"}
+T 18 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/38042/quic-v1"],"RTT":422737207},"role":"listen","ts":1793204574571019169,"type":"StartHolePunch"}
+T 18 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204574571078111,"type":"HolePunchAttempt"}
+T 18 classical B event {"evt":{"Success":false,"EllapsedTime":5002201515,"Error":"failed to dial: failed to dial 12D3KooWErnZtL5Qh3z5YYv8dUN46FopNsPqRGt28gi3PpLCG2s6: all dials failed\n  * [/ip4/11.0.0.1/udp/38042/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204579572127146,"type":"EndHolePunch"}
+T 18 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/44428/quic-v1"],"RTT":424811074},"role":"dial","ts":1793204563181447853,"type":"StartHolePunch"}
+T 18 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204563181854211,"type":"HolePunchAttempt"}
+T 18 classical A event {"evt":{"Success":false,"EllapsedTime":5003742844,"Error":"failed to dial: failed to dial 12D3KooWKmUE9X8XNkndgm7r98Y1h8YLEGVg5omSF8qTAqLKh9MG: all dials failed\n  * [/ip4/11.0.0.2/udp/44428/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204568185597696,"type":"EndHolePunch"}
+T 18 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/44428/quic-v1"],"RTT":422964816},"role":"dial","ts":1793204568823202194,"type":"StartHolePunch"}
+T 18 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204568823346844,"type":"HolePunchAttempt"}
+T 18 classical A event {"evt":{"Success":false,"EllapsedTime":5003019960,"Error":"failed to dial: failed to dial 12D3KooWKmUE9X8XNkndgm7r98Y1h8YLEGVg5omSF8qTAqLKh9MG: all dials failed\n  * [/ip4/11.0.0.2/udp/44428/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204573826367171,"type":"EndHolePunch"}
+T 18 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/44428/quic-v1"],"RTT":422832724},"role":"dial","ts":1793204574460112411,"type":"StartHolePunch"}
+T 18 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204574460244503,"type":"HolePunchAttempt"}
+T 18 classical A event {"evt":{"Success":false,"EllapsedTime":5001541927,"Error":"failed to dial: failed to dial 12D3KooWKmUE9X8XNkndgm7r98Y1h8YLEGVg5omSF8qTAqLKh9MG: all dials failed\n  * [/ip4/11.0.0.2/udp/44428/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204579461786338,"type":"EndHolePunch"}
+T 18 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1709.248,"total_ms":59230.065}
+T 18 hybrid B ready 12D3KooWRYEDboDdE9PJV4ijGpdVxYoLq2ExuGAcupSLJEV13f91
+T 18 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53679/quic-v1"],"RTT":425207165},"role":"listen","ts":1793204627212329989,"type":"StartHolePunch"}
+T 18 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204627212923255,"type":"HolePunchAttempt"}
+T 18 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003184594,"Error":"failed to dial: failed to dial 12D3KooWKjuBf7D1SJ9GXJEjcfKJCa2ENapzDAY8J3GHZnuowQQA: all dials failed\n  * [/ip4/11.0.0.1/udp/53679/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204635147981509,"type":"EndHolePunch"}
+T 18 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53679/quic-v1"],"RTT":423322407},"role":"listen","ts":1793204635784519924,"type":"StartHolePunch"}
+T 18 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204635784689507,"type":"HolePunchAttempt"}
+T 18 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002520607,"Error":"failed to dial: failed to dial 12D3KooWKjuBf7D1SJ9GXJEjcfKJCa2ENapzDAY8J3GHZnuowQQA: all dials failed\n  * [/ip4/11.0.0.1/udp/53679/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204640785769617,"type":"EndHolePunch"}
+T 18 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53679/quic-v1"],"RTT":421527299},"role":"listen","ts":1793204641418524399,"type":"StartHolePunch"}
+T 18 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204641418640449,"type":"HolePunchAttempt"}
+T 18 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001642395,"Error":"failed to dial: failed to dial 12D3KooWKjuBf7D1SJ9GXJEjcfKJCa2ENapzDAY8J3GHZnuowQQA: all dials failed\n  * [/ip4/11.0.0.1/udp/53679/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204646419893443,"type":"EndHolePunch"}
+T 18 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52430/quic-v1"],"RTT":425799332},"role":"dial","ts":1793204627101694289,"type":"StartHolePunch"}
+T 18 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204627102328439,"type":"HolePunchAttempt"}
+T 18 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003065794,"Error":"failed to dial: failed to dial 12D3KooWRYEDboDdE9PJV4ijGpdVxYoLq2ExuGAcupSLJEV13f91: all dials failed\n  * [/ip4/11.0.0.2/udp/52430/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204635038674793,"type":"EndHolePunch"}
+T 18 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52430/quic-v1"],"RTT":421517674},"role":"dial","ts":1793204635672270983,"type":"StartHolePunch"}
+T 18 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204635672307466,"type":"HolePunchAttempt"}
+T 18 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001472260,"Error":"failed to dial: failed to dial 12D3KooWRYEDboDdE9PJV4ijGpdVxYoLq2ExuGAcupSLJEV13f91: all dials failed\n  * [/ip4/11.0.0.2/udp/52430/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204640673792285,"type":"EndHolePunch"}
+T 18 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/52430/quic-v1"],"RTT":421008465},"role":"dial","ts":1793204641307966342,"type":"StartHolePunch"}
+T 18 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204641308006217,"type":"HolePunchAttempt"}
+T 18 hybrid A event {"evt":{"Success":false,"EllapsedTime":5000787602,"Error":"failed to dial: failed to dial 12D3KooWRYEDboDdE9PJV4ijGpdVxYoLq2ExuGAcupSLJEV13f91: all dials failed\n  * [/ip4/11.0.0.2/udp/52430/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204646308793910,"type":"EndHolePunch"}
+T 18 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1705.339,"total_ms":59243.62}
+T 19 hybrid B ready 12D3KooWMZSSCdPNNvCTmY82vvd2D8gSe4RD57prpnwm47qWfXkx
+T 19 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58170/quic-v1"],"RTT":423224507},"role":"listen","ts":1793204694013731607,"type":"StartHolePunch"}
+T 19 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204694014422866,"type":"HolePunchAttempt"}
+T 19 hybrid B event {"evt":{"Success":false,"EllapsedTime":5003135414,"Error":"failed to dial: failed to dial 12D3KooWNNekkMdLFp7ctuEUN7VXToFLEKtk1dx4nU3DRN9SYQme: all dials failed\n  * [/ip4/11.0.0.1/udp/58170/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204701942592864,"type":"EndHolePunch"}
+T 19 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58170/quic-v1"],"RTT":425789432},"role":"listen","ts":1793204702582891904,"type":"StartHolePunch"}
+T 19 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204702583042695,"type":"HolePunchAttempt"}
+T 19 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002807019,"Error":"failed to dial: failed to dial 12D3KooWNNekkMdLFp7ctuEUN7VXToFLEKtk1dx4nU3DRN9SYQme: all dials failed\n  * [/ip4/11.0.0.1/udp/58170/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204707584613589,"type":"EndHolePunch"}
+T 19 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/58170/quic-v1"],"RTT":424310299},"role":"listen","ts":1793204708222548545,"type":"StartHolePunch"}
+T 19 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204708222688337,"type":"HolePunchAttempt"}
+T 19 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004150486,"Error":"failed to dial: failed to dial 12D3KooWNNekkMdLFp7ctuEUN7VXToFLEKtk1dx4nU3DRN9SYQme: all dials failed\n  * [/ip4/11.0.0.1/udp/58170/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204713225851664,"type":"EndHolePunch"}
+T 19 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51100/quic-v1"],"RTT":424256673},"role":"dial","ts":1793204693903038250,"type":"StartHolePunch"}
+T 19 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204693903409316,"type":"HolePunchAttempt"}
+T 19 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002529360,"Error":"failed to dial: failed to dial 12D3KooWMZSSCdPNNvCTmY82vvd2D8gSe4RD57prpnwm47qWfXkx: all dials failed\n  * [/ip4/11.0.0.2/udp/51100/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204701832966140,"type":"EndHolePunch"}
+T 19 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51100/quic-v1"],"RTT":425659540},"role":"dial","ts":1793204702472201204,"type":"StartHolePunch"}
+T 19 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204702472331646,"type":"HolePunchAttempt"}
+T 19 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003248393,"Error":"failed to dial: failed to dial 12D3KooWMZSSCdPNNvCTmY82vvd2D8gSe4RD57prpnwm47qWfXkx: all dials failed\n  * [/ip4/11.0.0.2/udp/51100/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204707475580223,"type":"EndHolePunch"}
+T 19 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/51100/quic-v1"],"RTT":425668249},"role":"dial","ts":1793204708112440388,"type":"StartHolePunch"}
+T 19 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204708112574404,"type":"HolePunchAttempt"}
+T 19 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002796385,"Error":"failed to dial: failed to dial 12D3KooWMZSSCdPNNvCTmY82vvd2D8gSe4RD57prpnwm47qWfXkx: all dials failed\n  * [/ip4/11.0.0.2/udp/51100/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204713115371156,"type":"EndHolePunch"}
+T 19 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1705.307,"total_ms":59234.48}
+T 19 classical B ready 12D3KooWELemWdkpmuBhb7ecvmMW4AhX2h6pKKPafMZKDxUi87jm
+T 19 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52061/quic-v1"],"RTT":425415340},"role":"listen","ts":1793204760824187498,"type":"StartHolePunch"}
+T 19 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204760824715132,"type":"HolePunchAttempt"}
+T 19 classical B event {"evt":{"Success":false,"EllapsedTime":5003098014,"Error":"failed to dial: failed to dial 12D3KooWSiDeQfWw8YwSgho9bAZFhRks8rzzxkNMDMC1qEieY5Uw: all dials failed\n  * [/ip4/11.0.0.1/udp/52061/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204765825810734,"type":"EndHolePunch"}
+T 19 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52061/quic-v1"],"RTT":426554665},"role":"listen","ts":1793204766466546382,"type":"StartHolePunch"}
+T 19 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204766466955123,"type":"HolePunchAttempt"}
+T 19 classical B event {"evt":{"Success":false,"EllapsedTime":5002444295,"Error":"failed to dial: failed to dial 12D3KooWSiDeQfWw8YwSgho9bAZFhRks8rzzxkNMDMC1qEieY5Uw: all dials failed\n  * [/ip4/11.0.0.1/udp/52061/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204774385806821,"type":"EndHolePunch"}
+T 19 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/52061/quic-v1"],"RTT":424416358},"role":"listen","ts":1793204775023576869,"type":"StartHolePunch"}
+T 19 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204775023785227,"type":"HolePunchAttempt"}
+T 19 classical B event {"evt":{"Success":false,"EllapsedTime":5002714022,"Error":"failed to dial: failed to dial 12D3KooWSiDeQfWw8YwSgho9bAZFhRks8rzzxkNMDMC1qEieY5Uw: all dials failed\n  * [/ip4/11.0.0.1/udp/52061/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204780025810421,"type":"EndHolePunch"}
+T 19 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/41762/quic-v1"],"RTT":425143457},"role":"dial","ts":1793204760712809207,"type":"StartHolePunch"}
+T 19 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204760713216482,"type":"HolePunchAttempt"}
+T 19 classical A event {"evt":{"Success":false,"EllapsedTime":5002166544,"Error":"failed to dial: failed to dial 12D3KooWELemWdkpmuBhb7ecvmMW4AhX2h6pKKPafMZKDxUi87jm: all dials failed\n  * [/ip4/11.0.0.2/udp/41762/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204765715383576,"type":"EndHolePunch"}
+T 19 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/41762/quic-v1"],"RTT":423127341},"role":"dial","ts":1793204766353921424,"type":"StartHolePunch"}
+T 19 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204766353965332,"type":"HolePunchAttempt"}
+T 19 classical A event {"evt":{"Success":false,"EllapsedTime":5002300743,"Error":"failed to dial: failed to dial 12D3KooWELemWdkpmuBhb7ecvmMW4AhX2h6pKKPafMZKDxUi87jm: all dials failed\n  * [/ip4/11.0.0.2/udp/41762/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204774273247222,"type":"EndHolePunch"}
+T 19 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/41762/quic-v1"],"RTT":423519399},"role":"dial","ts":1793204774912944103,"type":"StartHolePunch"}
+T 19 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204774913263011,"type":"HolePunchAttempt"}
+T 19 classical A event {"evt":{"Success":false,"EllapsedTime":5003339601,"Error":"failed to dial: failed to dial 12D3KooWELemWdkpmuBhb7ecvmMW4AhX2h6pKKPafMZKDxUi87jm: all dials failed\n  * [/ip4/11.0.0.2/udp/41762/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204779916602980,"type":"EndHolePunch"}
+T 19 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1710.409,"total_ms":59240.173}
+T 20 classical B ready 12D3KooWR513MAF9kSBUFuv4JEekEaF1P2kXQqyR4wBgp39HGp5e
+T 20 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51995/quic-v1"],"RTT":425164815},"role":"listen","ts":1793204827617254403,"type":"StartHolePunch"}
+T 20 classical B event {"evt":{"Attempt":1},"role":"listen","ts":1793204827617443328,"type":"HolePunchAttempt"}
+T 20 classical B event {"evt":{"Success":false,"EllapsedTime":5003073403,"Error":"failed to dial: failed to dial 12D3KooWFK31U987mL4TCKKHmMoMjNimEnCwRxyV2MRh5KNcVhsX: all dials failed\n  * [/ip4/11.0.0.1/udp/51995/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204832619410405,"type":"EndHolePunch"}
+T 20 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51995/quic-v1"],"RTT":423268599},"role":"listen","ts":1793204833255507262,"type":"StartHolePunch"}
+T 20 classical B event {"evt":{"Attempt":2},"role":"listen","ts":1793204833255561528,"type":"HolePunchAttempt"}
+T 20 classical B event {"evt":{"Success":false,"EllapsedTime":5002373620,"Error":"failed to dial: failed to dial 12D3KooWFK31U987mL4TCKKHmMoMjNimEnCwRxyV2MRh5KNcVhsX: all dials failed\n  * [/ip4/11.0.0.1/udp/51995/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204838257463980,"type":"EndHolePunch"}
+T 20 classical B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/51995/quic-v1"],"RTT":424486482},"role":"listen","ts":1793204838895262720,"type":"StartHolePunch"}
+T 20 classical B event {"evt":{"Attempt":3},"role":"listen","ts":1793204838895533778,"type":"HolePunchAttempt"}
+T 20 classical B event {"evt":{"Success":false,"EllapsedTime":5002751927,"Error":"failed to dial: failed to dial 12D3KooWFK31U987mL4TCKKHmMoMjNimEnCwRxyV2MRh5KNcVhsX: all dials failed\n  * [/ip4/11.0.0.1/udp/51995/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204846851399623,"type":"EndHolePunch"}
+T 20 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/39581/quic-v1"],"RTT":425026948},"role":"dial","ts":1793204827506791037,"type":"StartHolePunch"}
+T 20 classical A event {"evt":{"Attempt":1},"role":"dial","ts":1793204827507272470,"type":"HolePunchAttempt"}
+T 20 classical A event {"evt":{"Success":false,"EllapsedTime":5002483160,"Error":"failed to dial: failed to dial 12D3KooWR513MAF9kSBUFuv4JEekEaF1P2kXQqyR4wBgp39HGp5e: all dials failed\n  * [/ip4/11.0.0.2/udp/39581/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204832509756181,"type":"EndHolePunch"}
+T 20 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/39581/quic-v1"],"RTT":423139808},"role":"dial","ts":1793204833144964971,"type":"StartHolePunch"}
+T 20 classical A event {"evt":{"Attempt":2},"role":"dial","ts":1793204833145085421,"type":"HolePunchAttempt"}
+T 20 classical A event {"evt":{"Success":false,"EllapsedTime":5003106768,"Error":"failed to dial: failed to dial 12D3KooWR513MAF9kSBUFuv4JEekEaF1P2kXQqyR4wBgp39HGp5e: all dials failed\n  * [/ip4/11.0.0.2/udp/39581/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204838148192647,"type":"EndHolePunch"}
+T 20 classical A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/39581/quic-v1"],"RTT":422019366},"role":"dial","ts":1793204838783806971,"type":"StartHolePunch"}
+T 20 classical A event {"evt":{"Attempt":3},"role":"dial","ts":1793204838783892496,"type":"HolePunchAttempt"}
+T 20 classical A event {"evt":{"Success":false,"EllapsedTime":5002044260,"Error":"failed to dial: failed to dial 12D3KooWR513MAF9kSBUFuv4JEekEaF1P2kXQqyR4wBgp39HGp5e: all dials failed\n  * [/ip4/11.0.0.2/udp/39581/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204846739653749,"type":"EndHolePunch"}
+T 20 classical A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1711.18,"total_ms":59230.765}
+T 20 hybrid B ready 12D3KooWJdNhfLHVFP1VZ99XfftSNSPdLv2cs15iwFYyBdMsvPVm
+T 20 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53288/quic-v1"],"RTT":422761957},"role":"listen","ts":1793204894431084599,"type":"StartHolePunch"}
+T 20 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204894431240341,"type":"HolePunchAttempt"}
+T 20 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002343323,"Error":"failed to dial: failed to dial 12D3KooWA3vbgPwzmnrx5hFKXs4mWB4T8FSwfzhkL3JN1JFyeXpZ: all dials failed\n  * [/ip4/11.0.0.1/udp/53288/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204899433207784,"type":"EndHolePunch"}
+T 20 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53288/quic-v1"],"RTT":424000924},"role":"listen","ts":1793204900070802932,"type":"StartHolePunch"}
+T 20 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204900070945749,"type":"HolePunchAttempt"}
+T 20 hybrid B event {"evt":{"Success":false,"EllapsedTime":5001873990,"Error":"failed to dial: failed to dial 12D3KooWA3vbgPwzmnrx5hFKXs4mWB4T8FSwfzhkL3JN1JFyeXpZ: all dials failed\n  * [/ip4/11.0.0.1/udp/53288/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204905072246593,"type":"EndHolePunch"}
+T 20 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/53288/quic-v1"],"RTT":425453474},"role":"listen","ts":1793204905711683874,"type":"StartHolePunch"}
+T 20 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204905711923674,"type":"HolePunchAttempt"}
+T 20 hybrid B event {"evt":{"Success":false,"EllapsedTime":5005291872,"Error":"failed to dial: failed to dial 12D3KooWA3vbgPwzmnrx5hFKXs4mWB4T8FSwfzhkL3JN1JFyeXpZ: all dials failed\n  * [/ip4/11.0.0.1/udp/53288/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204913630194673,"type":"EndHolePunch"}
+T 20 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37536/quic-v1"],"RTT":422373199},"role":"dial","ts":1793204894320334500,"type":"StartHolePunch"}
+T 20 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204894320492258,"type":"HolePunchAttempt"}
+T 20 hybrid A event {"evt":{"Success":false,"EllapsedTime":5001907769,"Error":"failed to dial: failed to dial 12D3KooWJdNhfLHVFP1VZ99XfftSNSPdLv2cs15iwFYyBdMsvPVm: all dials failed\n  * [/ip4/11.0.0.2/udp/37536/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204899322400668,"type":"EndHolePunch"}
+T 20 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37536/quic-v1"],"RTT":424696766},"role":"dial","ts":1793204899960577258,"type":"StartHolePunch"}
+T 20 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204899960706050,"type":"HolePunchAttempt"}
+T 20 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003183676,"Error":"failed to dial: failed to dial 12D3KooWJdNhfLHVFP1VZ99XfftSNSPdLv2cs15iwFYyBdMsvPVm: all dials failed\n  * [/ip4/11.0.0.2/udp/37536/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204904963889818,"type":"EndHolePunch"}
+T 20 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/37536/quic-v1"],"RTT":424701991},"role":"dial","ts":1793204905601027733,"type":"StartHolePunch"}
+T 20 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204905601181091,"type":"HolePunchAttempt"}
+T 20 hybrid A event {"evt":{"Success":false,"EllapsedTime":5002173143,"Error":"failed to dial: failed to dial 12D3KooWJdNhfLHVFP1VZ99XfftSNSPdLv2cs15iwFYyBdMsvPVm: all dials failed\n  * [/ip4/11.0.0.2/udp/37536/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204913517081133,"type":"EndHolePunch"}
+T 20 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1708.764,"total_ms":59229.009}
+T 21 hybrid B ready 12D3KooWS8oTWhbjMMhLkR7bu2NW5xPKD7VzWEM6NksPiLDfqRAe
+T 21 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35249/quic-v1"],"RTT":424781649},"role":"listen","ts":1793204961257085652,"type":"StartHolePunch"}
+T 21 hybrid B event {"evt":{"Attempt":1},"role":"listen","ts":1793204961257640602,"type":"HolePunchAttempt"}
+T 21 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002265453,"Error":"failed to dial: failed to dial 12D3KooWSdma5bZ7s42VyYbYVcz1PRwn8eq7M1vEqhofvRDkU4UW: all dials failed\n  * [/ip4/11.0.0.1/udp/35249/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204966258806879,"type":"EndHolePunch"}
+T 21 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35249/quic-v1"],"RTT":425771649},"role":"listen","ts":1793204966899071727,"type":"StartHolePunch"}
+T 21 hybrid B event {"evt":{"Attempt":2},"role":"listen","ts":1793204966899157252,"type":"HolePunchAttempt"}
+T 21 hybrid B event {"evt":{"Success":false,"EllapsedTime":5002694544,"Error":"failed to dial: failed to dial 12D3KooWSdma5bZ7s42VyYbYVcz1PRwn8eq7M1vEqhofvRDkU4UW: all dials failed\n  * [/ip4/11.0.0.1/udp/35249/quic-v1] hole punching attempted; no active dial"},"role":"listen","ts":1793204971900983529,"type":"EndHolePunch"}
+T 21 hybrid B event {"evt":{"RemoteAddrs":["/ip4/11.0.0.1/udp/35249/quic-v1"],"RTT":423324516},"role":"listen","ts":1793204972537418453,"type":"StartHolePunch"}
+T 21 hybrid B event {"evt":{"Attempt":3},"role":"listen","ts":1793204972537567503,"type":"HolePunchAttempt"}
+T 21 hybrid B event {"evt":{"Success":false,"EllapsedTime":5004589202,"Error":"failed to dial: failed to dial 12D3KooWSdma5bZ7s42VyYbYVcz1PRwn8eq7M1vEqhofvRDkU4UW: all dials failed\n  * [/ip4/11.0.0.1/udp/35249/quic-v1] timeout: no recent network activity"},"role":"listen","ts":1793204977541024254,"type":"EndHolePunch"}
+T 21 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50119/quic-v1"],"RTT":424255757},"role":"dial","ts":1793204961146890595,"type":"StartHolePunch"}
+T 21 hybrid A event {"evt":{"Attempt":1},"role":"dial","ts":1793204961147306853,"type":"HolePunchAttempt"}
+T 21 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003771168,"Error":"failed to dial: failed to dial 12D3KooWS8oTWhbjMMhLkR7bu2NW5xPKD7VzWEM6NksPiLDfqRAe: all dials failed\n  * [/ip4/11.0.0.2/udp/50119/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204966151078572,"type":"EndHolePunch"}
+T 21 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50119/quic-v1"],"RTT":424054732},"role":"dial","ts":1793204966787405328,"type":"StartHolePunch"}
+T 21 hybrid A event {"evt":{"Attempt":2},"role":"dial","ts":1793204966787547961,"type":"HolePunchAttempt"}
+T 21 hybrid A event {"evt":{"Success":false,"EllapsedTime":5004946885,"Error":"failed to dial: failed to dial 12D3KooWS8oTWhbjMMhLkR7bu2NW5xPKD7VzWEM6NksPiLDfqRAe: all dials failed\n  * [/ip4/11.0.0.2/udp/50119/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204971792495671,"type":"EndHolePunch"}
+T 21 hybrid A event {"evt":{"RemoteAddrs":["/ip4/11.0.0.2/udp/50119/quic-v1"],"RTT":421500349},"role":"dial","ts":1793204972425547087,"type":"StartHolePunch"}
+T 21 hybrid A event {"evt":{"Attempt":3},"role":"dial","ts":1793204972425642512,"type":"HolePunchAttempt"}
+T 21 hybrid A event {"evt":{"Success":false,"EllapsedTime":5003428060,"Error":"failed to dial: failed to dial 12D3KooWS8oTWhbjMMhLkR7bu2NW5xPKD7VzWEM6NksPiLDfqRAe: all dials failed\n  * [/ip4/11.0.0.2/udp/50119/quic-v1] timeout: no recent network activity"},"role":"dial","ts":1793204977429071305,"type":"EndHolePunch"}
+T 21 hybrid A result {"direct":false,"error":"no direct connection before timeout","relayed_ms":1711.724,"total_ms":59238.046}
