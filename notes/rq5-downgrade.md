@@ -251,3 +251,13 @@ confirm there is **no** second dial attempt offering a classical-only ClientHell
   HRR) and §4.4.1 (`message_hash` replaces ClientHello1) were checked against
   rfc-editor.org/rfc/rfc8446.txt on 2026-10-28. The RFC 9000/9001/9002 section numbers
   above have not been re-checked.
+
+## Live result (2026-10-28, C-33)
+
+Run with `harness/run_downgrade.sh` (dialer → logging tap → proxy → listener), one dial per cell.
+All four handshakes fail; no classical session; no classical-only retry. strip on go is answered
+with an HRR for SecP256r1MLKEM768, because strip removes only 0x11EC and Go's server prefers the
+remaining hybrid group; the transcript mismatch still kills it. The hrr-force aborts are the
+`illegal_parameter` case predicted from RFC 8446 §4.2.8. Limitations: one address per dial (no
+multi-address retry exercised), no packet loss (the proxy passes retransmitted original Initials
+through unmodified after the rewrite), js and nim not run.
