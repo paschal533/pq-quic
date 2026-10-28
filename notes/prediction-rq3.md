@@ -56,3 +56,14 @@ success-rate gap at SKEW ≤ 90.
   direct connection lands on the NAT's WAN address, and that the skew lands as designed (B's measured
   RTT 502 ms = 2D + 2·150). t_punch medians were ≈ 210 ms at skew 0 and ≈ 411 ms at skew 150, which is
   what the model in this note predicts. No prediction above was changed.
+
+## Design change before the remaining cells (2026-10-28, user decision)
+
+Recorded before running unified 300/1000 and testplans 110–1000. In `testplans`, a failed trial lasts
+A's full 60 s timeout, so a failing 200-trial cell takes ≈ 3.5 h. The `testplans` cells at SKEW ≥ 110
+are cut to **30 pairs** (60 trials) each; that model was registered as descriptive (direction only), so
+this changes no prediction. `unified` stays at 100 pairs in every cell, and so do testplans 0/50/90
+(already run). The seeded variant order for 30 pairs is the first 30 rows of the 100-pair order.
+
+Seen before this change (reported in f20d42e): testplans 0/50/90 200/200 direct; a partial testplans
+110 run (43 trials, discarded and rerun) had 0 direct for both variants, each after 3 attempts.
