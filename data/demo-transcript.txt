@@ -1,0 +1,40 @@
+# Console output of the four demo runs behind docs/make_demo_video.py (2026-10-29, Windows 11,
+# harness/go-pair/gopair.exe and harness/rust-pair/target/release/rust-pair.exe, loopback, no impairment).
+# signature_algorithms lists trimmed; the full decode is in the matching data/demo-*.jsonl.
+
+$ ./run_pair.sh demo-go-rust "rust-pair/target/release/rust-pair.exe listen __LP__ 15" "go-pair/gopair.exe -mode dial -dial-port __TP__ -peer __PEER__"
+=== demo-go-rust
+dialer: handshake ok
+listener: accepted 12D3KooWAt11ebNHRs4bZpquqrXA8JK1L8VuHAQDn3yMExZVH5C8
+c2s {'datagrams': 11, 'bytes': 4131, 'initial_datagrams': 3, 'initial_bytes': 3840}
+    {"ClientHello": {"supported_groups": ["X25519MLKEM768", "SecP256r1MLKEM768", "SecP384r1MLKEM1024", "X25519", "secp256r1", "secp384r1", "secp521r1"], "key_shares": [["X25519MLKEM768", 1216], ["X25519", 32]], "length": 1510}}
+s2c {'datagrams': 12, 'bytes': 8380, 'initial_datagrams': 2, 'initial_bytes': 2400}
+    {"ServerHello": {"hello_retry_request": false, "selected_group": "X25519MLKEM768", "key_share_len": 1120, "length": 1178}}
+
+$ ./run_pair.sh demo-rust-go "go-pair/gopair.exe -mode listen -listen-port __LP__ -seconds 15" "rust-pair/target/release/rust-pair.exe dial __TP__ __PEER__"
+=== demo-rust-go
+dialer: handshake ok
+listener: accepted 12D3KooWJRLFgMpKt2csgTn2bU2rdWHiV5iHT9Yo2h9EWDNmtJrr
+c2s {'datagrams': 15, 'bytes': 9545, 'initial_datagrams': 3, 'initial_bytes': 3600}
+    {"ClientHello": {"supported_groups": ["X25519MLKEM768", "X25519", "secp256r1", "secp384r1"], "key_shares": [["X25519MLKEM768", 1216], ["X25519", 32]], "length": 1490}}
+s2c {'datagrams': 18, 'bytes': 8375, 'initial_datagrams': 1, 'initial_bytes': 1280}
+    {"ServerHello": {"hello_retry_request": false, "selected_group": "X25519MLKEM768", "key_share_len": 1120, "length": 1178}}
+
+$ GODEBUG=tlsmlkem=0 ./run_pair.sh demo-classical "rust-pair/target/release/rust-pair.exe listen __LP__ 15" "go-pair/gopair.exe -mode dial -dial-port __TP__ -peer __PEER__"
+=== demo-classical
+dialer: handshake ok
+listener: accepted 12D3KooWGYQuMgnPQbs76xBhWvbozTi11aBPvTjPkRsb3hVkXtiM
+c2s {'datagrams': 10, 'bytes': 2851, 'initial_datagrams': 2, 'initial_bytes': 2560}
+    {"ClientHello": {"supported_groups": ["X25519", "secp256r1", "secp384r1", "secp521r1"], "key_shares": [["X25519", 32]], "length": 292}}
+s2c {'datagrams': 11, 'bytes': 7180, 'initial_datagrams': 1, 'initial_bytes': 1200}
+    {"ServerHello": {"hello_retry_request": false, "selected_group": "X25519", "key_share_len": 32, "length": 90}}
+
+$ ./run_downgrade.sh demo-strip strip "rust-pair/target/release/rust-pair.exe listen __LP__ 15" "go-pair/gopair.exe -mode dial -dial-port __TP__ -peer __PEER__"
+=== demo-strip (strip)
+dialer: 2026/10/29 00:06:17 connect: failed to dial: failed to dial 12D3KooWGK1fXw5pXUE2KwWPNeG5Z5USvGVsxtxoenoAavXuzYfY: all dials failed   * [/ip4/127.0.0.1/udp/65515/quic-v1] context deadline exceeded
+listener: incoming error: Listen error: Failed to negotiate transport protocol(s)
+proxy: downgrade-proxy strip 127.0.0.1:65514 -> 65513 downgrade-proxy done
+c2s {'datagrams': 8, 'bytes': 10240, 'initial_datagrams': 8, 'initial_bytes': 10240}
+    {"ClientHello": {"supported_groups": ["X25519MLKEM768", "SecP256r1MLKEM768", "SecP384r1MLKEM1024", "X25519", "secp256r1", "secp384r1", "secp521r1"], "key_shares": [["X25519MLKEM768", 1216], ["X25519", 32]], "length": 1517}}
+s2c {'datagrams': 28, 'bytes': 16285, 'initial_datagrams': 7, 'initial_bytes': 1539}
+    {"ServerHello": {"hello_retry_request": false, "selected_group": "X25519", "key_share_len": 32, "length": 90}}
