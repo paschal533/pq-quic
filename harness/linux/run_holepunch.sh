@@ -39,8 +39,11 @@ trap teardown EXIT
 
 x() { ip netns exec "$@"; }
 
-link() {  # link NS1 IF1 NS2 IF2
-  ip link add "$2" netns "$1" type veth peer name "$4" netns "$3"
+link() {  # link NS1 IF1 NS2 IF2: create with unique names in the root namespace, then move and rename
+  local a=hpv$RANDOM b=hpv$RANDOM
+  ip link add "$a" type veth peer name "$b"
+  ip link set "$a" netns "$1"; ip link set "$b" netns "$3"
+  x "$1" ip link set "$a" name "$2"; x "$3" ip link set "$b" name "$4"
   x "$1" ip link set "$2" up; x "$3" ip link set "$4" up
 }
 
@@ -49,15 +52,31 @@ nat_rules() {  # nat_rules NS WAN_IF LAN_IF WAN_ADDR
   x "$ns" sysctl -qw net.ipv4.ip_forward=1
   if [ "$MODEL" = testplans ]; then
     x "$ns" nft -f - <<EOF
-table ip nat { chain post { type nat hook postrouting priority 100; oifname "$wan" snat to $addr; } }
+table ip nat {
+  chain post {
+    type nat hook postrouting priority 100;
+    oifname "$wan" snat to $addr
+  }
+}
 EOF
   else
     x "$ns" nft -f - <<EOF
-table ip nat { chain post { type nat hook postrouting priority 100; oifname "$wan" masquerade; } }
+table ip nat {
+  chain post {
+    type nat hook postrouting priority 100;
+    oifname "$wan" masquerade
+  }
+}
 table ip filter {
-  chain input { type filter hook input priority 0; policy accept; iifname "$wan" ct state new drop; }
-  chain forward { type filter hook forward priority 0; policy drop;
-    iifname "$lan" accept; ct state established,related accept; }
+  chain input {
+    type filter hook input priority 0; policy accept;
+    iifname "$wan" ct state new drop
+  }
+  chain forward {
+    type filter hook forward priority 0; policy drop;
+    iifname "$lan" accept
+    ct state established,related accept
+  }
 }
 EOF
   fi
@@ -79,6 +98,11 @@ setup() {
   done
   x hpNB tc qdisc add dev wan0 root netem delay ${half}ms
   set_skew 0
+  # fail fast if the topology is not wired: both peers must reach the relay through their NAT
+  for s in A B; do
+    x hp$s ping -c1 -W2 $RELAY_IP >/dev/null || { echo "setup check failed: hp$s cannot reach the relay"; exit 3; }
+    x hpN$s nft list ruleset | grep -q "type nat hook postrouting" || { echo "setup check failed: no NAT in hpN$s"; exit 3; }
+  done
 }
 
 set_skew() {  # A->relay gets D/2 + 2*SKEW, everything else from A's NAT gets D/2
