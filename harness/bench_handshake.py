@@ -16,6 +16,7 @@ import json
 import os
 import random
 import re
+import socket
 import statistics
 import subprocess
 import sys
@@ -28,14 +29,17 @@ HERE = Path(__file__).resolve().parent
 GO = os.environ.get("PQQUIC_GO_BIN", str(HERE / "go-pair" / "gopair.exe"))
 RS = os.environ.get("PQQUIC_RS_BIN", str(HERE / "rust-pair" / "target" / "release" / "rust-pair.exe"))
 
+# Listener lifetime. Must exceed the longest cell: 400 dials x 20 s timeout is about 2.2 h.
+LISTENER_SECONDS = 6 * 3600
+
 STACKS = {
     "go": {
-        "listen": lambda lp: [GO, "-mode", "listen", "-listen-port", str(lp), "-seconds", "3600"],
+        "listen": lambda lp: [GO, "-mode", "listen", "-listen-port", str(lp), "-seconds", str(LISTENER_SECONDS)],
         "dial": lambda tp, peer: [GO, "-mode", "dial", "-dial-port", str(tp), "-peer", peer],
         "classical_env": {"GODEBUG": "tlsmlkem=0"},
     },
     "rust": {
-        "listen": lambda lp: [RS, "listen", str(lp), "3600"],
+        "listen": lambda lp: [RS, "listen", str(lp), str(LISTENER_SECONDS)],
         "dial": lambda tp, peer: [RS, "dial", str(tp), peer],
         "classical_env": {"PQQUIC_CLASSICAL": "1"},
     },
@@ -55,12 +59,26 @@ def start_listener(cmd: list[str]) -> tuple[subprocess.Popen, str, list[str]]:
     deadline = time.monotonic() + 15
     while time.monotonic() < deadline:
         line = proc.stdout.readline()
+        if not line and proc.poll() is not None:
+            break  # listener exited before printing its peer id
         if line.startswith("peer "):
             log: list[str] = []
             threading.Thread(target=drain, args=(proc.stdout, log), daemon=True).start()
             return proc, line.split()[1].strip(), log
     proc.kill()
     raise RuntimeError("listener did not print its peer id")
+
+
+def free_udp_ports(n: int) -> list[int]:
+    """Ports the OS reports free now. Held open together so the n ports differ."""
+    socks = [socket.socket(socket.AF_INET, socket.SOCK_DGRAM) for _ in range(n)]
+    try:
+        for s_ in socks:
+            s_.bind(("127.0.0.1", 0))
+        return [s_.getsockname()[1] for s_ in socks]
+    finally:
+        for s_ in socks:
+            s_.close()
 
 
 def dial_once(cmd: list[str], extra_env: dict[str, str]) -> float | None:
@@ -145,8 +163,7 @@ def main() -> int:
     a = p.parse_args()
 
     stack = STACKS[a.stack]
-    lp = 49000 + random.randrange(500)
-    tp = lp + 500
+    lp, tp = free_udp_ports(2)
     Path(a.out).parent.mkdir(parents=True, exist_ok=True)
     trace = str(Path(a.out).with_suffix(".jsonl"))
 
@@ -155,21 +172,22 @@ def main() -> int:
         keys.unlink(missing_ok=True)
         os.environ["SSLKEYLOGFILE"] = str(keys)
     listener, peer, listener_log = start_listener(stack["listen"](lp))
-    tap = None if a.direct else subprocess.Popen(
-        [sys.executable, str(HERE / "tap" / "quic_tap.py"), "--listen", str(tp), "--upstream", str(lp),
-         "--out", trace, "--seconds", "100000", "--delay-ms", str(a.delay_ms),
-         "--loss", str(a.loss), "--seed", str(a.seed), "--drop-c2s", a.drop_c2s],
-        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    if a.direct:
-        tp = lp
-    time.sleep(1.0)
-
-    # Warm-up: the listener's first connection is slower (pilot finding), so discard one dial.
-    dial_once(stack["dial"](tp, peer), {})
-
-    order_rng = random.Random(a.seed)
-    rows = []
+    tap = None
     try:
+        tap = None if a.direct else subprocess.Popen(
+            [sys.executable, str(HERE / "tap" / "quic_tap.py"), "--listen", str(tp), "--upstream", str(lp),
+             "--out", trace, "--seconds", "100000", "--delay-ms", str(a.delay_ms),
+             "--loss", str(a.loss), "--seed", str(a.seed), "--drop-c2s", a.drop_c2s],
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        if a.direct:
+            tp = lp
+        time.sleep(1.0)
+
+        # Warm-up: the listener's first connection is slower (pilot finding), so discard one dial.
+        dial_once(stack["dial"](tp, peer), {})
+
+        order_rng = random.Random(a.seed)
+        rows = []
         for i in range(a.pairs):
             order = ["hybrid", "classical"]
             order_rng.shuffle(order)
