@@ -395,7 +395,7 @@ problems are post-quantum authentication and real-network validation.
 
 ## Artifact Availability
 
-https://github.com/paschal533/pq-quic *[TODO: confirm after the push]*. The repository contains the
+https://github.com/paschal533/pq-quic. The repository contains the
 peers, the tap and decoder, the benchmark and analysis scripts, the traces and CSVs, every
 pre-registered prediction with its commit, and `CLAIMS.md`, which maps each number in this paper to
 its evidence. MIT / Apache-2.0.
