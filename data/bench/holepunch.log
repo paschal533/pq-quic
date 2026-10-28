@@ -1,0 +1,12 @@
+model=unified D=100 pairs=100 seed=23 skews=0 50 90 110 150 300 1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWSYr1BCbPMWrVGpfFgTEN6kTr916wSmETQd5vA2oruhYe
+unified skew 0: 200 direct of 200
+unified skew 50: 200 direct of 200
+unified skew 90: 200 direct of 200
+unified skew 110: 200 direct of 200
+unified skew 150: 200 direct of 200
+run_holepunch.sh: line 36: 49445 Done                    python3 -c "import random; r=random.Random($SEED*1000+$s)
+for i in range($PAIRS): print(i, *r.sample(['hybrid','classical'], 2))"
+     49446 Hangup                  | while read -r pair v1 v2; do
+    trial "$pair" "$v1" "$cell.log"; trial "$pair" "$v2" "$cell.log";
+done

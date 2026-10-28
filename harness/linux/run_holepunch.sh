@@ -33,7 +33,11 @@ half=$(python3 -c "print($D/2)")
 
 teardown() {
   [ -n "${relay_pid:-}" ] && kill "$relay_pid" 2>/dev/null
-  for n in $NS; do ip netns del "$n" 2>/dev/null; done
+  # kill anything still running inside our namespaces (strays from a killed run), then remove them
+  for n in $NS; do
+    ip netns pids "$n" 2>/dev/null | xargs -r kill 2>/dev/null
+    ip netns del "$n" 2>/dev/null
+  done
 }
 trap teardown EXIT
 
