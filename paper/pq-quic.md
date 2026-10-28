@@ -206,14 +206,14 @@ The baseline classical ClientHellos are 287 bytes (Go) and 266 bytes (Rust) (C-1
 ## 6. Cost Without Loss
 
 Over a 30-pair pilot at 50 and 150 ms RTT, the median paired ratios were 0.99–1.01 (C-17). The Linux
-cost table (200 pairs per cell, rust half complete) agrees and extends this. The median paired
-difference is within ±1 ms on a LAN and at 50, 150 and 300 ms RTT, with ratios of 0.993–1.002 (C-34).
+cost table (200 pairs per cell, both stacks) agrees and extends this. In all eight no-loss cells,
+on a LAN and at 50, 150 and 300 ms RTT, the median paired difference is within ±1 ms. At RTT ≥ 50 ms
+the ratios are 0.997–1.003 (C-34).
 
 We had predicted a small positive LAN cost, below 2 ms, from the ML-KEM work and one more datagram
-each way. It was not observed. The LAN median difference was −0.43 ms, and the paired mean was
-−2.8 ms (95 % CI −6.3, +0.5). The failure is in the direction of *less* cost. On this setup the
-hybrid's LAN cost is below what we can resolve.
-*[TODO: add the go half of C-34 when the run completes on 10-28.]*
+each way. On go it held (+0.52 ms). On rust it did not: the LAN median difference was −0.43 ms, and
+the paired mean was −2.8 ms (95 % CI −6.3, +0.5), a failure in the direction of *less* cost. On a LAN
+the hybrid costs under a millisecond either way, which is below what this setup resolves (C-34).
 
 With no loss, the hybrid connection carries about one extra datagram each way (go: 8.7 versus 7.6
 client-to-server, 7.5 versus 6.6 server-to-client) (C-25).
@@ -293,17 +293,21 @@ Every pre-registered criterion held (C-31).
 
 ### 7.5 Round-trip time matters too
 
-The Linux cost table adds loss at four RTTs (rust half, C-34). Hybrid's paired-mean advantage is
+The Linux cost table adds loss at four RTTs (C-34). On rust, hybrid's paired-mean advantage is
 clear on a LAN: −38.7 ms (CI −68.0, −13.7) at 1 % loss and −45.4 ms (−80.4, −14.4) at 5 %. The point
 estimate shrinks as RTT grows and turns positive at 300 ms RTT (+68.0 ms at 5 %), though with a CI
 that includes zero. Our pre-registered stall prediction failed in one cell (150 ms RTT, 5 % loss).
+On go the direction of C-25 holds at longer RTTs: at 5 % loss the hybrid is slower by +18.6 ms
+(CI +0.4, +36.4) at 50 ms RTT and +47.5 ms (+8.2, +89.5) at 150 ms. No go cell has a CI excluding
+zero in the other direction (C-34).
 
 A post-hoc split of slow handshakes suggests why. Classical slow handshakes are all slow by more than
 800 ms, consistent with quinn's one-second PTO. Hybrid shows a band of moderate delays that classical
 never shows. **Hypothesis, not yet tested:** after a partial loss, the hybrid client's PTO is derived
 from a real RTT sample. That beats one second on short paths and stops beating it on long ones,
 while the hybrid also has one more datagram to lose. Testing this needs traced runs at 150 and 300 ms
-RTT. *[TODO: go half of C-34.]*
+RTT. (The two dialers stop their clocks at different points of the handshake: rust ≈ 59 ms + 1
+RTT, go ≈ 2 RTT. Paired differences are therefore compared within a stack, never across.)
 
 ## 8. Downgrade
 

@@ -67,3 +67,40 @@ an RTT sample, so its PTO is RTT-derived; that beats 999 ms at short RTT and sto
 grows, while hybrid also has one more datagram to lose. The 500 ms stall threshold counts these
 moderate delays at RTT 150 and is meaningless at RTT 300 (baseline ≈ 360 ms). Testing this needs
 traced cells at RTT 150/300, not new statistics on this data.
+
+## Outcome, go half (2026-10-28)
+
+The resumed sweep ran the 12 go cells (same setup; rust cells skipped as done). 200 pairs each, no
+missing pairs. `data/bench/profiles-linux/go-*.csv`.
+
+| one-way delay | loss | median diff | median ratio | paired mean [95% CI] | stall > 500 ms H / C |
+|---|---|---|---|---|---|
+| 0 | 0 | +0.52 | 1.069 | +0.0 [−1.0, +1.1] | 0.0 / 0.0 % |
+| 0 | 1 % | +0.29 | 1.053 | −0.5 [−5.1, +3.9] | 0.0 / 0.0 % |
+| 0 | 5 % | +0.29 | 1.051 | −8.9 [−21.0, +2.2] | 0.0 / 0.0 % |
+| 25 | 0 | +0.31 | 1.003 | +0.6 [−0.0, +1.2] | 0.0 / 0.0 % |
+| 25 | 1 % | +0.61 | 1.006 | +2.5 [−6.5, +11.2] | 0.0 / 0.0 % |
+| 25 | 5 % | +1.19 | 1.011 | +18.6 [+0.4, +36.4] | 1.5 / 1.0 % |
+| 75 | 0 | +0.29 | 1.001 | +0.3 [−0.6, +1.2] | 0.0 / 0.0 % |
+| 75 | 1 % | +0.92 | 1.003 | +6.4 [−6.8, +19.4] | 3.5 / 2.5 % |
+| 75 | 5 % | +0.89 | 1.003 | +47.5 [+8.2, +89.5] | 29.5 / 22.0 % |
+| 150 | 0 | +0.61 | 1.001 | +0.4 [−0.3, +1.2] | 100 / 100 % |
+| 150 | 1 % | +0.88 | 1.001 | −19.7 [−41.7, +0.2] | 100 / 100 % |
+| 150 | 5 % | +1.07 | 1.002 | +20.5 [−22.5, +63.8] | 100 / 100 % |
+
+Verdicts (go):
+1. **PASS.** No loss, RTT 50/150/300: median diffs +0.31 / +0.29 / +0.61 ms, ratios 1.001–1.003.
+2. **PASS.** LAN, no loss: median diff +0.52 ms, inside (0, 2). (Ratio 1.069 because the go LAN
+   handshake is only ~7 ms.) Rust failed the same prediction in the other direction (−0.43 ms), so
+   the pooled statement is "below 1 ms either way".
+3. **No contradiction.** Point estimates ≥ 0 in 9 of 12 cells. The three negative ones (LAN 1 %
+   and 5 %, RTT 300 1 %) all have CIs that include 0. Two cells have CIs excluding 0 in the predicted
+   direction: RTT 50, 5 % (+18.6) and RTT 150, 5 % (+47.5).
+4. Not applicable (rust-only prediction). The 500 ms stall threshold is meaningless for go at
+   RTT ≥ 150, where the no-loss baseline is 307 ms (RTT 150) and 610 ms (RTT 300).
+
+Observation, not a claim yet: at the same delay the go and rust medians differ in shape. rust ≈ 59 ms
++ 1 RTT (59 / 109 / 208 / 361 ms) and go ≈ 2 RTT (7 / 108 / 307 / 610 ms). So the two dialers stop
+their clocks at different points of the handshake (see the CLAIMS method note on rust returning from
+dial early). Paired differences within a stack are unaffected; absolute times across stacks are not
+comparable.
