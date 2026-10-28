@@ -1,0 +1,12 @@
+Third-party code vendored in this repository keeps its own license:
+
+- harness/go-pair/vendor-quic-go/            quic-go v0.64.1, MIT (see its LICENSE).
+  Harness patches: PQQUIC_INITIAL_RTT_MS, PQQUIC_INITIAL_PACKET_SIZE (git log -- harness/go-pair/vendor-quic-go).
+- harness/rust-pair/vendor/libp2p-quic/      rust-libp2p libp2p-quic 0.14.0, MIT.
+  Harness patches: PQQUIC_INITIAL_RTT_MS, PQQUIC_DISABLE_GSO (src/config.rs).
+- harness/rust-pair/vendor/libp2p-tls/       rust-libp2p libp2p-tls 0.7.0, MIT.
+  Harness patch: PQQUIC_CLASSICAL=1 restricts key exchange to X25519 (classical baseline).
+- harness/go-pair/hp/main.go is adapted from libp2p/test-plans hole-punch-interop impl/go/v0.49.
+
+The patches exist only to run controlled experiments. Every patch is off unless its environment
+variable is set; with no variable set the peers behave as the upstream releases.
