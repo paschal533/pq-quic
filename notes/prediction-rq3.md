@@ -44,3 +44,15 @@ rules as 1–3.
 The null is the expected result. What would refute this model: hybrid needing fewer attempts or a
 shorter `t_punch` than classical at SKEW = 110 or 150 (datagram 2 getting through on its own), or any
 success-rate gap at SKEW ≤ 90.
+
+## Setup notes added before the main run (2026-10-28, after the pilot; predictions unchanged)
+
+- **Toolchain:** the peer is built with Go 1.27.3 (the Go 1.26.10 toolchain used for C-17..C-31 is no
+  longer installed), same go.mod, go-libp2p v0.51.0, vendored quic-go. Per C-32 the only wire change
+  is ML-DSA entries in signature_algorithms (+16 B ClientHello), present in both variants.
+- **Pilot** (3 pairs, skew 0 and 150, `unified`; not counted, kept outside `data/`): found and fixed
+  two setup bugs (nft one-line chain syntax; veth naming collision with the host's eth0), then ran
+  12/12 direct. It confirmed that DCUtR runs (StartHolePunch on both peers, no DirectDial), that the
+  direct connection lands on the NAT's WAN address, and that the skew lands as designed (B's measured
+  RTT 502 ms = 2D + 2·150). t_punch medians were ≈ 210 ms at skew 0 and ≈ 411 ms at skew 150, which is
+  what the model in this note predicts. No prediction above was changed.
