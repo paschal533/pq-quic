@@ -63,7 +63,7 @@ flowchart LR
    dial, through the same delay and loss (userspace tap on Windows, kernel netem on Linux).
 3. **Adversary.** `harness/tap/downgrade_proxy.py` rewrites the ClientHello in flight (strip the hybrid
    group, or force a HelloRetryRequest) to see whether a classical session can be forced.
-4. **NAT traversal.** A five-namespace Linux topology runs DCUtR hole punching through a relay (in progress).
+4. **NAT traversal.** A five-namespace Linux topology runs DCUtR hole punching through a relay, with controlled timing skew between the peers.
 
 The classical baseline is `GODEBUG=tlsmlkem=0` (Go) or `PQQUIC_CLASSICAL=1` (Rust, vendored patch).
 
@@ -77,6 +77,7 @@ Details and confidence intervals are in CLAIMS.md.
 | **No loss, no cost** | Hybrid and classical handshakes take the same time at RTTs of 50, 150 and 300 ms and on a LAN | C-17, C-34 |
 | **Loss: the timers decide** | rust-libp2p (quinn) connects *faster* with the hybrid hello: the second datagram earns an early ACK, so it recovers by time-threshold loss detection instead of quinn's 999 ms first probe timeout. go-libp2p (quic-go, 200 ms first PTO) sees no gain, and is slower at 10% loss. Swapping the timers swaps the outcome. A Linux kernel-netem replication registered before the run passed | C-18, C-21..C-23, C-25, C-26, C-29, C-31 |
 | **Downgrade** | An on-path proxy that strips or forces away the hybrid group never yields a classical session | C-33 |
+| **Hole punching** | go-libp2p DCUtR across two Linux NATs: hybrid and classical succeed equally often (100/100 at every timing skew from 0 to 1,000 ms) and the hybrid punch is 1–2 ms slower. The two-datagram hello neither helps nor hurts | C-35, C-36 |
 
 ## Layout
 
@@ -88,7 +89,7 @@ Details and confidence intervals are in CLAIMS.md.
 | `harness/tap/` | UDP tap with seeded loss and delay (`quic_tap.py`), Initial decoder (`decode_initial.py`), Handshake-space decryption, downgrade proxy (with tests) |
 | `harness/bench_handshake.py` | paired, interleaved hybrid-vs-classical benchmark; one fresh process per dial |
 | `harness/analyse_loss.py` | means, tails and bootstrap CIs for loss cells |
-| `harness/linux/` | kernel-netem replication (`run_wsl.sh`, `run_netem.sh`, `run_profiles.sh`, Dockerfile) and the DCUtR hole-punch topology (`run_holepunch.sh`, in progress) |
+| `harness/linux/` | kernel-netem replication (`run_wsl.sh`, `run_netem.sh`, `run_profiles.sh`, Dockerfile) and the DCUtR hole-punch topology (`run_holepunch.sh`) |
 | `data/` | traces (`*.jsonl`) and benchmark CSVs referenced from CLAIMS.md |
 
 ## Reproducing

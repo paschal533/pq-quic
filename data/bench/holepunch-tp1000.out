@@ -1,0 +1,4 @@
+model=testplans D=100 pairs=30 seed=23 skews=1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWBuCNywVQ1eJkp8n8UZMjL8qZ4vTvA1DtchYXqo6qXQWL
+testplans skew 1000: 0 direct of 60
+holepunch done: /mnt/c/Users/user/Documents/PQ-QUIC/data/bench/holepunch-testplans

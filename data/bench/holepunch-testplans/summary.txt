@@ -3,3 +3,11 @@ relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWK6uma6MSM8NFxQHgDk3maK3aq6ZqQd
 testplans skew 0: 200 direct of 200
 testplans skew 50: 200 direct of 200
 testplans skew 90: 200 direct of 200
+model=testplans D=100 pairs=30 seed=23 skews=110 150 300 1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWP8KUtMfFqH9jJa1bDr1d8fyPpWJniTdU96cC3c2T5miV
+testplans skew 110: 1 direct of 60
+testplans skew 150: 0 direct of 60
+testplans skew 300: 0 direct of 60
+model=testplans D=100 pairs=30 seed=23 skews=1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWBuCNywVQ1eJkp8n8UZMjL8qZ4vTvA1DtchYXqo6qXQWL
+testplans skew 1000: 0 direct of 60

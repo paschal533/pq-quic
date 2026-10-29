@@ -63,7 +63,7 @@ network, where loss is common, NAT traversal depends on timing, and connections 
 4. **A live downgrade test** of hybrid negotiation in libp2p QUIC (§8).
 5. **A sizing analysis of post-quantum authentication** against QUIC's anti-amplification limit for
    libp2p's mutual-authentication case (§9, a projection, not a measurement), and **a pre-registered
-   hole-punching experiment** (§10, in progress).
+   hole-punching experiment** (§10).
 
 We also report what went wrong. One cross-check failed its pre-registered bar (§7.5). One LAN
 prediction was wrong (§6). A Linux send optimisation silently invalidated a run until we found it
@@ -347,7 +347,7 @@ In that narrow sense the hybrid hello is partly self-financing. Fully post-quant
 (ML-DSA-44 and above for both keys, ≈11–21 KB) exceed either budget and cost one extra round trip.
 *[TODO author: decide whether to keep this section, given the length.]*
 
-## 10. Hole Punching (in progress)
+## 10. Hole Punching
 
 libp2p's DCUtR protocol synchronises a simultaneous open across two NATs using an RTT measured over
 a relay. On QUIC, the peer that dials as client sends the ClientHello through the other peer's NAT.
@@ -355,8 +355,19 @@ If the other peer is late to open its mapping, part of the first flight may be d
 model a two-datagram hello neither helps nor hurts, except in a window that should be microseconds
 wide. We pre-registered predictions to that effect (`notes/prediction-rq3.md`, committed before any
 run) and built a five-namespace NAT testbed with two router models and controlled timing skew
-(`harness/linux/run_holepunch.sh`). Results are not part of this submission.
-*[TODO: replace with results if available by submission.]*
+(`harness/linux/run_holepunch.sh`): one-way delay 100 ms between the peers, go-libp2p v0.51.0,
+fresh processes per trial, hybrid and classical interleaved in seeded order.
+
+The null held. Under the `unified` router model (masquerade, unsolicited input dropped), both
+variants connected directly in 100 of 100 trials at every skew from 0 to 1,000 ms, always on the
+first attempt (C-35). The median punch time was 212–214 ms while the late peer's skew stayed below
+the one-way delay. Above it, the first flight is lost and recovered by a probe timeout, so the
+median steps to about 414 ms, and to about 1,615 ms at a 1,000 ms skew. The hybrid median was
+1.1–2.2 ms slower than the classical one in every cell, and in no cell did the second datagram give
+hybrid an advantage. Under the `testplans` model (plain SNAT, as used by libp2p's own interop
+tests), every trial succeeded up to a 90 ms skew. Beyond the one-way delay, almost every trial failed
+for both variants (1 of 30 hybrid and 0 of 30 classical at 110 ms, then 0 of 30 for both) (C-36).
+That failure belongs to the router model, not to the key exchange.
 
 ## 11. Limitations and Threats to Validity
 

@@ -9,3 +9,7 @@ model=unified D=100 pairs=100 seed=23 skews=0 50 90 110 150 300 1000
 relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/
 unified skew 300: 0 direct of 200
 unified skew 1000: 0 direct of 200
+model=unified D=100 pairs=100 seed=23 skews=0 50 90 110 150 300 1000
+relay /ip4/11.0.0.10/udp/4001/quic-v1/p2p/12D3KooWHa7UyWh5jRCGrxA2hAcMXvbhnDK1ATNrdRBebnVUU2sd
+unified skew 300: 200 direct of 200
+unified skew 1000: 200 direct of 200
